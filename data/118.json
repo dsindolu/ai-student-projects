@@ -1,0 +1,102 @@
+{
+  "id": 118,
+  "emoji": "🧭",
+  "title": "College Group Selection Career Roadmap",
+  "title_te": "ఇంటర్ గ్రూప్ ఎంపిక కెరీర్ రోడ్‌మ్యాప్",
+  "problem": "Class 10 hostel friends choose college groups (MPC, BiPC, CEC) blindly because their classmates picked them, and regret it later.",
+  "idea": "A group finder. Pick what you enjoy most and see which Intermediate group fits you and where it can lead.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What do I enjoy most?",
+      "intro": "This is a starting idea only. Talk to your teachers and parents before deciding.",
+      "question": "My favourite thing to learn is…",
+      "options": [
+        {
+          "icon": "📐",
+          "label": "Maths and machines",
+          "result": "MPC (Maths, Physics, Chemistry). Leads to Engineering, B.Sc, Polytechnic, Architecture.",
+          "te": "MPC – ఇంజనీరింగ్, బీఎస్సీ వైపు.",
+          "level": "good"
+        },
+        {
+          "icon": "🌿",
+          "label": "Plants, animals and the body",
+          "result": "BiPC (Biology, Physics, Chemistry). Leads to Nursing, Pharmacy, Agriculture, Medicine, B.Sc.",
+          "te": "BiPC – నర్సింగ్, ఫార్మసీ, వ్యవసాయం, వైద్యం వైపు.",
+          "level": "good"
+        },
+        {
+          "icon": "💰",
+          "label": "Money, shops and business",
+          "result": "CEC (Civics, Economics, Commerce) or MEC (Maths, Economics, Commerce). Leads to B.Com, CA, Banking.",
+          "te": "CEC / MEC – బీకామ్, సీఏ, బ్యాంకింగ్ వైపు.",
+          "level": "good"
+        },
+        {
+          "icon": "📜",
+          "label": "History, people and society",
+          "result": "HEC (History, Economics, Civics). Leads to B.A., Law, Teaching, Civil Services.",
+          "te": "HEC – బీఏ, లా, టీచింగ్ వైపు.",
+          "level": "good"
+        },
+        {
+          "icon": "🛠️",
+          "label": "Working with my hands",
+          "result": "Look at Polytechnic diploma or ITI after Class 10. Quick skills and jobs!",
+          "te": "పాలిటెక్నిక్ లేదా ఐటీఐ చూడండి.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Smart Choice Quiz",
+      "questions": [
+        {
+          "q": "What is the best reason to choose a group?",
+          "options": [
+            "My best friend chose it",
+            "My interest and strengths",
+            "It is popular"
+          ],
+          "answer": 1,
+          "why": "You will study it for 2 years – choose what you enjoy and are good at."
+        },
+        {
+          "q": "Which group usually leads to Nursing and Pharmacy?",
+          "options": [
+            "CEC",
+            "BiPC",
+            "HEC"
+          ],
+          "answer": 1,
+          "why": "BiPC has Biology, needed for health courses."
+        },
+        {
+          "q": "Who should you talk to before deciding?",
+          "options": [
+            "Nobody",
+            "Teachers, parents and seniors",
+            "Only social media"
+          ],
+          "answer": 1,
+          "why": "People who know you can guide you well."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Write your Class 9/10 marks and your favourite subjects on paper.",
+    "Enter them into Gemini and ask which Intermediate groups suit you and why.",
+    "Ask Gemini for a simple roadmap: group → degree → jobs.",
+    "Check the suggestions with your teacher.",
+    "Make a one-page guidance sheet in Canva for each group.",
+    "Share the sheets with Class 10 friends in the hostel."
+  ],
+  "prompt": "I am a Class 10 student in Telangana. My marks: Maths 85, Science 70, Social 90, English 75. I love reading history and talking to people. Suggest suitable Intermediate groups (MPC, BiPC, CEC, MEC, HEC) with a simple career roadmap for each."
+}

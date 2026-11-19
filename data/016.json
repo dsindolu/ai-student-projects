@@ -1,0 +1,107 @@
+{
+  "id": 16,
+  "emoji": "🥬",
+  "title": "Tasty Gongura Food Recipe Chart for Weak Friends",
+  "title_te": "బలహీనమైన స్నేహితుల కోసం రుచికరమైన గోంగూర వంటల చార్ట్",
+  "problem": "Many girls in my village hostel look pale and get tired quickly because they don't eat enough iron-rich green leaves like gongura and spinach.",
+  "idea": "A colourful meal chart with cheap, tasty recipes using local green leaves. Gemini gives the recipes and Canva makes the chart for our dining hall. Here you can check your iron-rich habits.",
+  "widgets": [
+    {
+      "type": "cards",
+      "heading": "🍲 Low-Cost Iron-Rich Dishes",
+      "items": [
+        {
+          "icon": "🥬",
+          "title": "Gongura dal",
+          "text": "Cook gongura leaves with toor dal. Tasty with rice.",
+          "te": "గోంగూర పప్పు - అన్నంతో రుచిగా ఉంటుంది."
+        },
+        {
+          "icon": "🌿",
+          "title": "Palakura curry",
+          "text": "Spinach cooked with a little onion and tomato.",
+          "te": "పాలకూర కూర - ఉల్లిపాయ, టమాటాతో."
+        },
+        {
+          "icon": "🍃",
+          "title": "Thotakura fry",
+          "text": "Amaranth leaves fried lightly with garlic.",
+          "te": "తోటకూర వేపుడు - వెల్లుల్లితో."
+        },
+        {
+          "icon": "🥜",
+          "title": "Peanut and jaggery laddu",
+          "text": "A sweet snack made with groundnuts and jaggery.",
+          "te": "పల్లీ బెల్లం లడ్డు - మంచి చిరుతిండి."
+        },
+        {
+          "icon": "🍋",
+          "title": "Add lemon or amla",
+          "text": "Vitamin C from lemon or amla helps the body take in iron.",
+          "te": "నిమ్మ లేదా ఉసిరి ఇనుము బాగా అందేలా సహాయం చేస్తుంది."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ My Iron-Strong Week",
+      "intro": "Tick the good habits you followed this week.",
+      "items": [
+        {
+          "text": "I ate green leafy vegetables at least 3 days",
+          "te": "వారంలో కనీసం 3 రోజులు ఆకుకూరలు తిన్నాను"
+        },
+        {
+          "text": "I ate dal, chana or groundnuts",
+          "te": "పప్పు, శనగలు లేదా పల్లీలు తిన్నాను"
+        },
+        {
+          "text": "I added lemon or ate a guava/amla with meals",
+          "te": "భోజనంతో నిమ్మ, జామ లేదా ఉసిరి తిన్నాను"
+        },
+        {
+          "text": "I did not drink tea right with my meal",
+          "te": "భోజనం వెంటనే టీ తాగలేదు"
+        },
+        {
+          "text": "I took the iron tablet given at school, as the teacher/nurse said",
+          "te": "బడిలో ఇచ్చిన ఐరన్ మాత్ర టీచర్/నర్సు చెప్పినట్టు వేసుకున్నాను"
+        },
+        {
+          "text": "I told the nurse if I felt very tired or dizzy",
+          "te": "బాగా అలసట, కళ్ళు తిరిగితే నర్సుకు చెప్పాను"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.84,
+          "text": "Iron-strong star! Keep it up.",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good! Add one more healthy habit next week.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Let's start with green leaves 3 days a week.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Make a list of green leaves easily found in our village (gongura, palakura, thotakura, menthi).",
+    "Ask Gemini for 5 cheap and tasty recipes using these leaves.",
+    "Check the recipes with our hostel cook or Amma.",
+    "Open Canva, search 'menu poster', and make a colourful weekly meal chart.",
+    "Add pictures and short Telugu names for each dish.",
+    "Print it, stick it near the dining hall, and ask the warden if we can add one dish each week."
+  ],
+  "prompt": "I am a Class 8 student in a Telangana hostel. Many girls are pale and tired. Give me 5 low-cost, tasty recipes using local leafy greens like gongura, spinach and amaranth. Write short steps in simple English and Telugu. Add one tip to help the body absorb iron."
+}

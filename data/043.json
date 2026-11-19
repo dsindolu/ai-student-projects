@@ -1,0 +1,118 @@
+{
+  "id": 43,
+  "emoji": "🎋",
+  "title": "Sugarcane Red Rot Stem Inspector",
+  "title_te": "చెరకు ఎర్ర కుళ్ళు కాండం తనిఖీ",
+  "problem": "Sugarcane crops rot from inside the stem, but farmers only discover the red colour after cutting down the entire field.",
+  "idea": "A stem inspector. The farmer cuts a few sample canes, shows the inside to the camera, and the helper says if it looks healthy or has red rot. Tap the stem to try it.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the inside of the cane look like?",
+      "intro": "In my real project, Teachable Machine learned photos of split sugarcane stems.",
+      "question": "The split stem looks like:",
+      "options": [
+        {
+          "icon": "⬜",
+          "label": "White / cream inside, sweet smell",
+          "result": "Healthy cane! Keep checking a few canes every 2 weeks.",
+          "te": "ఆరోగ్యకరమైన చెరకు! 2 వారాలకోసారి కొన్ని గడలు చూడండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🟥",
+          "label": "Red inside with white patches across",
+          "result": "This looks like red rot! Show it to the Agriculture Officer. Remove and destroy sick clumps.",
+          "te": "ఎర్ర కుళ్ళు తెగులు లాగా ఉంది! వ్యవసాయ అధికారికి చూపించండి. జబ్బు దుబ్బులు తీసి నాశనం చేయండి.",
+          "level": "bad",
+          "tip": "Ask the officer if early harvest of the healthy part is a good idea for your field."
+        },
+        {
+          "icon": "🍂",
+          "label": "Top leaves drying, sour smell",
+          "result": "Warning sign! Split a few canes and check inside. Call the officer.",
+          "te": "హెచ్చరిక! కొన్ని గడలు చీల్చి లోపల చూడండి. అధికారిని పిలవండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🛡️ Protect Next Year's Crop",
+      "items": [
+        {
+          "icon": "🌱",
+          "title": "Healthy seed canes",
+          "text": "Plant setts only from healthy fields.",
+          "te": "ఆరోగ్యకరమైన పొలం నుండే విత్తనపు ముక్కలు తీసుకోండి."
+        },
+        {
+          "icon": "🧬",
+          "title": "Resistant varieties",
+          "text": "Ask the officer for varieties that resist red rot.",
+          "te": "ఎర్ర కుళ్ళును తట్టుకునే రకాల గురించి అడగండి."
+        },
+        {
+          "icon": "🔄",
+          "title": "Change the crop",
+          "text": "Grow a different crop next season in a sick field.",
+          "te": "జబ్బు వచ్చిన పొలంలో తర్వాత వేరే పంట వేయండి."
+        },
+        {
+          "icon": "🚱",
+          "title": "No water from sick fields",
+          "text": "Water flowing from a sick field can carry the disease.",
+          "te": "జబ్బు పొలం నుండి వచ్చే నీరు తెగులును తీసుకెళ్తుంది."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "How do we see red rot early?",
+          "options": [
+            "Split a few sample canes and look inside",
+            "Only look at the field from far"
+          ],
+          "answer": 0,
+          "why": "The disease hides inside the stem."
+        },
+        {
+          "q": "Seed canes for next year should come from…",
+          "options": [
+            "A healthy field",
+            "The sick field"
+          ],
+          "answer": 0,
+          "why": "Sick setts carry the disease to the new crop."
+        },
+        {
+          "q": "Whom should we ask about treatment?",
+          "options": [
+            "Agriculture Extension Officer / sugar factory field staff",
+            "Random video"
+          ],
+          "answer": 0,
+          "why": "They give correct, local advice."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Open teachablemachine.withgoogle.com and choose Image Project.",
+    "Make classes: Healthy stem, Red rot stem. Add about 40 clear photos to each class.",
+    "Click Train Model. Test it with new photos it has never seen.",
+    "Click Export, upload the model and copy the shareable link.",
+    "In PictoBlox, load the model and show a red warning when it sees 'Red rot stem'.",
+    "Add Telugu voice: 'Show this cane to the Agriculture Officer'.",
+    "Ask Gemini for safe prevention tips and check them with the sugar factory field officer."
+  ],
+  "prompt": "I am a Class 8 student. Explain sugarcane red rot disease to farmers in simple English and Telugu: how the inside of the stem looks, early warning signs, and 5 ways to stop it next season. Tell them to ask the Agriculture Extension Officer about treatment and early harvest."
+}

@@ -1,0 +1,101 @@
+{
+  "id": 123,
+  "emoji": "📋",
+  "title": "Dormitory Evening Attendance Assistant",
+  "title_te": "హాస్టల్ సాయంత్రం హాజరు సహాయకుడు",
+  "problem": "Wardens waste 45 minutes every evening calling out 100 student names line by line in noisy dormitories, cutting into our study time.",
+  "idea": "A quick check-in helper. Each student shows their face (or ID card) to the webcam and their name is marked present on a Scratch attendance sheet. See how much study time we save.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Who is at the check-in camera?",
+      "intro": "In my real project, Teachable Machine recognises each student. Tap who the camera sees.",
+      "question": "The camera sees:",
+      "options": [
+        {
+          "icon": "🧑",
+          "label": "Ravi (Room 4)",
+          "result": "Ravi, Room 4 — marked PRESENT. Good evening!",
+          "te": "రవి, గది 4 — హాజరు నమోదైంది. శుభ సాయంత్రం!",
+          "level": "good"
+        },
+        {
+          "icon": "👧",
+          "label": "Lakshmi (Room 7)",
+          "result": "Lakshmi, Room 7 — marked PRESENT. Good evening!",
+          "te": "లక్ష్మి, గది 7 — హాజరు నమోదైంది. శుభ సాయంత్రం!",
+          "level": "good"
+        },
+        {
+          "icon": "❓",
+          "label": "Not sure",
+          "result": "I could not recognise you. Please show your ID card to the warden.",
+          "te": "మిమ్మల్ని గుర్తించలేకపోయాను. వార్డెన్‌కి ఐడీ కార్డు చూపించండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "🧮 How much time will we save?",
+      "intro": "Enter the numbers for your hostel.",
+      "inputs": [
+        {
+          "id": "students",
+          "label": "Number of students",
+          "value": 100
+        },
+        {
+          "id": "oldsec",
+          "label": "Seconds per name now (calling out)",
+          "value": 27
+        },
+        {
+          "id": "newsec",
+          "label": "Seconds per student with camera",
+          "value": 5
+        }
+      ],
+      "formula": "if (typeof students !== 'number' || typeof oldsec !== 'number' || typeof newsec !== 'number') return null; if (students <= 0 || oldsec <= 0 || newsec < 0) return null; var oldm = students * oldsec / 60; var newm = students * newsec / 60; var saved = oldm - newm; var month = saved * 30 / 60; return {oldm: oldm, newm: newm, saved: saved, month: month, level: saved > 0 ? 'good' : 'warn'};",
+      "result": "Now: {oldm} minutes  →  With camera: {newm} minutes\nStudy time saved: {saved} minutes every evening\nIn a month: about {month} hours saved!"
+    },
+    {
+      "type": "cards",
+      "heading": "🔐 Respect Privacy",
+      "items": [
+        {
+          "icon": "🙋",
+          "title": "Ask permission",
+          "text": "Take photos only with the warden's and students' permission.",
+          "te": "వార్డెన్, విద్యార్థుల అనుమతితోనే ఫోటోలు తీయండి."
+        },
+        {
+          "icon": "💻",
+          "title": "Keep photos safe",
+          "text": "Keep the photos only on the hostel computer. Never post them online.",
+          "te": "ఫోటోలు హాస్టల్ కంప్యూటర్‌లోనే ఉంచండి. ఆన్‌లైన్‌లో పెట్టవద్దు."
+        },
+        {
+          "icon": "🪪",
+          "title": "Easy option",
+          "text": "You can also train the camera on ID cards instead of faces.",
+          "te": "ముఖాలకు బదులు ఐడీ కార్డులను కూడా గుర్తించేలా చేయవచ్చు."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Get permission from the warden first. Start with a small test of 5 friends.",
+    "In Teachable Machine, make one class per friend and a 'Nobody' class. Take about 40 photos each in the dorm light.",
+    "Train, Export and copy the model link. Open it in PictoBlox using the Machine Learning extension.",
+    "Make a list called 'Present'. When a class is detected, add that name to the list once.",
+    "Show the list on screen and let the warden check the names at the end.",
+    "Ask Gemini how to keep student photos private and safe."
+  ],
+  "prompt": "I am a Class 8 student making a webcam attendance helper for my hostel. In simple English, give me 5 rules to keep student photos private and safe, and a short welcome message in Telugu for each student who checks in."
+}

@@ -1,0 +1,125 @@
+{
+  "id": 129,
+  "emoji": "👕",
+  "title": "Stitched Name-Tag Laundry Scanner",
+  "title_te": "బట్టలపై కుట్టిన పేరు-ట్యాగ్ స్కానర్",
+  "problem": "After Sunday washing, identical green school uniform shirts get mixed up, leading to arguments among hostel roommates over lost clothes.",
+  "idea": "Every shirt gets a small stitched initial tag. The camera reads the tag and the phone says out loud whose shirt it is. Try it with the tags below.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Which tag is on the collar?",
+      "intro": "In my real project, Teachable Machine recognises the stitched tag. Tap the tag the camera sees.",
+      "question": "The stitched tag says:",
+      "options": [
+        {
+          "icon": "🟥",
+          "label": "R.K (red thread)",
+          "result": "This shirt belongs to Ravi Kumar, Room 3.",
+          "te": "ఈ చొక్కా రవి కుమార్‌ది, గది 3.",
+          "level": "good"
+        },
+        {
+          "icon": "🟦",
+          "label": "S.P (blue thread)",
+          "result": "This shirt belongs to Srinu P, Room 3.",
+          "te": "ఈ చొక్కా శ్రీను పి ది, గది 3.",
+          "level": "good"
+        },
+        {
+          "icon": "🟨",
+          "label": "M.A (yellow thread)",
+          "result": "This shirt belongs to Mahesh A, Room 5.",
+          "te": "ఈ చొక్కా మహేష్ ఎ ది, గది 5.",
+          "level": "good"
+        },
+        {
+          "icon": "❓",
+          "label": "No tag",
+          "result": "No name tag found. Keep it in the Lost & Found box.",
+          "te": "పేరు ట్యాగ్ లేదు. 'దొరికినవి' డబ్బాలో పెట్టండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "🧵 How to stitch a name tag",
+      "items": [
+        {
+          "title": "Choose a colour",
+          "text": "Each roommate picks a different thread colour.",
+          "te": "ప్రతి ఒక్కరూ వేరే రంగు దారం ఎంచుకోండి."
+        },
+        {
+          "title": "Write initials",
+          "text": "Write your initials with a pencil inside the collar.",
+          "te": "కాలర్ లోపల పెన్సిల్‌తో మీ పేరు అక్షరాలు రాయండి."
+        },
+        {
+          "title": "Stitch",
+          "text": "Stitch over the pencil line with small running stitches.",
+          "te": "పెన్సిల్ గీతపై చిన్న కుట్లు వేయండి."
+        },
+        {
+          "title": "Tie the knot",
+          "text": "Tie a strong knot on the inside so it does not open in washing.",
+          "te": "ఉతికినప్పుడు ఊడిపోకుండా లోపల గట్టి ముడి వేయండి."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Laundry day checklist",
+      "items": [
+        {
+          "text": "All my clothes have a name tag",
+          "te": "నా బట్టలన్నిటికీ పేరు ట్యాగ్ ఉంది"
+        },
+        {
+          "text": "I counted my clothes before washing",
+          "te": "ఉతికే ముందు బట్టలు లెక్కపెట్టాను"
+        },
+        {
+          "text": "I counted them again after drying",
+          "te": "ఆరిన తర్వాత మళ్ళీ లెక్కపెట్టాను"
+        },
+        {
+          "text": "I put others' clothes in the right pile",
+          "te": "ఇతరుల బట్టలు సరైన కుప్పలో పెట్టాను"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "No more lost shirts! 👕",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good start. Do all four every Sunday.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Start by stitching your name tags.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Stitch a big, clear initial tag in a different thread colour for each roommate.",
+    "In Teachable Machine (Image Project), make one class per tag and one 'No tag' class. Take about 30 photos of each collar.",
+    "Train, Export and copy the model link.",
+    "Open the model in PictoBlox (Scratch-style blocks) and add Text-to-Speech.",
+    "When a tag class is seen, say the owner's name and room number out loud.",
+    "Ask Gemini to make a roommate list with name, initials and thread colour."
+  ],
+  "prompt": "I am a Class 8 hostel student. Make a simple table for my 6 roommates with their name, 2-letter initials and a different thread colour, and write a short polite message in Telugu that says 'This shirt belongs to ___'."
+}

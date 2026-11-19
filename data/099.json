@@ -1,0 +1,79 @@
+{
+  "id": 99,
+  "emoji": "🕳️",
+  "title": "Kitchen Wastewater Soak-Pit Planner",
+  "title_te": "వంటింటి మురుగునీటి ఇంకుడు గుంత ప్లానర్",
+  "problem": "Wastewater from house kitchens flows directly onto street paths, making smelly mud pools where mosquitoes lay eggs.",
+  "idea": "A soak-pit planner. Enter your family size and it suggests a simple soak-pit size, plus the building steps.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: What size soak pit do we need?",
+      "intro": "A kitchen and bath soak pit takes the dirty water into the ground. A pit of about 1 m × 1 m × 1 m is enough for a small family.",
+      "inputs": [
+        {
+          "id": "people",
+          "label": "People in the house",
+          "value": 5
+        },
+        {
+          "id": "water",
+          "label": "Kitchen + bath water used per person per day (litres)",
+          "value": 30
+        }
+      ],
+      "formula": "if (!(people > 0 && water > 0)) return null; var daily = people * water; var side = daily <= 150 ? 1 : (daily <= 300 ? 1.2 : 1.5); var depth = daily <= 150 ? 1 : 1.2; return {daily: daily, size: side + ' m × ' + side + ' m × ' + depth + ' m deep', level: daily > 300 ? 'warn' : 'good', note: daily > 300 ? 'That is a lot of water. Ask the Panchayat engineer to check the plan.' : 'This is a good size for your home.'};",
+      "result": "Dirty water every day: about {daily} litres.\nSuggested soak pit: {size}\n{note}"
+    },
+    {
+      "type": "steps",
+      "heading": "🛠️ Building a soak pit",
+      "items": [
+        {
+          "title": "Choose the place",
+          "text": "Keep it at least 10 metres away from any well or handpump.",
+          "te": "బావి, బోరు నుండి కనీసం 10 మీటర్ల దూరంలో ఉండాలి."
+        },
+        {
+          "title": "Dig",
+          "text": "Elders dig the pit to the size from the calculator.",
+          "te": "పెద్దవాళ్ళు కాలిక్యులేటర్ సైజులో గుంత తవ్వాలి."
+        },
+        {
+          "title": "Fill",
+          "text": "Put big stones at the bottom, then smaller stones, then gravel on top.",
+          "te": "అడుగున పెద్ద రాళ్ళు, తర్వాత చిన్న రాళ్ళు, పైన కంకర వేయండి."
+        },
+        {
+          "title": "Pipe and filter",
+          "text": "Bring the kitchen pipe in. Keep a small filter box or net to stop food bits and oil.",
+          "te": "వంటింటి పైపు కలపండి. ఆహార ముక్కలు ఆపడానికి జాలీ పెట్టండి."
+        },
+        {
+          "title": "Cover",
+          "text": "Cover with a slab or soil so mosquitoes cannot breed.",
+          "te": "దోమలు రాకుండా రాయి లేదా మట్టితో మూయండి."
+        },
+        {
+          "title": "Plant a tree",
+          "text": "A papaya or banana plant nearby uses the extra water.",
+          "te": "దగ్గరలో బొప్పాయి లేదా అరటి మొక్క నాటండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva",
+    "Scratch"
+  ],
+  "how": [
+    "Ask your family how many buckets of kitchen and bath water you use every day.",
+    "Ask Gemini for a low-cost soak-pit design with stones, gravel and a papaya tree.",
+    "Make a small Scratch calculator: enter people, get the pit size.",
+    "Draw the pit layout in Canva with labels: stones, gravel, pipe, filter, cover.",
+    "Show your drawing to the Panchayat secretary or a mason and ask for advice.",
+    "Help your family build one, with elders doing the digging."
+  ],
+  "prompt": "I am a Class 8 student in a Telangana village. Give simple steps to build a low-cost kitchen wastewater soak pit for a family of 5, using stones, gravel and a papaya plant. Include safety distance from wells."
+}

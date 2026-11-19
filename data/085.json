@@ -1,0 +1,44 @@
+{
+  "id": 85,
+  "emoji": "🧸",
+  "title": "Anganwadi Toy & Book Inventory Tracker",
+  "title_te": "అంగన్‌వాడీ బొమ్మలు & పుస్తకాల జాబితా ట్రాకర్",
+  "problem": "The village Anganwadi teacher spends hours writing down inventory lists of storybooks and building blocks on paper registers that get damaged by rain.",
+  "idea": "A camera counter. The teacher shows each toy or book to the camera and it adds one to the right list. Here you can tap what the camera sees and check the stock calculator.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What is the teacher showing?",
+      "intro": "In my real project, Teachable Machine recognises the item and PictoBlox adds +1 to its count. Tap what the camera sees.",
+      "question": "The camera sees…",
+      "options": [
+        {"icon": "📚", "label": "Storybook", "result": "Storybook found! +1 added to Books.", "te": "కథల పుస్తకం! పుస్తకాల లెక్కలో +1.", "level": "good"},
+        {"icon": "🧱", "label": "Building blocks box", "result": "Blocks box found! +1 added to Blocks.", "te": "బ్లాక్స్ పెట్టె! బ్లాక్స్ లెక్కలో +1.", "level": "good"},
+        {"icon": "⚽", "label": "Ball", "result": "Ball found! +1 added to Balls.", "te": "బంతి! బంతుల లెక్కలో +1.", "level": "good"},
+        {"icon": "❓", "label": "Something new", "result": "I don't know this item. Please type it in by hand.", "te": "ఇది నాకు తెలియదు. చేతితో రాయండి.", "level": "warn"}
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "📦 Monthly Stock Check",
+      "inputs": [
+        {"id": "start", "label": "Books at the start of the month", "value": 40},
+        {"id": "added", "label": "New books received", "value": 10},
+        {"id": "damaged", "label": "Books torn or lost", "value": 5},
+        {"id": "counted", "label": "Books counted today by the camera", "value": 45}
+      ],
+      "formula": "if ([start, added, damaged, counted].some(function(x){return typeof x !== 'number' || x < 0;})) return null; var should = start + added - damaged; var diff = counted - should; if (diff === 0) return {should: should, msg: 'Perfect match! Register is correct.', level: 'good'}; return {should: should, msg: (diff < 0 ? 'Missing ' + (-diff) : 'Extra ' + diff) + ' book(s). Count again by hand.', level: 'warn'};",
+      "result": "Books there should be: {should}\n{msg}"
+    }
+  ],
+  "tools": ["Teachable Machine", "PictoBlox"],
+  "how": [
+    "Ask the Anganwadi teacher which items she counts most often.",
+    "In Teachable Machine (Image Project), make one class for each item: Storybook, Blocks, Ball, Nothing.",
+    "Take about 40 photos of each item from different sides, then Train and Export the model.",
+    "In PictoBlox, add the ML extension and make a variable for each item.",
+    "When an item is seen, change its variable by 1 and wait 2 seconds so it doesn't count twice.",
+    "At the end, show all counts on screen and the teacher can save a screenshot instead of a paper register."
+  ],
+  "prompt": "I am a Class 8 student making a toy and book counter for our Anganwadi. Suggest a simple list of 6 common Anganwadi learning items to train my model on, and 3 tips to keep the counting accurate. Use simple English and Telugu."
+}

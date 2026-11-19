@@ -1,0 +1,134 @@
+{
+  "id": 146,
+  "emoji": "🌿",
+  "title": "Village Herbal Leaf Identification Guide",
+  "title_te": "పల్లెలో ఔషధ ఆకుల గుర్తింపు గైడ్",
+  "problem": "Children step on useful medicinal plants like Tulsi, Doddapatre and Neem growing along backyard paths without knowing their health benefits.",
+  "idea": "Show a leaf to the camera and the screen tells its name and how grandmothers traditionally use it — and warns about poisonous plants. Try it below.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Which leaf does the camera see?",
+      "intro": "In my real project, Teachable Machine recognises the leaf. Tap a leaf. (Home remedies are only for small problems. For illness, see a doctor.)",
+      "question": "The leaf is:",
+      "options": [
+        {
+          "icon": "🌱",
+          "label": "Tulsi (Holy basil)",
+          "result": "Tulsi. Traditionally, tulsi leaves are boiled in water or tea to soothe a cough and cold.",
+          "te": "తులసి. దగ్గు, జలుబుకు తులసి ఆకులను నీటిలో మరిగించి తాగుతారు.",
+          "level": "good"
+        },
+        {
+          "icon": "🍃",
+          "label": "Neem",
+          "result": "Neem. Traditionally, neem leaves are added to bath water, and neem twigs are used to clean teeth.",
+          "te": "వేప. వేప ఆకులు స్నానం నీటిలో వేస్తారు, వేప పుల్లతో పళ్ళు తోముతారు.",
+          "level": "good"
+        },
+        {
+          "icon": "🌿",
+          "label": "Doddapatre (Karpooravalli)",
+          "result": "Doddapatre. Its thick, sweet-smelling leaves are traditionally used at home for cough and cold.",
+          "te": "కర్పూరవల్లి (వాము ఆకు). దగ్గు, జలుబుకు ఇంట్లో వాడతారు.",
+          "level": "good"
+        },
+        {
+          "icon": "🌵",
+          "label": "Aloe vera",
+          "result": "Aloe vera. The gel is traditionally put on small burns and dry skin.",
+          "te": "కలబంద. చిన్న కాలిన గాయాలు, పొడి చర్మంపై జెల్ రాస్తారు.",
+          "level": "good"
+        },
+        {
+          "icon": "☠️",
+          "label": "Datura (Ummetta)",
+          "result": "DANGER! Datura is poisonous. Do not touch, smell or eat it. Wash hands if touched.",
+          "te": "ప్రమాదం! ఉమ్మెత్త విషం. ముట్టుకోవద్దు, తినవద్దు. తాకితే చేతులు కడగండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "⚠️",
+          "label": "Jilledu (Calotropis)",
+          "result": "CAREFUL! Its milky sap can hurt your eyes and skin. Do not break the leaves.",
+          "te": "జాగ్రత్త! జిల్లేడు పాలు కళ్ళకు, చర్మానికి హాని. ఆకులు తెంపవద్దు.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🛡️ Herbal safety rules",
+      "items": [
+        {
+          "icon": "👵",
+          "title": "Ask an elder",
+          "text": "Never eat any leaf unless an elder knows it well.",
+          "te": "పెద్దవాళ్ళకు బాగా తెలిసిన ఆకులు తప్ప ఏదీ తినవద్దు."
+        },
+        {
+          "icon": "👨‍⚕️",
+          "title": "Doctor for illness",
+          "text": "Fever for more than 2 days, breathing trouble or bad pain needs a doctor or PHC.",
+          "te": "2 రోజులకు మించిన జ్వరం, ఊపిరి ఇబ్బందికి డాక్టర్ దగ్గరకు వెళ్ళండి."
+        },
+        {
+          "icon": "🌱",
+          "title": "Protect the plants",
+          "text": "Don't step on or pluck too many leaves. Plant a tulsi or neem at home.",
+          "te": "మొక్కలను తొక్కవద్దు. ఇంట్లో తులసి, వేప నాటండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "❓ Leaf Quiz",
+      "questions": [
+        {
+          "q": "Which plant is poisonous?",
+          "options": [
+            "Tulsi",
+            "Datura (Ummetta)",
+            "Neem"
+          ],
+          "answer": 1,
+          "why": "Datura is poisonous. Never eat it."
+        },
+        {
+          "q": "Neem twigs are traditionally used to…",
+          "options": [
+            "Clean teeth",
+            "Make tea",
+            "Light lamps"
+          ],
+          "answer": 0,
+          "why": "Neem twigs have long been used as a natural toothbrush."
+        },
+        {
+          "q": "You have had high fever for 3 days. What should you do?",
+          "options": [
+            "Only eat tulsi",
+            "See a doctor or go to the PHC",
+            "Wait one more week"
+          ],
+          "answer": 1,
+          "why": "Home remedies are not enough for long or high fever."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "With an elder, collect leaves of Tulsi, Neem, Doddapatre and Aloe vera. Learn what Datura and Jilledu look like but don't pluck them — take photos only.",
+    "In Teachable Machine (Image Project), make one class per plant. Take about 40 photos of each leaf on a white paper.",
+    "Train, Export and open the model in PictoBlox (Scratch blocks).",
+    "For each plant, show its name, a traditional use and a safety note. Make poisonous plants show a red DANGER screen.",
+    "Ask Gemini for traditional uses in simple words, and check them with an elder or your science teacher.",
+    "Add the line 'For illness, see a doctor' on every screen."
+  ],
+  "prompt": "I am a Class 8 student in a Telangana village. In simple English and Telugu, give one traditional home use for Tulsi, Neem, Doddapatre (Karpooravalli) and Aloe vera, and a safety warning for Datura and Jilledu. Add a reminder to see a doctor for real illness."
+}

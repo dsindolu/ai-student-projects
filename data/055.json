@@ -1,0 +1,126 @@
+{
+  "id": 55,
+  "emoji": "📲",
+  "title": "Digital Wallet Safety Comic Strip",
+  "title_te": "డిజిటల్ వాలెట్ భద్రత కామిక్ స్ట్రిప్",
+  "problem": "Village elders think phone payment apps automatically steal money from accounts, so they avoid using safe digital payments entirely.",
+  "idea": "A friendly comic that shows Tata how phone payments work and the few rules that keep money safe. Then a small quiz to check what he learned.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🖼️ The Comic: Tata Learns UPI",
+      "items": [
+        {
+          "title": "Panel 1",
+          "text": "Tata: 'Phone apps take money by themselves!' Grandson Ravi: 'No Tata, money moves only when YOU enter your secret PIN.'",
+          "te": "తాత: 'ఫోన్ యాప్ తానే డబ్బు తీసేస్తుంది!' రవి: 'లేదు తాతా, మీరు పిన్ వేస్తేనే డబ్బు వెళ్తుంది.'"
+        },
+        {
+          "title": "Panel 2",
+          "text": "Ravi shows: scan the shop's QR, check the shop name, type the amount, enter PIN. Done!",
+          "te": "రవి: షాప్ క్యూఆర్ స్కాన్ చేసి, పేరు చూసి, మొత్తం టైప్ చేసి, పిన్ వేయండి. అయిపోయింది!"
+        },
+        {
+          "title": "Panel 3",
+          "text": "A fake call: 'Tell me your OTP!' Tata smiles: 'Banks never ask OTP. Bye!'",
+          "te": "నకిలీ కాల్: 'ఓటీపీ చెప్పండి!' తాత: 'బ్యాంకులు ఓటీపీ అడగవు. బై!'"
+        },
+        {
+          "title": "Panel 4",
+          "text": "Tata gets money from his son. He just checks the SMS. No scanning, no PIN needed to receive.",
+          "te": "కొడుకు డబ్బు పంపాడు. తాత ఎస్ఎంఎస్ చూశాడు. తీసుకోవడానికి పిన్ అవసరం లేదు."
+        },
+        {
+          "title": "Panel 5",
+          "text": "Tata: 'Digital payment is safe when I keep my PIN secret!' Everyone cheers.",
+          "te": "తాత: 'పిన్ రహస్యంగా ఉంచితే డిజిటల్ చెల్లింపు సురక్షితం!'"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Tata's Quiz",
+      "questions": [
+        {
+          "q": "Can a payment app take money without your PIN?",
+          "options": [
+            "Yes, anytime",
+            "No, a payment needs your PIN"
+          ],
+          "answer": 1,
+          "why": "UPI payments need your secret PIN. Keep it secret."
+        },
+        {
+          "q": "Before paying a shop by QR, what should you check?",
+          "options": [
+            "The shop name shown on the screen",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "Check the name to make sure money goes to the right person."
+        },
+        {
+          "q": "You want to receive money from your son. Do you enter your PIN?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "answer": 1,
+          "why": "PIN is only for sending money."
+        },
+        {
+          "q": "Someone asks your OTP on the phone. You…",
+          "options": [
+            "Tell them",
+            "Cut the call"
+          ],
+          "answer": 1,
+          "why": "Banks never ask for OTP. If cheated, call 1930."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🔐 4 Safe Wallet Rules",
+      "items": [
+        {
+          "icon": "🤫",
+          "title": "Secret PIN",
+          "text": "Never share UPI PIN or OTP.",
+          "te": "యూపీఐ పిన్, ఓటీపీ ఎవరికీ చెప్పవద్దు."
+        },
+        {
+          "icon": "👀",
+          "title": "Check the name",
+          "text": "Look at the receiver's name before paying.",
+          "te": "చెల్లించే ముందు పేరు చూడండి."
+        },
+        {
+          "icon": "📵",
+          "title": "No unknown apps",
+          "text": "Don't install apps a stranger tells you to.",
+          "te": "అపరిచితులు చెప్పిన యాప్‌లు వేయవద్దు."
+        },
+        {
+          "icon": "📞",
+          "title": "Help: 1930",
+          "text": "If cheated, call 1930 quickly.",
+          "te": "మోసపోతే వెంటనే 1930కి ఫోన్ చేయండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini to write a 5-panel comic script about a grandfather learning UPI safety.",
+    "Ask it to keep each line short and give a Telugu version.",
+    "Open Canva and search for 'comic strip' templates.",
+    "Add simple characters, speech bubbles and the lines from Gemini.",
+    "Show the comic to Tata and Dadi and ask if they understood.",
+    "Print it and stick it at the village kirana shop and library."
+  ],
+  "prompt": "I am a Class 8 student. Write a 5-panel comic strip script in simple English and Telugu where a grandson teaches his grandfather how UPI payments work and why they are safe if he keeps his PIN and OTP secret. Include: PIN is only to pay, check the receiver's name, never share OTP, call 1930 if cheated."
+}

@@ -1,0 +1,111 @@
+{
+  "id": 134,
+  "emoji": "💡",
+  "title": "Empty Classroom Light & Fan Saver",
+  "title_te": "ఖాళీ తరగతి గది లైట్ & ఫ్యాన్ సేవర్",
+  "problem": "Classroom ceiling fans and lights keep running for hours when students go out for sports ground practice, wasting electricity.",
+  "idea": "A camera that knows when the classroom is empty. If the room is empty but fans are on, it speaks a reminder to switch off. See how much power we can save.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the classroom camera see?",
+      "intro": "In my real project, Teachable Machine checks the room. Tap what it sees.",
+      "question": "The camera sees:",
+      "options": [
+        {
+          "icon": "👩‍🎓",
+          "label": "Students in class",
+          "result": "Class in progress. Fans and lights are needed.",
+          "te": "తరగతి జరుగుతోంది. ఫ్యాన్లు, లైట్లు అవసరం.",
+          "level": "good"
+        },
+        {
+          "icon": "🪑",
+          "label": "Empty room, fans OFF",
+          "result": "Empty room and power is off. Well done! 🌱",
+          "te": "ఖాళీ గది, కరెంట్ ఆఫ్. చాలా బాగుంది! 🌱",
+          "level": "good"
+        },
+        {
+          "icon": "🌀",
+          "label": "Empty room, fans ON",
+          "result": "Room is empty! Last student, please switch off the fans and lights.",
+          "te": "గది ఖాళీ! చివరి విద్యార్థి, ఫ్యాన్లు, లైట్లు ఆపండి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "🧮 How much power is wasted?",
+      "intro": "Count the fans and lights left on in an empty classroom.",
+      "inputs": [
+        {
+          "id": "fans",
+          "label": "Fans left on",
+          "value": 4
+        },
+        {
+          "id": "lights",
+          "label": "Tube lights left on",
+          "value": 4
+        },
+        {
+          "id": "hours",
+          "label": "Hours on in an empty room each day",
+          "value": 2
+        },
+        {
+          "id": "days",
+          "label": "School days in a month",
+          "value": 24
+        },
+        {
+          "id": "rate",
+          "label": "Cost of 1 unit (₹)",
+          "value": 7
+        }
+      ],
+      "formula": "if (typeof fans !== 'number' || typeof lights !== 'number' || typeof hours !== 'number' || typeof days !== 'number' || typeof rate !== 'number') return null; if (fans < 0 || lights < 0 || hours < 0 || days < 0 || rate < 0) return null; var watts = fans * 75 + lights * 40; var units = watts * hours * days / 1000; var money = units * rate; return {units: units, money: money, year: money * 10, level: units > 10 ? 'bad' : (units > 0 ? 'warn' : 'good')};",
+      "result": "Units wasted per month: {units} (fan ≈ 75 W, tube light ≈ 40 W)\nMoney wasted per month: ₹{money}\nIn a school year (10 months): ₹{year} — for ONE classroom!"
+    },
+    {
+      "type": "cards",
+      "heading": "🌱 Power Saver Habits",
+      "items": [
+        {
+          "icon": "🚪",
+          "title": "Last one out",
+          "text": "The last student out switches off everything.",
+          "te": "చివరగా బయటకు వెళ్ళేవాళ్ళు అన్నీ ఆపాలి."
+        },
+        {
+          "icon": "☀️",
+          "title": "Use daylight",
+          "text": "Open windows in the day instead of switching on lights.",
+          "te": "పగలు లైట్లకు బదులు కిటికీలు తెరవండి."
+        },
+        {
+          "icon": "🏷️",
+          "title": "Switch stickers",
+          "text": "Stick 'Switch off!' labels above the switchboard.",
+          "te": "స్విచ్‌బోర్డు పైన 'ఆపండి!' స్టిక్కర్ అతికించండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "In Teachable Machine (Image Project), make classes: Students present, Empty fans off, Empty fans on. Take about 40 photos of each from the same spot.",
+    "Train, Export and copy the model link.",
+    "In PictoBlox, add the Machine Learning and Text-to-Speech extensions.",
+    "If the class is 'Empty fans on' for more than 1 minute, speak 'Please switch off the fans and lights' in Telugu and English.",
+    "Use the calculator above to show the class how much money is wasted.",
+    "Ask Gemini for energy-saving slogans and stick them near the switchboards."
+  ],
+  "prompt": "I am a Class 8 student. Write 5 short energy-saving slogans in English and Telugu to stick near classroom switchboards, reminding the last student to switch off fans and lights."
+}

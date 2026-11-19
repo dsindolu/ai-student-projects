@@ -1,0 +1,133 @@
+{
+  "id": 147,
+  "emoji": "🥻",
+  "title": "Handloom Saree Weaver Mark Authenticator",
+  "title_te": "చేనేత చీర నేతగాని గుర్తు తనిఖీ",
+  "problem": "Town shoppers confuse cheap powerloom factory sarees with real handwoven sarees, underpaying weaver families who spend weeks on one saree.",
+  "idea": "Show the saree edge to the camera and the screen gives clues: handloom or powerloom? It also reminds shoppers to look for the official handloom labels. Try it below.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What do you notice on the saree?",
+      "intro": "In my real project, Teachable Machine looks at close-up photos of the weave. Tap what you see. (These are clues — the official label is the best proof.)",
+      "question": "Looking closely, I see:",
+      "options": [
+        {
+          "icon": "🏷️",
+          "label": "Handloom Mark / India Handloom Brand label",
+          "result": "Good sign! Official handloom labels are given for genuine handwoven products.",
+          "te": "మంచి సంకేతం! అసలైన చేనేతకు అధికారిక లేబుల్ ఇస్తారు.",
+          "level": "good"
+        },
+        {
+          "icon": "🧶",
+          "label": "Tiny uneven spots in the weave",
+          "result": "Small irregularities are a sign of a human weaver's hands. Likely handloom.",
+          "te": "నేతలో చిన్న తేడాలు చేతి నేతకు సంకేతం.",
+          "level": "good"
+        },
+        {
+          "icon": "🔁",
+          "label": "Design looks the same on both sides",
+          "result": "In handwoven ikat, the pattern shows clearly on both sides. Good clue!",
+          "te": "ఇకత్ చేనేతలో రెండు వైపులా డిజైన్ కనిపిస్తుంది. మంచి సూచన!",
+          "level": "good"
+        },
+        {
+          "icon": "📏",
+          "label": "Perfectly even, machine-like weave",
+          "result": "Too perfect. It may be powerloom. Ask the seller for the handloom label.",
+          "te": "చాలా సమానంగా ఉంది. పవర్‌లూమ్ కావచ్చు. లేబుల్ అడగండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🖨️",
+          "label": "Design printed only on top side",
+          "result": "Printed design! This is not woven ikat.",
+          "te": "పైన మాత్రమే ప్రింట్ చేసిన డిజైన్! ఇది నేసిన ఇకత్ కాదు.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🥻 Famous Telangana handloom sarees",
+      "items": [
+        {
+          "icon": "🔷",
+          "title": "Pochampally Ikat",
+          "text": "Geometric ikat designs from Bhoodan Pochampally.",
+          "te": "భూదాన్ పోచంపల్లి నుండి జ్యామితీయ ఇకత్ డిజైన్లు."
+        },
+        {
+          "icon": "👑",
+          "title": "Gadwal",
+          "text": "Cotton body with a rich silk border, from Gadwal.",
+          "te": "గద్వాల్: నూలు చీరకు పట్టు అంచు."
+        },
+        {
+          "icon": "🌺",
+          "title": "Narayanpet",
+          "text": "Cotton and silk sarees with bold borders, from Narayanpet.",
+          "te": "నారాయణపేట: అందమైన అంచులతో నూలు, పట్టు చీరలు."
+        },
+        {
+          "icon": "💃",
+          "title": "Siddipet Gollabhama",
+          "text": "Sarees with woven motifs of the Gollabhama (milkmaid) figure.",
+          "te": "సిద్దిపేట గొల్లభామ: గొల్లభామ బొమ్మలు నేసిన చీరలు."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "❓ Handloom Quiz",
+      "questions": [
+        {
+          "q": "When is National Handloom Day?",
+          "options": [
+            "7 August",
+            "15 August",
+            "2 October"
+          ],
+          "answer": 0,
+          "why": "National Handloom Day is celebrated on 7 August every year."
+        },
+        {
+          "q": "What is the best proof that a saree is handwoven?",
+          "options": [
+            "Very low price",
+            "Official handloom label and a trusted seller",
+            "Shiny plastic cover"
+          ],
+          "answer": 1,
+          "why": "Look for official handloom labels and buy from weaver cooperatives or trusted shops."
+        },
+        {
+          "q": "Gadwal sarees are known for…",
+          "options": [
+            "Silk border on cotton body",
+            "Plastic threads",
+            "Printed cartoons"
+          ],
+          "answer": 0,
+          "why": "Gadwal sarees often join a cotton body with a silk border."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Visit a weavers' cooperative with a teacher and ask to photograph the edges and back of real handloom sarees.",
+    "Also photograph powerloom and printed sarees (from home or shops, with permission).",
+    "In Teachable Machine, make classes: Handloom, Powerloom, Printed. Use close-up photos (about 40 each).",
+    "Train, Export and open the model in PictoBlox with the Machine Learning extension.",
+    "Show a handloom badge for 'Handloom' and a 'Check the label' warning for others. Never say 100% sure.",
+    "Ask Gemini for simple shopping tips and put them on screen."
+  ],
+  "prompt": "I am a Class 8 student. In simple English and Telugu, give 5 clues to tell a real handwoven saree from a powerloom or printed saree, and explain the official handloom labels in India in simple words."
+}

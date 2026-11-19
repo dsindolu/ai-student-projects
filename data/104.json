@@ -1,0 +1,110 @@
+{
+  "id": 104,
+  "emoji": "🌿",
+  "title": "Old Neem Tree Protection Rules Display",
+  "title_te": "పాత వేప చెట్ల రక్షణ నియమాల ప్రదర్శన",
+  "problem": "Unknown people cut down 50-year-old shady neem trees on our village common land at night to sell the wood illegally.",
+  "idea": "A tree identifier that recognises neem leaves and shows tree protection rules. Tap the leaf the camera sees to try it.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Which leaf is this?",
+      "intro": "In my real project, Teachable Machine recognises the leaf and PictoBlox shows the protection message.",
+      "question": "The camera sees this leaf:",
+      "options": [
+        {
+          "icon": "🌿",
+          "label": "Neem leaf (toothed small leaflets)",
+          "result": "This is a NEEM tree. It gives shade, clean air and medicine. Protect it!",
+          "te": "ఇది వేప చెట్టు. నీడ, మంచి గాలి, ఔషధం ఇస్తుంది. రక్షించండి!",
+          "level": "good"
+        },
+        {
+          "icon": "🍃",
+          "label": "Tamarind leaf (tiny leaflets)",
+          "result": "This is a TAMARIND tree. It is also precious for our village.",
+          "te": "ఇది చింత చెట్టు. ఇది కూడా విలువైనది.",
+          "level": "good"
+        },
+        {
+          "icon": "🪓",
+          "label": "Fresh cut stump",
+          "result": "A tree has been cut! Note the place and time and tell the Panchayat secretary or forest office.",
+          "te": "చెట్టు నరికారు! పంచాయతీ కార్యదర్శి లేదా అటవీ శాఖకు చెప్పండి.",
+          "level": "bad",
+          "tip": "Don't argue with the people cutting. Stay safe and tell elders."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Tree Protection Rules",
+      "items": [
+        {
+          "icon": "📜",
+          "title": "Permission needed",
+          "text": "In Telangana, cutting trees needs permission from officials under the WALTA Act.",
+          "te": "తెలంగాణలో వాల్టా చట్టం ప్రకారం చెట్లు నరకడానికి అనుమతి అవసరం."
+        },
+        {
+          "icon": "🏛️",
+          "title": "Common land belongs to all",
+          "text": "Trees on village common land belong to the whole village, not to one person.",
+          "te": "ఉమ్మడి భూమిలోని చెట్లు గ్రామం అందరివీ."
+        },
+        {
+          "icon": "📞",
+          "title": "Report it",
+          "text": "Tell the Panchayat secretary or the forest office if you see illegal cutting.",
+          "te": "అక్రమ నరికివేత చూస్తే అధికారులకు చెప్పండి."
+        },
+        {
+          "icon": "🌱",
+          "title": "Plant more",
+          "text": "For every tree, plant and care for new saplings.",
+          "te": "ప్రతి చెట్టుకు కొత్త మొక్కలు నాటండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Neem Quiz",
+      "questions": [
+        {
+          "q": "What should you do if you see someone cutting trees at night?",
+          "options": [
+            "Fight them",
+            "Stay safe and tell the Panchayat or forest office",
+            "Take the wood"
+          ],
+          "answer": 1,
+          "why": "Your safety comes first. Officials can take action."
+        },
+        {
+          "q": "Which is a gift of the neem tree?",
+          "options": [
+            "Shade and medicine",
+            "Plastic",
+            "Petrol"
+          ],
+          "answer": 0,
+          "why": "Neem gives shade, cleaner air, and is used in traditional medicine."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Collect leaves of neem, tamarind and other village trees.",
+    "In Teachable Machine (Image Project), make one class per leaf and take 50 photos of each.",
+    "Train, Export and copy the model link.",
+    "In PictoBlox, load the model and show the tree's name and a protection rule.",
+    "Ask Gemini to explain tree protection rules in simple words, and check them with your teacher.",
+    "Show the project at a Gram Sabha meeting."
+  ],
+  "prompt": "I am a Class 8 student in Telangana. Explain in simple English and Telugu why old neem trees are important for a village and what villagers can do to stop illegal tree cutting on common land."
+}

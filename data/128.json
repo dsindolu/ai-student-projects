@@ -1,0 +1,123 @@
+{
+  "id": 128,
+  "emoji": "🍳",
+  "title": "Cooking Oil Reuse Safety Checker for Mess",
+  "title_te": "మెస్‌లో వంట నూనె మళ్ళీ వాడకం భద్రతా చెకర్",
+  "problem": "Re-using deep-frying oil 4 or 5 times in hostel kitchens turns the oil thick and black, giving students throat irritation and stomach upset.",
+  "idea": "An oil checker for our mess cooks. The camera looks at the oil colour and says if it is still OK or must be thrown away. Try it, and use the checklist before every frying.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What colour is the frying oil?",
+      "intro": "In my real project, Teachable Machine looks at a spoonful of oil in a white bowl. Tap what the camera sees.",
+      "question": "The oil in the bowl looks:",
+      "options": [
+        {
+          "icon": "🟡",
+          "label": "Fresh golden",
+          "result": "Fresh oil. Safe to use.",
+          "te": "తాజా నూనె. వాడవచ్చు.",
+          "level": "good"
+        },
+        {
+          "icon": "🟠",
+          "label": "Slightly darker",
+          "result": "Used before. You may use it once more, then replace it.",
+          "te": "ఇంతకు ముందు వాడారు. ఇంకొక్కసారి మాత్రమే, తర్వాత మార్చండి.",
+          "level": "warn",
+          "tip": "Do not reuse frying oil more than 2–3 times."
+        },
+        {
+          "icon": "⚫",
+          "label": "Dark, thick or foamy",
+          "result": "STOP! This oil is burnt. Throw it away and use fresh oil.",
+          "te": "ఆపండి! ఈ నూనె మాడిపోయింది. పారేసి కొత్త నూనె వాడండి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Throw the oil away if ANY of these is true",
+      "intro": "Tick the signs you see. Even one tick means: change the oil.",
+      "items": [
+        {
+          "text": "Already used 3 times for frying",
+          "te": "ఇప్పటికే 3 సార్లు వేయించడానికి వాడారు"
+        },
+        {
+          "text": "Colour is dark brown or black",
+          "te": "రంగు నల్లగా లేదా ముదురు గోధుమగా ఉంది"
+        },
+        {
+          "text": "Oil has become thick and sticky",
+          "te": "నూనె చిక్కగా, జిగటగా అయింది"
+        },
+        {
+          "text": "Lots of smoke even at low heat",
+          "te": "తక్కువ మంటలో కూడా చాలా పొగ వస్తోంది"
+        },
+        {
+          "text": "Foam on top or bad smell",
+          "te": "పైన నురుగు లేదా చెడు వాసన"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.2,
+          "text": "Change the oil now. Do not use it for food.",
+          "level": "bad"
+        },
+        {
+          "min": 0,
+          "text": "No bad signs. Oil is OK — keep counting the uses.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Safe Frying Tips (FSSAI advice)",
+      "items": [
+        {
+          "icon": "🔢",
+          "title": "Count the uses",
+          "text": "Use frying oil at most 2–3 times. Keep a tally on the kitchen wall.",
+          "te": "వేయించిన నూనె 2–3 సార్ల కంటే ఎక్కువ వాడవద్దు."
+        },
+        {
+          "icon": "🧺",
+          "title": "Filter and store",
+          "text": "Filter used oil through a clean cloth and keep it covered.",
+          "te": "వాడిన నూనెను గుడ్డతో వడకట్టి మూత పెట్టండి."
+        },
+        {
+          "icon": "🥘",
+          "title": "Use leftover for curry",
+          "text": "Slightly used oil is better for curries than for more deep frying, and use it up within 1–2 days.",
+          "te": "కొంచెం వాడిన నూనెను కూరల్లో 1–2 రోజుల్లో వాడేయండి."
+        },
+        {
+          "icon": "🚫",
+          "title": "Never top up",
+          "text": "Do not mix fresh oil into old burnt oil.",
+          "te": "పాత మాడిన నూనెలో కొత్త నూనె కలపవద్దు."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "With the mess cook's help, take a spoon of oil from each frying round and pour it into a small white bowl.",
+    "In Teachable Machine, make 3 classes: Fresh, Used once or twice, Burnt. Take about 30 photos each in the same light.",
+    "Train, Export and copy the model link into PictoBlox's Machine Learning extension.",
+    "Make PictoBlox say the result in Telugu out loud for the cook.",
+    "Stick a tally chart near the stove: one line every time the oil is used for frying.",
+    "Ask Gemini for FSSAI tips on oil reuse and make a small poster for the kitchen."
+  ],
+  "prompt": "I am a Class 8 student helping my hostel mess. In simple English and Telugu, explain how many times frying oil can be reused safely, the signs that it must be thrown away, and why burnt oil is bad for health. Keep it short for a kitchen poster."
+}

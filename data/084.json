@@ -1,0 +1,48 @@
+{
+  "id": 84,
+  "emoji": "💡",
+  "title": "Online Complaint Assistant for Broken Streetlights",
+  "title_te": "పాడైన వీధి దీపాల కోసం ఆన్‌లైన్ ఫిర్యాదు సహాయకుడు",
+  "problem": "Dark streetlights remain broken for months because villagers think they must travel to town offices just to inform someone about a fused bulb.",
+  "idea": "A complaint helper. It shows how to write a short, clear complaint with Gemini and send it without travelling to town. The checklist makes sure the complaint has all details.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "📲 Report a Broken Streetlight",
+      "items": [
+        {"title": "Note the details", "text": "Write the pole number (if any), street name and since when it is off.", "te": "స్తంభం నంబర్, వీధి పేరు, ఎప్పటి నుండి వెలగడం లేదో రాయండి."},
+        {"title": "Take a photo", "text": "Take a photo of the pole in daytime and one at night.", "te": "పగలు, రాత్రి స్తంభం ఫోటో తీయండి."},
+        {"title": "Write with Gemini", "text": "Ask Gemini to write a short polite complaint in Telugu and English.", "te": "జెమినితో చిన్న మర్యాదపూర్వక ఫిర్యాదు రాయించండి."},
+        {"title": "Send it", "text": "Give it to the Gram Panchayat Secretary, or ask at the Panchayat office about the official online grievance option.", "te": "పంచాయతీ కార్యదర్శికి ఇవ్వండి, లేదా అధికారిక ఆన్‌లైన్ ఫిర్యాదు మార్గం గురించి అడగండి."},
+        {"title": "Follow up", "text": "Keep the complaint number or a received copy. Ask again after one week if not fixed.", "te": "ఫిర్యాదు నంబర్ ఉంచుకోండి. వారం తర్వాత మళ్ళీ అడగండి."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Does Our Complaint Have Everything?",
+      "items": [
+        {"text": "Village and street name", "te": "ఊరు, వీధి పేరు"},
+        {"text": "Pole number or nearby landmark", "te": "స్తంభం నంబర్ లేదా దగ్గరి గుర్తు"},
+        {"text": "Since when the light is off", "te": "ఎప్పటి నుండి లైటు వెలగడం లేదు"},
+        {"text": "Why it is dangerous (children, women, snakes)", "te": "ఎందుకు ప్రమాదం (పిల్లలు, మహిళలు, పాములు)"},
+        {"text": "Photo attached", "te": "ఫోటో జత చేశాం"},
+        {"text": "Name and phone number of person complaining", "te": "ఫిర్యాదు చేసే వారి పేరు, ఫోన్ నంబర్"}
+      ],
+      "bands": [
+        {"min": 1, "text": "Complete complaint! Send it now.", "level": "good"},
+        {"min": 0.5, "text": "Add the missing details so the office can act fast.", "level": "warn"},
+        {"min": 0, "text": "Too few details. The office may not find the pole.", "level": "bad"}
+      ]
+    }
+  ],
+  "tools": ["Google Lens", "Gemini"],
+  "how": [
+    "Use Google Lens to scan the paper grievance form from the Panchayat office and read it in Telugu.",
+    "Walk the street with elders and list every broken light with landmarks.",
+    "Ask Gemini to turn our notes into a short, polite complaint.",
+    "Ask the Panchayat Secretary which official online or written method to use.",
+    "Help elders send the complaint and save the complaint number.",
+    "Make a small list on paper to track which lights got fixed."
+  ],
+  "prompt": "I am a Class 8 student. Write a short, polite complaint (under 80 words) to the Gram Panchayat about a broken streetlight. Details: [street name, pole number / landmark, off since date, danger to children at night]. Give it in English and simple Telugu."
+}

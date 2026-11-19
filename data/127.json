@@ -1,0 +1,103 @@
+{
+  "id": 127,
+  "emoji": "👔",
+  "title": "Morning Assembly Uniform & Badge Kiosk",
+  "title_te": "ఉదయం ప్రార్థన యూనిఫామ్ & బ్యాడ్జ్ కియోస్క్",
+  "problem": "Students line up for morning prayer missing house badges or wearing dirty shoes, and get scolded in front of the whole school assembly.",
+  "idea": "A friendly uniform check mirror before assembly. The camera checks ID card, belt and tie, and shows a green tick or a gentle reminder. Try it and do your own uniform check.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the kiosk camera see?",
+      "intro": "In my real project, Teachable Machine checks the uniform. Tap what the camera sees.",
+      "question": "The student in front of the kiosk has:",
+      "options": [
+        {
+          "icon": "✅",
+          "label": "Full uniform",
+          "result": "Green tick! ID card, belt and tie all present. Have a great day!",
+          "te": "ఆకుపచ్చ టిక్! ఐడీ కార్డు, బెల్ట్, టై అన్నీ ఉన్నాయి. శుభదినం!",
+          "level": "good"
+        },
+        {
+          "icon": "🪪",
+          "label": "No ID card",
+          "result": "Oops, ID card is missing. Please go and wear it before prayer.",
+          "te": "అయ్యో, ఐడీ కార్డు లేదు. ప్రార్థనకు ముందు వేసుకోండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "👟",
+          "label": "Dirty shoes",
+          "result": "Your shoes need a quick clean. Use the cloth near the door.",
+          "te": "బూట్లు కొంచెం శుభ్రం చేయాలి. తలుపు దగ్గర గుడ్డ ఉంది.",
+          "level": "warn"
+        },
+        {
+          "icon": "👔",
+          "label": "No tie",
+          "result": "Tie is missing. Please wear your tie and come back.",
+          "te": "టై లేదు. టై వేసుకుని రండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ My 1-minute uniform check",
+      "items": [
+        {
+          "text": "ID card around my neck",
+          "te": "మెడలో ఐడీ కార్డు"
+        },
+        {
+          "text": "House badge pinned",
+          "te": "హౌస్ బ్యాడ్జ్ పెట్టుకున్నాను"
+        },
+        {
+          "text": "Belt and tie on",
+          "te": "బెల్ట్, టై వేసుకున్నాను"
+        },
+        {
+          "text": "Clean shoes and socks",
+          "te": "శుభ్రమైన బూట్లు, సాక్సులు"
+        },
+        {
+          "text": "Hair combed, nails cut",
+          "te": "జుట్టు దువ్వుకున్నాను, గోళ్ళు కత్తిరించాను"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Ready for assembly! 🌟",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Almost ready. Fix the rest quickly.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Get ready step by step. You still have time.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Canva"
+  ],
+  "how": [
+    "In Teachable Machine (Image Project), make classes: Full uniform, No ID card, No tie, Dirty shoes. Ask friends to pose for about 40 photos each.",
+    "Train the model, Export it and copy the link.",
+    "In PictoBlox, add the Machine Learning extension and paste the link.",
+    "When 'Full uniform' is seen, show a big green tick and play a happy sound. For other classes, show a kind reminder.",
+    "Place the laptop near the dorm door 10 minutes before assembly.",
+    "Make a small uniform checklist poster in Canva to stick next to the mirror."
+  ],
+  "prompt": "I am a Class 8 student. Write 5 short, kind reminder messages in English and Telugu for a uniform check kiosk (missing ID card, no tie, dirty shoes, no badge, all correct). They should not shame anyone."
+}

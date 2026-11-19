@@ -1,0 +1,119 @@
+{
+  "id": 29,
+  "emoji": "🤰",
+  "title": "Daily Folic Acid Tablet Voice Alarm for Pregnant Women",
+  "title_te": "గర్భిణీల కోసం రోజువారీ ఫోలిక్ యాసిడ్ మాత్ర గుర్తు",
+  "problem": "Pregnant aunties in our neighborhood forget to take their daily iron tablets because they are busy cooking and fetching water all day.",
+  "idea": "A daily Telugu voice reminder in Scratch and a printable tablet tracker. Here you can tick the days you remembered. Always take tablets exactly as the doctor or ANM said.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "✅ This Week's Tablet Tracker",
+      "intro": "Tick each day the tablet was taken, as the doctor or ANM advised.",
+      "items": [
+        {
+          "text": "Monday",
+          "te": "సోమవారం"
+        },
+        {
+          "text": "Tuesday",
+          "te": "మంగళవారం"
+        },
+        {
+          "text": "Wednesday",
+          "te": "బుధవారం"
+        },
+        {
+          "text": "Thursday",
+          "te": "గురువారం"
+        },
+        {
+          "text": "Friday",
+          "te": "శుక్రవారం"
+        },
+        {
+          "text": "Saturday",
+          "te": "శనివారం"
+        },
+        {
+          "text": "Sunday",
+          "te": "ఆదివారం"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "All 7 days! Great care for mother and baby.",
+          "level": "good"
+        },
+        {
+          "min": 0.7,
+          "text": "Good! Try not to miss any day next week.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Many days missed. Set the voice alarm and ask the ANM for help.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Tablet Tips Quiz",
+      "questions": [
+        {
+          "q": "Who decides how many tablets to take?",
+          "options": [
+            "Neighbours",
+            "The doctor or ANM",
+            "Anyone"
+          ],
+          "answer": 1,
+          "why": "Always follow the doctor or ANM. Never change the amount yourself."
+        },
+        {
+          "q": "A tablet was forgotten yesterday. What should she do?",
+          "options": [
+            "Take two today without asking",
+            "Ask the ANM or doctor what to do"
+          ],
+          "answer": 1,
+          "why": "Don't double up on your own. Ask the health worker."
+        },
+        {
+          "q": "What helps her remember every day?",
+          "options": [
+            "Same time daily with a voice alarm",
+            "Only when she feels like it"
+          ],
+          "answer": 0,
+          "why": "Taking it at the same time daily, with a reminder, builds the habit."
+        },
+        {
+          "q": "The tablet makes her feel sick. What should she do?",
+          "options": [
+            "Stop quietly",
+            "Tell the ANM or doctor"
+          ],
+          "answer": 1,
+          "why": "The health worker can give advice. Don't stop without telling them."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Canva",
+    "Gemini"
+  ],
+  "how": [
+    "Ask Gemini to write a short, kind Telugu reminder like 'Akka, it's time for your tablet. Take it as the doctor said.'",
+    "Record the message in Scratch using the Sound tab, or use the Text to Speech extension.",
+    "Make a big button sprite and a timer that plays the message at the time she chooses.",
+    "Open Canva and design a monthly tracker with tablet pictures and tick boxes.",
+    "Print the tracker and stick it near the kitchen.",
+    "Check the message with the ANM or ASHA worker before sharing."
+  ],
+  "prompt": "I am a Class 8 student. Write 3 short, kind voice reminder messages in simple Telugu and English to remind pregnant women to take their daily tablet as advised by their doctor or ANM. Do not mention any dose."
+}

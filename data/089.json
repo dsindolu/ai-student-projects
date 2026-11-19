@@ -1,0 +1,58 @@
+{
+  "id": 89,
+  "emoji": "👴",
+  "title": "Senior Citizen Bus Pass & Hospital Concession Guide",
+  "title_te": "వృద్ధులకు బస్ పాస్ & ఆసుపత్రి రాయితీ గైడ్",
+  "problem": "My grandfather pays full ticket fare on RTC buses because he does not know that senior citizens get discounts with an official age proof card.",
+  "idea": "A large-font guide for Thatha. A calculator shows how much he could save with a senior citizen concession, and a checklist shows what to carry. The discount amount is editable because rules can change.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 How Much Can Thatha Save?",
+      "intro": "Enter the discount the RTC depot tells you. The 25% below is only a sample – confirm the current rule at the bus depot.",
+      "inputs": [
+        {"id": "fare", "label": "Normal one-way ticket (₹)", "value": 60},
+        {"id": "trips", "label": "One-way trips in a month", "value": 8},
+        {"id": "disc", "label": "Senior citizen discount (%) – confirm at depot", "value": 25}
+      ],
+      "formula": "if ([fare, trips, disc].some(function(x){return typeof x !== 'number' || x < 0;}) || disc > 100) return null; var save = fare * trips * disc / 100; return {pay: Math.round(fare * (1 - disc / 100)), month: Math.round(save), year: Math.round(save * 12), level: 'good'};",
+      "result": "Ticket with discount: ₹{pay}\nSaved in a month: ₹{month}\nSaved in a year: ₹{year}"
+    },
+    {
+      "type": "checklist",
+      "heading": "🎒 Thatha's Travel & Hospital Bag",
+      "items": [
+        {"text": "Age proof / ID card (Aadhaar or senior citizen card)", "te": "వయస్సు ధృవపత్రం / గుర్తింపు కార్డు (ఆధార్ లేదా సీనియర్ సిటిజన్ కార్డు)"},
+        {"text": "Copy of ID in his pocket", "te": "జేబులో గుర్తింపు కార్డు కాపీ"},
+        {"text": "Health card / Aarogyasri card (if he has one)", "te": "హెల్త్ కార్డు / ఆరోగ్యశ్రీ కార్డు (ఉంటే)"},
+        {"text": "Old prescriptions and medicine list", "te": "పాత ప్రిస్క్రిప్షన్లు, మందుల జాబితా"},
+        {"text": "Family phone number written on paper", "te": "కుటుంబ ఫోన్ నంబర్ కాగితంపై"},
+        {"text": "Water bottle and reading glasses", "te": "నీళ్ళ సీసా, కళ్ళజోడు"}
+      ],
+      "bands": [
+        {"min": 1, "text": "Thatha is ready to travel and save!", "level": "good"},
+        {"min": 0.5, "text": "Add the missing items before he leaves.", "level": "warn"},
+        {"min": 0, "text": "Pack the ID card first – it's the most important.", "level": "bad"}
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "💡 Useful Tips for Elders",
+      "items": [
+        {"icon": "🚌", "title": "Ask the conductor", "text": "Show the age proof and ask if a senior citizen concession applies on this bus.", "te": "వయస్సు ధృవపత్రం చూపించి రాయితీ ఉందా అని కండక్టర్‌ని అడగండి."},
+        {"icon": "🏥", "title": "Hospital help desk", "text": "In government hospitals, ask the help desk about a separate line for elders.", "te": "ప్రభుత్వ ఆసుపత్రిలో వృద్ధుల కోసం వేరే క్యూ ఉందా అని అడగండి."},
+        {"icon": "📞", "title": "Emergency", "text": "Call 108 for an ambulance.", "te": "అంబులెన్స్ కోసం 108 కి ఫోన్ చేయండి."}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Ask Gemini about general senior citizen benefits for bus travel and hospitals in Telangana.",
+    "Visit the nearest RTC bus depot and a government hospital help desk to confirm the real rules.",
+    "Open Canva and choose a small booklet (A5) template.",
+    "Use very large Telugu letters, one tip per page, with pictures.",
+    "Add the savings example and the 'what to carry' list.",
+    "Print copies and give them to elders at the village temple or Panchayat meeting."
+  ],
+  "prompt": "I am a Class 8 student. In very simple Telugu with large-font style short lines, list general benefits senior citizens (60+) in Telangana can ask about for bus travel and government hospitals. Do not give exact discount amounts. Tell them to confirm at the RTC depot and hospital help desk."
+}

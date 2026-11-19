@@ -1,0 +1,97 @@
+{
+  "id": 97,
+  "emoji": "🐄",
+  "title": "Cow Dung Manure Readiness Scanner",
+  "title_te": "పేడ ఎరువు సిద్ధమైందా? – స్కానర్",
+  "problem": "Abba puts raw wet cow dung directly on young vegetable plants. It attracts harmful grubs that eat away the plant roots.",
+  "idea": "A manure checker. Show the manure to the camera and it says if it is ready for the field or needs more time. Tap what the camera sees to try it.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Is the manure ready?",
+      "intro": "In my real project, Teachable Machine looks at photos of the manure pit. Tap what the camera sees.",
+      "question": "The camera sees this manure:",
+      "options": [
+        {
+          "icon": "🟤",
+          "label": "Dark, crumbly, earthy smell",
+          "result": "READY! This manure is fully rotted. You can put it on the plants.",
+          "te": "ఎరువు సిద్ధం! మొక్కలకు వేయవచ్చు.",
+          "level": "good"
+        },
+        {
+          "icon": "🟫",
+          "label": "Half-dry, some lumps",
+          "result": "Almost ready. Mix it and wait 2 or 3 more weeks.",
+          "te": "దాదాపు సిద్ధం. కలిపి 2–3 వారాలు ఆగండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "💩",
+          "label": "Fresh, wet, smelly dung",
+          "result": "NOT READY! Raw dung attracts grubs and burns young roots. Put it in the pit.",
+          "te": "సిద్ధం కాలేదు! పచ్చి పేడ వేర్లకు హాని చేస్తుంది. గుంతలో వేయండి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Manure ready test",
+      "intro": "Check the manure with Abba and tick what is true.",
+      "items": [
+        {
+          "text": "Colour is dark brown or black",
+          "te": "రంగు ముదురు గోధుమ లేదా నలుపు"
+        },
+        {
+          "text": "It smells like soil, not bad",
+          "te": "మట్టి వాసన వస్తోంది, చెడు వాసన లేదు"
+        },
+        {
+          "text": "It breaks into small crumbs in the hand",
+          "te": "చేతిలో పొడిపొడిగా విడిపోతుంది"
+        },
+        {
+          "text": "It is not hot inside",
+          "te": "లోపల వేడిగా లేదు"
+        },
+        {
+          "text": "It has rested in the pit for about 3 months or more",
+          "te": "సుమారు 3 నెలలు గుంతలో ఉంది"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Fully ready! Use it for your vegetables. 🌱",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Nearly ready. Wait a few more weeks.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Not ready. Keep it in the pit and turn it sometimes.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Take photos of manure in your village: fresh dung, half-rotted and fully ready.",
+    "In Teachable Machine (Image Project), make 3 classes and upload about 40 photos each.",
+    "Train the model and Export the link.",
+    "In PictoBlox, add the Machine Learning extension and paste the link.",
+    "Show a green 'READY' message or a red 'WAIT' message for each class.",
+    "Ask Gemini how farmers can make good manure faster, and share the tips with Abba."
+  ],
+  "prompt": "I am a Class 8 student from a farming family. Explain in simple English and Telugu why raw cow dung should not be put on young vegetable plants, and how to tell when farmyard manure is fully ready."
+}

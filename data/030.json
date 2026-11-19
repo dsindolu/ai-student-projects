@@ -1,0 +1,130 @@
+{
+  "id": 30,
+  "emoji": "⚠️",
+  "title": "Farm Chemical Bottle Warning Card",
+  "title_te": "పురుగుమందుల సీసా హెచ్చరిక కార్డు",
+  "problem": "Farmers leave pesticide bottles near house backyards, and small kids touch them out of curiosity without knowing how dangerous they are.",
+  "idea": "Big warning posters about farm chemicals. Google Lens reads the chemical name, Gemini writes emergency safety steps, and Canva makes the poster. Here you can learn the coloured danger triangle on pesticide labels.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the label triangle mean?",
+      "intro": "Pesticide labels in India have a coloured diamond/triangle that shows how poisonous the chemical is. Tap a colour. Remember: ALL of them are dangerous for children.",
+      "question": "The bottle label has this colour mark:",
+      "options": [
+        {
+          "icon": "🔴",
+          "label": "Red",
+          "result": "Extremely toxic! The most dangerous. Lock it away.",
+          "te": "అత్యంత విషపూరితం! తాళం వేసి పెట్టండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🟡",
+          "label": "Yellow",
+          "result": "Highly toxic! Very dangerous. Keep far from children.",
+          "te": "చాలా విషపూరితం! పిల్లలకు దూరంగా ఉంచండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🔵",
+          "label": "Blue",
+          "result": "Moderately toxic. Still poison. Keep locked away.",
+          "te": "మధ్యస్థ విషం. అయినా విషమే. దూరంగా ఉంచండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🟢",
+          "label": "Green",
+          "result": "Slightly toxic. Still NOT safe for children or food.",
+          "te": "తక్కువ విషం. అయినా పిల్లలకు, ఆహారానికి సురక్షితం కాదు.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🚨 Emergency and Safety Card",
+      "items": [
+        {
+          "icon": "🔒",
+          "title": "Lock it away",
+          "text": "Keep pesticides in a locked box, high up, away from the house and food.",
+          "te": "పురుగుమందులను తాళం వేసిన పెట్టెలో, ఎత్తులో ఉంచండి."
+        },
+        {
+          "icon": "🧤",
+          "title": "Wear protection",
+          "text": "Use gloves, a mask and full clothes while spraying. Wash after.",
+          "te": "పిచికారీ చేసేటప్పుడు గ్లౌజులు, మాస్క్ వాడండి."
+        },
+        {
+          "icon": "🚑",
+          "title": "If swallowed: call 108",
+          "text": "Rush to the hospital and take the bottle or label to show the doctor.",
+          "te": "మింగితే 108కి ఫోన్ చేసి, సీసాతో ఆసుపత్రికి వెళ్ళండి."
+        },
+        {
+          "icon": "🚿",
+          "title": "On skin or eyes",
+          "text": "Remove wet clothes and wash with lots of clean water, then go to the doctor.",
+          "te": "చర్మం లేదా కళ్ళపై పడితే నీటితో బాగా కడిగి, డాక్టర్‌ దగ్గరికి వెళ్ళండి."
+        },
+        {
+          "icon": "🚫",
+          "title": "Never reuse bottles",
+          "text": "Empty pesticide bottles must never be used for water, oil or food.",
+          "te": "ఖాళీ పురుగుమందు సీసాలను నీళ్ళకు, నూనెకు వాడవద్దు."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Farm Chemical Safety Quiz",
+      "questions": [
+        {
+          "q": "A child drank something from a pesticide bottle. What first?",
+          "options": [
+            "Wait and watch",
+            "Call 108 and rush to hospital with the bottle",
+            "Give home remedies"
+          ],
+          "answer": 1,
+          "why": "Every minute matters. The bottle helps the doctor know the poison."
+        },
+        {
+          "q": "Is a green-label pesticide safe for kids?",
+          "options": [
+            "Yes",
+            "No, all pesticides are poison"
+          ],
+          "answer": 1,
+          "why": "Green means less toxic, not safe."
+        },
+        {
+          "q": "Can we store drinking water in an empty pesticide bottle after washing it?",
+          "options": [
+            "Yes",
+            "Never"
+          ],
+          "answer": 1,
+          "why": "Chemicals stay in the bottle even after washing."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "With an adult (and gloves), look at the pesticide bottles. Don't open them.",
+    "Use Google Lens to read and copy the chemical name, the coloured mark and the warnings.",
+    "Paste into Gemini and ask for simple emergency and safety steps in Telugu and English.",
+    "Check the steps with the agriculture officer, PHC staff or science teacher.",
+    "Open Canva and design a big poster with a skull, '108', and the do's and don'ts.",
+    "Print it and stick it near the farm store room and at the village rythu vedika or Panchayat."
+  ],
+  "prompt": "I am a Class 8 student. Here is the text from a pesticide bottle label: [paste text]. In simple English and Telugu, write a short warning card for village families: how to store it safely, what to do if a child swallows it or it touches skin or eyes (call 108, go to hospital with the bottle), and why empty bottles must never be reused."
+}

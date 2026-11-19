@@ -1,0 +1,128 @@
+{
+  "id": 31,
+  "emoji": "🐛",
+  "title": "Pink Bollworm Detector for Cotton Leaves",
+  "title_te": "పత్తి ఆకుల్లో గులాబీ రంగు పురుగు గుర్తింపు",
+  "problem": "Abba comes home sad when tiny pink worms destroy our cotton crop, taking away our main family income for the whole year.",
+  "idea": "A cotton checker. Abba shows a cotton flower or boll to the camera, and the helper says if it looks healthy or attacked by pink bollworm, and what safe step to take next. Here you can try it by tapping what the camera sees.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the camera see in the cotton field?",
+      "intro": "In my real project, Teachable Machine looks at the photo. Pink bollworm mostly hides inside flowers and bolls, so we check those, not only leaves.",
+      "question": "Abba shows this to the camera:",
+      "options": [
+        {
+          "icon": "🌼",
+          "label": "Open, normal flower",
+          "result": "Healthy flower. Keep checking the field two times a week.",
+          "te": "ఆరోగ్యకరమైన పువ్వు. వారానికి రెండుసార్లు పొలం చూడండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🌹",
+          "label": "Twisted 'rosette' flower",
+          "result": "Warning! A flower that stays closed and twisted like a rose may have a pink worm inside. Pluck it and destroy it.",
+          "te": "జాగ్రత్త! గులాబీలా ముడుచుకున్న పువ్వులో పురుగు ఉండవచ్చు. దాన్ని తెంపి నాశనం చేయండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🕳️",
+          "label": "Boll with a small hole",
+          "result": "Pink bollworm attack! Show this boll to the Agriculture Extension Officer or Rythu Vedika today.",
+          "te": "గులాబీ రంగు పురుగు దాడి! ఈ కాయను ఈరోజే వ్యవసాయ విస్తరణ అధికారికి / రైతు వేదికకు చూపించండి.",
+          "level": "bad",
+          "tip": "Do not buy any spray before asking the officer. Wrong sprays waste money."
+        },
+        {
+          "icon": "🟢",
+          "label": "Green healthy boll",
+          "result": "Healthy boll. Good work! Keep the field clean.",
+          "te": "ఆరోగ్యకరమైన కాయ. పొలాన్ని శుభ్రంగా ఉంచండి.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Safe Steps Against Pink Bollworm",
+      "items": [
+        {
+          "icon": "🪤",
+          "title": "Pheromone traps",
+          "text": "Put pheromone traps in the field. If many moths are caught, tell the officer.",
+          "te": "పొలంలో ఫెరోమోన్ ట్రాప్‌లు పెట్టండి. ఎక్కువ పురుగులు పడితే అధికారికి చెప్పండి."
+        },
+        {
+          "icon": "✂️",
+          "title": "Remove rosette flowers",
+          "text": "Pluck twisted flowers and damaged bolls and destroy them.",
+          "te": "ముడుచుకున్న పువ్వులు, పాడైన కాయలు తీసి నాశనం చేయండి."
+        },
+        {
+          "icon": "🧹",
+          "title": "Clean after harvest",
+          "text": "Do not leave old cotton stalks and bolls in the field for months.",
+          "te": "పంట తర్వాత పాత పత్తి కట్టెలు పొలంలో ఉంచవద్దు."
+        },
+        {
+          "icon": "👨‍🌾",
+          "title": "Ask the expert",
+          "text": "For any spray, ask the Agriculture Extension Officer or Rythu Vedika first.",
+          "te": "ఏ మందు చల్లాలన్నా ముందు వ్యవసాయ అధికారిని అడగండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "Where does the pink bollworm mostly hide?",
+          "options": [
+            "On the roots",
+            "Inside flowers and bolls",
+            "In the soil water"
+          ],
+          "answer": 1,
+          "why": "The small pink worm eats inside flowers and bolls, so we must open and check them."
+        },
+        {
+          "q": "A flower looks twisted like a closed rose. What should we do?",
+          "options": [
+            "Leave it",
+            "Pluck it and destroy it",
+            "Water it more"
+          ],
+          "answer": 1,
+          "why": "Rosette flowers often hide a worm. Removing them stops it spreading."
+        },
+        {
+          "q": "Who should we ask before buying a spray?",
+          "options": [
+            "The shopkeeper only",
+            "Agriculture Extension Officer / Rythu Vedika",
+            "Nobody"
+          ],
+          "answer": 1,
+          "why": "The officer gives free, correct advice and saves money."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Open teachablemachine.withgoogle.com and choose Image Project.",
+    "Make classes: Healthy flower, Rosette flower, Damaged boll, Healthy boll. Add about 50 clear photos to each class (from our field or from the Agriculture Officer's pictures).",
+    "Click Train Model. Test it with new photos it has never seen.",
+    "Click Export, upload the model and copy the shareable link.",
+    "In PictoBlox, add the Machine Learning extension and paste the link.",
+    "Add 'when class is Damaged boll' → say the warning in Telugu with Text-to-Speech.",
+    "Ask Gemini to write the safe steps in simple Telugu and check them with the Agriculture Officer."
+  ],
+  "prompt": "I am a Class 8 student from a cotton farming village in Telangana. Explain in very simple English and Telugu how a farmer can spot pink bollworm in cotton flowers and bolls, and give 5 safe, low-cost steps to control it without chemicals. Tell farmers to ask the Agriculture Extension Officer before using any spray."
+}

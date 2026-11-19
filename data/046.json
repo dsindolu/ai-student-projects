@@ -1,0 +1,148 @@
+{
+  "id": 46,
+  "emoji": "🏧",
+  "title": "Hiding Your PIN at the ATM Kiosk",
+  "title_te": "ఏటీఎంలో మీ పిన్‌ను దాచుకోవడం",
+  "problem": "Elders in our village feel nervous standing inside town ATM centres and often ask strangers to press secret PIN keys for them.",
+  "idea": "A small game that teaches elders how to use an ATM safely: cover the keypad with one hand, never tell the PIN, and never take help from strangers.",
+  "widgets": [
+    {
+      "type": "quiz",
+      "heading": "🎮 Try it: ATM Safety Game",
+      "questions": [
+        {
+          "q": "You are typing your PIN. What should your other hand do?",
+          "options": [
+            "Wave to people",
+            "Cover the keypad",
+            "Hold the door open"
+          ],
+          "answer": 1,
+          "why": "Covering the keypad stops people and hidden cameras from seeing your PIN."
+        },
+        {
+          "q": "A kind stranger says, 'Tell me your PIN, I will help you'. What do you do?",
+          "options": [
+            "Tell him",
+            "Say NO and ask the bank guard or your family"
+          ],
+          "answer": 1,
+          "why": "Never share your PIN with anyone, not even a helpful person."
+        },
+        {
+          "q": "The card gets stuck in the machine. A man says, 'Type PIN again, it will come'.",
+          "options": [
+            "Type it again",
+            "Call the bank helpline number shown on the ATM / card"
+          ],
+          "answer": 1,
+          "why": "This is a common trick. Call the official bank helpline only."
+        },
+        {
+          "q": "Where should you write your PIN?",
+          "options": [
+            "On the back of the card",
+            "Nowhere – remember it",
+            "On a paper in the wallet"
+          ],
+          "answer": 1,
+          "why": "If the card is lost, a written PIN lets thieves take your money."
+        },
+        {
+          "q": "After you finish, what should you check?",
+          "options": [
+            "Card and cash are taken, and the screen is back to start",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "Always take your card and wait for the welcome screen."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ My ATM Safety Checklist",
+      "intro": "Tick the habits you already follow.",
+      "items": [
+        {
+          "text": "I go inside alone, one person at a time",
+          "te": "ఒక్కరే లోపలికి వెళ్తాను"
+        },
+        {
+          "text": "I check for anything strange stuck on the card slot",
+          "te": "కార్డ్ స్లాట్ దగ్గర వింత వస్తువు ఉందేమో చూస్తాను"
+        },
+        {
+          "text": "I cover the keypad with my hand",
+          "te": "చేతితో కీప్యాడ్ కప్పుతాను"
+        },
+        {
+          "text": "I never tell my PIN to anyone",
+          "te": "నా పిన్ ఎవరికీ చెప్పను"
+        },
+        {
+          "text": "I take my card and cash before leaving",
+          "te": "కార్డ్, డబ్బు తీసుకుని బయటకు వస్తాను"
+        },
+        {
+          "text": "I take a family member if I feel unsure",
+          "te": "అనుమానం ఉంటే ఇంట్లో వాళ్ళను తీసుకెళ్తాను"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1.0,
+          "text": "Super safe! You are an ATM champion.",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Good. Practise the missing habits.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Be careful! Learn these habits with your family.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🖐️ Golden Rules",
+      "items": [
+        {
+          "icon": "✋",
+          "title": "Cover the keypad",
+          "text": "One hand types, the other hand covers.",
+          "te": "ఒక చేతితో టైప్ చేయండి, మరో చేతితో కప్పండి."
+        },
+        {
+          "icon": "🤐",
+          "title": "PIN is a secret",
+          "text": "Not even the bank staff need your PIN.",
+          "te": "బ్యాంక్ సిబ్బందికి కూడా పిన్ చెప్పవద్దు."
+        },
+        {
+          "icon": "📞",
+          "title": "Call 1930 if cheated",
+          "text": "If money is stolen, call 1930 at once.",
+          "te": "డబ్బు పోతే వెంటనే 1930కి ఫోన్ చేయండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Ask Gemini for 5 common ATM tricks used on elders and the safe answer for each.",
+    "In Scratch, draw an ATM backdrop and a grandfather sprite.",
+    "Make question scenes with 'ask' blocks and two choices.",
+    "If the right choice is picked, play a happy sound; else show the safe rule.",
+    "Add a 'cover the keypad' animation where a hand sprite moves over the keys.",
+    "Let Dadi and Tata play the game and record Telugu voice with the Text-to-Speech extension."
+  ],
+  "prompt": "I am a Class 8 student. Write 5 short ATM safety situations for village elders, each with two choices (safe and unsafe) and a one-line reason, in simple English and Telugu. Include covering the keypad, never sharing the PIN, and not taking help from strangers."
+}

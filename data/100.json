@@ -1,0 +1,73 @@
+{
+  "id": 100,
+  "emoji": "📏",
+  "title": "Village Tank Silt Warning Gauge",
+  "title_te": "గ్రామ చెరువులో పూడిక హెచ్చరిక గేజ్",
+  "problem": "Our village tank holds very little water in summer because thick mud silt has filled up the tank bottom over many years.",
+  "idea": "A silt checker. The camera reads the depth marker post and shows if the tank needs desilting. You can also calculate how much space the silt has taken.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the marker post show?",
+      "intro": "In my real project, Teachable Machine looks at photos of the painted depth post in the dry tank. Tap what the camera sees.",
+      "question": "Silt on the marker post has reached:",
+      "options": [
+        {
+          "icon": "🟢",
+          "label": "Below the green mark",
+          "result": "Silt is low. The tank is healthy. Check again next summer.",
+          "te": "పూడిక తక్కువ. చెరువు బాగుంది.",
+          "level": "good"
+        },
+        {
+          "icon": "🟡",
+          "label": "Up to the yellow mark",
+          "result": "Silt is building up. Plan desilting in the next summer.",
+          "te": "పూడిక పెరుగుతోంది. వచ్చే వేసవిలో తీయాలి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🔴",
+          "label": "Above the red mark",
+          "result": "ALERT! Too much silt. Tell the Panchayat to desilt the tank this summer.",
+          "te": "హెచ్చరిక! పూడిక చాలా ఎక్కువ. పంచాయతీకి చెప్పండి.",
+          "level": "bad",
+          "tip": "Desilted tank soil is rich and farmers can use it in their fields."
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "🧮 How much of the tank is filled with silt?",
+      "intro": "Measure on the marker post when the tank is dry.",
+      "inputs": [
+        {
+          "id": "fulldepth",
+          "label": "Original tank depth (metres)",
+          "value": 3
+        },
+        {
+          "id": "silt",
+          "label": "Silt depth now (metres)",
+          "value": 1.2
+        }
+      ],
+      "formula": "if (!(fulldepth > 0 && silt >= 0) || silt > fulldepth) return null; var p = silt / fulldepth * 100; return {p: Math.round(p), left: Math.round(100 - p), level: p >= 30 ? 'bad' : (p >= 15 ? 'warn' : 'good'), msg: p >= 30 ? 'Desilting needed soon!' : (p >= 15 ? 'Keep watching every year.' : 'Tank is in good shape.')};",
+      "result": "Silt has taken about {p}% of the tank depth.\nOnly {left}% depth is left for water.\n{msg}"
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "With an adult, paint green, yellow and red marks on a post in the dry tank bed.",
+    "Take photos of the post with silt at different levels (you can also use a bucket model at school).",
+    "In Teachable Machine, make 3 classes: Low, Medium, High silt. Train and Export.",
+    "In Scratch, load the model with TM2Scratch and show a coloured alert for each class.",
+    "Ask Gemini how desilted soil helps farmers, and add that message.",
+    "Share the result with the Gram Panchayat before summer."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple English and Telugu why silt reduces water in our village tank, and how desilting in summer and using the silt in fields helps farmers."
+}

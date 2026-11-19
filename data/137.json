@@ -1,0 +1,122 @@
+{
+  "id": 137,
+  "emoji": "🧵",
+  "title": "Handloom Saree Weaving Grid Paper Generator",
+  "title_te": "చేనేత చీర డిజైన్ గ్రిడ్ పేపర్ తయారీ",
+  "problem": "Pochampally saree weavers spend days drawing thread grid patterns by hand on graph paper before setting up their looms.",
+  "idea": "Ready-made printable grid sheets with traditional geometric pattern ideas, so weavers spend less time drawing lines and more time designing. Use the calculator to plan how many motifs fit across the cloth.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 How many motifs fit across?",
+      "intro": "Plan a row of diamonds or flowers across the saree border or body.",
+      "inputs": [
+        {
+          "id": "width",
+          "label": "Width of cloth area (cm)",
+          "value": 110
+        },
+        {
+          "id": "motif",
+          "label": "Width of one motif (cm)",
+          "value": 8
+        },
+        {
+          "id": "gap",
+          "label": "Gap between motifs (cm)",
+          "value": 2
+        }
+      ],
+      "formula": "if (typeof width !== 'number' || typeof motif !== 'number' || typeof gap !== 'number') return null; if (width <= 0 || motif <= 0 || gap < 0 || motif > width) return null; var n = Math.floor((width + gap) / (motif + gap)); var used = n * motif + (n - 1) * gap; var side = (width - used) / 2; return {n: n, side: side, level: 'good'};",
+      "result": "Motifs in one row: {n}\nLeave {side} cm empty on each side to keep it centred."
+    },
+    {
+      "type": "cards",
+      "heading": "🔷 Pattern ideas for grid sheets",
+      "items": [
+        {
+          "icon": "🔶",
+          "title": "Diamond (Ikat)",
+          "text": "The famous Pochampally diamond. Easy to draw on squares.",
+          "te": "పోచంపల్లి వజ్రం ఆకారం. చతురస్రాలపై సులభం."
+        },
+        {
+          "icon": "〰️",
+          "title": "Zig-zag",
+          "text": "Up-and-down lines along the border.",
+          "te": "అంచు వెంబడి ఎగుడుదిగుడు గీతలు."
+        },
+        {
+          "icon": "🐘",
+          "title": "Elephant & parrot",
+          "text": "Animal and bird shapes made from small squares.",
+          "te": "చిన్న చతురస్రాలతో ఏనుగు, చిలుక ఆకారాలు."
+        },
+        {
+          "icon": "🌸",
+          "title": "Flower",
+          "text": "A simple 4-petal or 8-petal flower.",
+          "te": "4 లేదా 8 రేకుల పువ్వు."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "❓ Handloom Quiz",
+      "questions": [
+        {
+          "q": "What is special about Ikat weaving?",
+          "options": [
+            "Design is printed after weaving",
+            "Threads are tied and dyed BEFORE weaving",
+            "Design is painted by brush"
+          ],
+          "answer": 1,
+          "why": "In Ikat, threads are tied and dyed first. The pattern appears while weaving."
+        },
+        {
+          "q": "Bhoodan Pochampally is in which district?",
+          "options": [
+            "Yadadri Bhuvanagiri",
+            "Nizamabad",
+            "Khammam"
+          ],
+          "answer": 0,
+          "why": "Pochampally is in Yadadri Bhuvanagiri district, Telangana."
+        },
+        {
+          "q": "Why do weavers draw on graph paper?",
+          "options": [
+            "For homework",
+            "To plan which threads get which colour",
+            "To wrap the saree"
+          ],
+          "answer": 1,
+          "why": "Each small square is like a group of threads, so the grid plans the colours."
+        },
+        {
+          "q": "Does Pochampally Ikat have a GI tag?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0,
+          "why": "Pochampally Ikat has a Geographical Indication tag."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Visit a weaver family with a teacher and ask what grid sizes they use (how many squares per inch).",
+    "Ask Gemini for simple traditional geometric pattern ideas (diamond, zig-zag, flower).",
+    "In Canva, make an A4 page and use the 'Grids' or table tool to make small squares.",
+    "Make two versions: a blank grid sheet and a sheet with a light pattern outline to colour in.",
+    "Print a few copies and ask the weaver if the size is right. Change it as they suggest.",
+    "Share the Canva link with the weavers' cooperative so they can print more."
+  ],
+  "prompt": "I am a Class 8 student helping Pochampally weavers. Suggest 6 simple traditional geometric patterns (like diamonds and zig-zags) that can be drawn on graph paper, and explain each in one line in English and Telugu."
+}

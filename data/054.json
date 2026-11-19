@@ -1,0 +1,139 @@
+{
+  "id": 54,
+  "emoji": "💼",
+  "title": "Spotting Fake Job Offer Letters",
+  "title_te": "నకిలీ ఉద్యోగ నియామక పత్రాలను గుర్తించడం",
+  "problem": "My older cousin paid ₹10,000 to an agent for a fake company appointment letter, only to discover the office address didn't exist.",
+  "idea": "A red-flag checker for job letters. Tick the warning signs you see, and the page tells you how risky the offer looks.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "🚩 Try it: Tick the red flags in the letter",
+      "intro": "Read the offer letter and tick every warning sign you find. More ticks = more danger.",
+      "items": [
+        {
+          "text": "They asked for money (fee, deposit, training charge)",
+          "te": "డబ్బు అడిగారు (ఫీజు, డిపాజిట్, ట్రైనింగ్)"
+        },
+        {
+          "text": "Contact email is a free Gmail / Yahoo address",
+          "te": "కాంటాక్ట్ ఈమెయిల్ ఉచిత జీమెయిల్ / యాహూ"
+        },
+        {
+          "text": "No interview, or only a short phone call",
+          "te": "ఇంటర్వ్యూ లేదు, లేదా చిన్న ఫోన్ కాల్ మాత్రమే"
+        },
+        {
+          "text": "Spelling mistakes and blurry logo or seal",
+          "te": "స్పెల్లింగ్ తప్పులు, మసక లోగో / సీల్"
+        },
+        {
+          "text": "Office address not found on Google Maps",
+          "te": "ఆఫీస్ చిరునామా గూగుల్ మ్యాప్స్‌లో లేదు"
+        },
+        {
+          "text": "Salary is too high for the work",
+          "te": "పనికి మించిన జీతం"
+        },
+        {
+          "text": "They say 'join fast, only today'",
+          "te": "'ఈరోజే చేరండి' అని తొందర పెడుతున్నారు"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.4,
+          "text": "🚨 Very risky! This looks fake. Do not pay anything. Report at cybercrime.gov.in or call 1930.",
+          "level": "bad"
+        },
+        {
+          "min": 0.1,
+          "text": "⚠️ Some warning signs. Call the company's official number from its real website to check.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "No red flags ticked. Still check the company website and never pay for a job.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "✅ How Real Companies Hire",
+      "items": [
+        {
+          "icon": "🆓",
+          "title": "No fees",
+          "text": "Real companies never ask you to pay to get a job.",
+          "te": "నిజమైన కంపెనీలు ఉద్యోగానికి డబ్బు అడగవు."
+        },
+        {
+          "icon": "📧",
+          "title": "Official email",
+          "text": "Emails come from the company's own domain, like @company.com.",
+          "te": "ఈమెయిల్ కంపెనీ స్వంత డొమైన్ నుండి వస్తుంది."
+        },
+        {
+          "icon": "🗣️",
+          "title": "Proper interview",
+          "text": "There are tests and interviews before an offer.",
+          "te": "ఆఫర్ ముందు పరీక్ష, ఇంటర్వ్యూ ఉంటాయి."
+        },
+        {
+          "icon": "🌐",
+          "title": "Check the website",
+          "text": "Look for the job on the company's official careers page.",
+          "te": "కంపెనీ అధికారిక వెబ్‌సైట్‌లో ఉద్యోగం ఉందో చూడండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "An 'HR' asks ₹10,000 for the joining letter. Real or fake?",
+          "options": [
+            "Real",
+            "Fake"
+          ],
+          "answer": 1,
+          "why": "Asking money for a job is the biggest red flag."
+        },
+        {
+          "q": "The offer comes from hr.company123@gmail.com. Is that safe?",
+          "options": [
+            "Yes",
+            "Be careful – check the official website"
+          ],
+          "answer": 1,
+          "why": "Big companies use their own email domain."
+        },
+        {
+          "q": "You already paid a fake agent. What now?",
+          "options": [
+            "Call 1930 / cybercrime.gov.in and tell family",
+            "Pay more to get the job"
+          ],
+          "answer": 0,
+          "why": "Report quickly to improve the chance of stopping the money."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Scratch"
+  ],
+  "how": [
+    "Collect sample fake offer letters from news articles (hide real names).",
+    "Use Google Lens to copy the text from the letter.",
+    "Paste the text into Gemini with my prompt to find the red flags.",
+    "In Scratch, make a checker: ask 6 yes/no questions (fees? Gmail? interview?).",
+    "Count the 'yes' answers and show a red alert if there are 2 or more.",
+    "Show the project to older students in our hostel and village."
+  ],
+  "prompt": "I am a Class 8 student. Here is the text of a job offer letter. List any red flags (asking for money, free email address, no interview, spelling mistakes, fake address, urgency) in simple English and Telugu, and tell me how to check if the company is real. Remind me that real jobs never ask for fees."
+}

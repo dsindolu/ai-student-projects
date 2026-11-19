@@ -1,0 +1,51 @@
+{
+  "id": 86,
+  "emoji": "🌾",
+  "title": "Land Mutation Step-by-Step Card for Farmers",
+  "title_te": "రైతుల కోసం భూమి మ్యుటేషన్ దశల కార్డు",
+  "problem": "When my friend's father passed away, his family struggled for months to change the land title papers to his mother's name on the Dharani portal.",
+  "idea": "A pocket step card. It explains in plain Telugu how a family changes land records to the heir's name after a death (succession mutation), with a checklist of papers to collect.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🪜 Changing Land Records After a Death (general steps)",
+      "intro": "Telangana land records moved from Dharani to the Bhu Bharati portal. Rules can change – confirm at the Mee Seva centre or Tahsildar office.",
+      "items": [
+        {"title": "Death certificate", "text": "Get the death certificate from the Gram Panchayat or municipality.", "te": "గ్రామ పంచాయతీ / మున్సిపాలిటీ నుండి మరణ ధృవపత్రం తీసుకోండి."},
+        {"title": "Family member certificate", "text": "Apply for the family member / legal heir certificate through Mee Seva.", "te": "మీసేవ ద్వారా కుటుంబ సభ్యుల / వారసత్వ ధృవపత్రం కోసం దరఖాస్తు చేయండి."},
+        {"title": "Agree in the family", "text": "All heirs should agree in writing on whose name the land goes to.", "te": "భూమి ఎవరి పేరు మీదకు వెళ్ళాలో వారసులందరూ రాతపూర్వకంగా అంగీకరించాలి."},
+        {"title": "Apply for succession", "text": "Apply for succession / mutation on the official land portal through Mee Seva and book a slot if asked.", "te": "మీసేవ ద్వారా అధికారిక భూ పోర్టల్‌లో వారసత్వ మ్యుటేషన్‌కు దరఖాస్తు చేయండి."},
+        {"title": "Attend verification", "text": "Go to the Tahsildar office on the given date with all heirs and original papers.", "te": "ఇచ్చిన తేదీన వారసులందరూ, అసలు కాగితాలతో తహసీల్దార్ ఆఫీసుకు వెళ్ళండి."},
+        {"title": "Check the record", "text": "Check online that the new name shows correctly and collect the new passbook.", "te": "కొత్త పేరు ఆన్‌లైన్‌లో సరిగ్గా ఉందో చూసి, కొత్త పాస్‌బుక్ తీసుకోండి."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Papers Usually Asked For",
+      "intro": "Confirm the exact list at the Mee Seva centre before applying.",
+      "items": [
+        {"text": "Death certificate", "te": "మరణ ధృవపత్రం"},
+        {"text": "Family member / legal heir certificate", "te": "కుటుంబ సభ్యుల / వారసత్వ ధృవపత్రం"},
+        {"text": "Old pattadar passbook", "te": "పాత పట్టాదారు పాస్‌బుక్"},
+        {"text": "Aadhaar of all heirs", "te": "వారసులందరి ఆధార్"},
+        {"text": "Written agreement (no-objection) of other heirs", "te": "ఇతర వారసుల అంగీకార పత్రం"},
+        {"text": "Bank passbook and photos of the new owner", "te": "కొత్త యజమాని బ్యాంకు పాస్‌బుక్, ఫోటోలు"}
+      ],
+      "bands": [
+        {"min": 1, "text": "Papers ready! Go to Mee Seva to apply.", "level": "good"},
+        {"min": 0.5, "text": "Half way. Collect the remaining papers.", "level": "warn"},
+        {"min": 0, "text": "Start with the death certificate and family member certificate.", "level": "bad"}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Ask Gemini to explain succession mutation of farm land in Telangana in 6 plain Telugu steps.",
+    "Check the steps with the Mee Seva operator or the village revenue staff, and fix anything different.",
+    "Open Canva and choose a small card or bookmark template.",
+    "Put the 6 steps on the front and the papers checklist on the back.",
+    "Use big Telugu letters and simple icons.",
+    "Print and laminate the cards for farmer families who need them."
+  ],
+  "prompt": "I am a Class 8 student. Explain in 6 plain Telugu steps how a farmer family in Telangana changes land records to the heir's name after the owner dies (succession mutation). Do not give fees or exact timelines. Tell them to confirm at the Mee Seva centre or Tahsildar office."
+}

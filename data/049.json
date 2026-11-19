@@ -1,0 +1,95 @@
+{
+  "id": 49,
+  "emoji": "👩‍👩‍👧",
+  "title": "Interest Math Checker for Women's Savings Groups",
+  "title_te": "మహిళా పొదుపు సంఘాల వడ్డీ లెక్క తనిఖీ",
+  "problem": "Amma saves ₹100 every week in her self-help group, but she worries that leaders may calculate the monthly interest wrong on paper.",
+  "idea": "Two simple calculators: one shows how much Amma has saved, and the other checks loan interest. If the leader's number is different, she can ask politely.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: How much has Amma saved?",
+      "intro": "Type the weekly saving and the number of weeks.",
+      "inputs": [
+        {
+          "id": "weekly",
+          "label": "Saving every week (₹)",
+          "value": 100
+        },
+        {
+          "id": "weeks",
+          "label": "Number of weeks",
+          "value": 52
+        }
+      ],
+      "formula": "if (weekly <= 0 || weeks <= 0) return null; return {total: weekly * weeks, level: 'good'};",
+      "result": "Amma's total saving = ₹{total}\nMatch this with the group book."
+    },
+    {
+      "type": "calculator",
+      "heading": "🧮 Check the loan interest",
+      "intro": "Self-help groups usually charge simple interest per month. Type the numbers from the group book.",
+      "inputs": [
+        {
+          "id": "loan",
+          "label": "Loan taken (₹)",
+          "value": 10000
+        },
+        {
+          "id": "rate",
+          "label": "Interest per month (%)",
+          "value": 1
+        },
+        {
+          "id": "months",
+          "label": "Number of months",
+          "value": 10
+        },
+        {
+          "id": "told",
+          "label": "Interest the leader wrote (₹)",
+          "value": 1200
+        }
+      ],
+      "formula": "if (loan <= 0 || rate < 0 || months <= 0 || told < 0) return null; var i = loan * rate / 100 * months; var diff = told - i; var msg = Math.abs(diff) < 1 ? 'Matches! The book is correct.' : (diff > 0 ? 'Leader wrote ₹' + Math.round(diff) + ' MORE. Ask politely to re-check.' : 'Leader wrote ₹' + Math.round(-diff) + ' less. Ask to re-check.'); return {i: Math.round(i), tot: Math.round(loan + i), msg: msg, level: Math.abs(diff) < 1 ? 'good' : 'warn'};",
+      "result": "Correct simple interest = ₹{i}\nTotal to repay = ₹{tot}\n{msg}"
+    },
+    {
+      "type": "cards",
+      "heading": "📒 Good Group Habits",
+      "items": [
+        {
+          "icon": "📖",
+          "title": "Read the book aloud",
+          "text": "Read every member's savings aloud at each meeting.",
+          "te": "ప్రతి సమావేశంలో అందరి పొదుపు చదివి వినిపించండి."
+        },
+        {
+          "icon": "🧾",
+          "title": "Receipts for all",
+          "text": "Every payment gets a written entry or receipt.",
+          "te": "ప్రతి చెల్లింపుకు రసీదు ఉండాలి."
+        },
+        {
+          "icon": "🏦",
+          "title": "Use the bank",
+          "text": "Keep group money in the group bank account, not at home.",
+          "te": "సంఘం డబ్బు బ్యాంక్ ఖాతాలో ఉంచండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Ask Gemini to explain simple interest with an example: ₹10,000 at 1% per month for 10 months.",
+    "Open Scratch and make variables: loan, rate, months.",
+    "Use 'ask' blocks to get each number from the user.",
+    "Set interest = loan × rate ÷ 100 × months and make the sprite say it.",
+    "Add a second part: weekly saving × weeks = total saving.",
+    "Test with Amma's real group book numbers and practise with her."
+  ],
+  "prompt": "I am a Class 8 student. Explain simple interest in very simple English and Telugu for women in a self-help group. Show 3 examples with loan amount, monthly interest rate and months, and show how to check the total saving when ₹100 is saved every week."
+}

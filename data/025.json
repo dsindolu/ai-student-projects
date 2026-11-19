@@ -1,0 +1,104 @@
+{
+  "id": 25,
+  "emoji": "🦷",
+  "title": "Tooth Pain Warning Helper for Village Kids",
+  "title_te": "పల్లె పిల్లల కోసం పంటి నొప్పి హెచ్చరిక సహాయకుడు",
+  "problem": "Little kids in our street eat cheap sticky sweets and cry with tooth pain at night, hiding black spots on their teeth from their parents.",
+  "idea": "A tooth check helper. Kids show their teeth to the camera, and the helper gives a friendly reminder to brush or see a dentist. Here you can tap what the camera 'sees'.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the camera see in the mouth?",
+      "intro": "In my real project, Teachable Machine learns photos of clean teeth and teeth with spots. It is not a doctor. Only a dentist can say for sure.",
+      "question": "The camera sees:",
+      "options": [
+        {
+          "icon": "😁",
+          "label": "Clean white teeth",
+          "result": "Shiny teeth! Keep brushing twice a day.",
+          "te": "మెరిసే పళ్ళు! రోజుకు రెండు సార్లు బ్రష్ చేయండి.",
+          "level": "good"
+        },
+        {
+          "icon": "⚫",
+          "label": "Small black or brown spot",
+          "result": "There may be a cavity starting. Tell Amma and show a dentist soon.",
+          "te": "పుచ్చు మొదలవుతూ ఉండొచ్చు. అమ్మకు చెప్పి డెంటిస్ట్‌కి చూపించండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🕳️",
+          "label": "Hole in tooth with pain",
+          "result": "Please see a dentist soon. Don't hide the pain!",
+          "te": "త్వరగా డెంటిస్ట్‌ని కలవండి. నొప్పి దాచవద్దు!",
+          "level": "bad"
+        },
+        {
+          "icon": "🎈",
+          "label": "Swollen gum or face",
+          "result": "Go to a doctor or dentist today. Swelling needs quick care.",
+          "te": "ఈరోజే డాక్టర్ దగ్గరికి వెళ్ళండి. వాపుకు త్వరగా చికిత్స కావాలి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ My Happy Teeth Habits",
+      "intro": "Tick the habits you did today.",
+      "items": [
+        {
+          "text": "I brushed in the morning",
+          "te": "ఉదయం బ్రష్ చేశాను"
+        },
+        {
+          "text": "I brushed at night before sleeping",
+          "te": "రాత్రి పడుకునే ముందు బ్రష్ చేశాను"
+        },
+        {
+          "text": "I rinsed my mouth with water after eating sweets",
+          "te": "స్వీట్లు తిన్నాక నీళ్ళతో నోరు పుక్కిలించాను"
+        },
+        {
+          "text": "I ate fruits instead of sticky toffees",
+          "te": "చాక్లెట్ బదులు పండ్లు తిన్నాను"
+        },
+        {
+          "text": "I told my parents if any tooth hurts",
+          "te": "పన్ను నొప్పిగా ఉంటే అమ్మానాన్నలకు చెప్పాను"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Tooth champion! Your teeth are smiling.",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Good! Don't forget night brushing.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Your teeth need help. Start brushing twice a day.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Collect clear pictures of healthy teeth and teeth with cavities from a dental health chart or book (don't photograph children without permission).",
+    "Open Teachable Machine and make classes: Clean teeth, Black spots, No teeth in view.",
+    "Upload about 40 pictures for each class, Train and Export.",
+    "In PictoBlox, load the model and add a friendly voice reminder in Telugu for each class.",
+    "Ask Gemini to write fun, short tooth-care lines for kids.",
+    "Show it at our street and remind everyone it is only a helper, not a dentist."
+  ],
+  "prompt": "I am a Class 8 student. Write 5 short, fun tooth-care reminders in simple Telugu and English for small village children who eat sticky sweets, and tell them to tell their parents and see a dentist if a tooth hurts."
+}

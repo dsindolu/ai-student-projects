@@ -1,0 +1,104 @@
+{
+  "id": 5,
+  "emoji": "🦯",
+  "title": "Smart Stick Alert for Grandpa's Evening Walks",
+  "title_te": "తాతయ్య సాయంత్రం నడకకు స్మార్ట్ కర్ర హెచ్చరిక",
+  "problem": "Grandpa walks with a wooden stick on our bumpy village lane, but he often trips over sleeping stray dogs or deep potholes in the dark.",
+  "idea": "A phone on grandpa's stick or pocket watches the path. When it sees a dog, pothole or stone, it plays a loud beep and warning. Here you can tap what the camera 'sees'.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What is on grandpa's path?",
+      "intro": "In my real project, PictoBlox object detection looks at the lane through the camera. Here, tap what it sees.",
+      "question": "The camera sees this in front of grandpa:",
+      "options": [
+        {
+          "icon": "🐕",
+          "label": "Sleeping dog",
+          "result": "Beep beep! Dog ahead. Walk slowly to the side.",
+          "te": "బీప్! ముందు కుక్క ఉంది. మెల్లగా పక్కకి నడవండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🕳️",
+          "label": "Pothole",
+          "result": "Beep beep! Hole in the road. Stop and step around.",
+          "te": "బీప్! రోడ్డులో గుంత ఉంది. ఆగి పక్కనుంచి వెళ్ళండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🪨",
+          "label": "Big stone",
+          "result": "Careful! Stone ahead. Lift your feet.",
+          "te": "జాగ్రత్త! ముందు రాయి ఉంది.",
+          "level": "warn"
+        },
+        {
+          "icon": "🛣️",
+          "label": "Clear path",
+          "result": "Path is clear. Walk slowly.",
+          "te": "దారి బాగుంది. మెల్లగా నడవండి.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Grandpa's Safe Evening Walk Check",
+      "intro": "Tick what grandpa has before going out.",
+      "items": [
+        {
+          "text": "Torch or phone light is on",
+          "te": "టార్చ్ లేదా ఫోన్ లైట్ ఉంది"
+        },
+        {
+          "text": "Light-coloured shirt so vehicles can see him",
+          "te": "వాహనాలకు కనిపించేలా తెల్లని చొక్కా"
+        },
+        {
+          "text": "Good chappals that don't slip",
+          "te": "జారని మంచి చెప్పులు"
+        },
+        {
+          "text": "Family phone number in his pocket",
+          "te": "జేబులో ఇంటి వాళ్ళ ఫోన్ నంబర్"
+        },
+        {
+          "text": "Walks on a known path, before it gets very dark",
+          "te": "బాగా చీకటి పడక ముందే తెలిసిన దారిలో నడక"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Super! Grandpa is ready for a safe walk.",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Almost there. Add the missing things.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Please get these things ready before he goes out.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "PictoBlox",
+    "Teachable Machine",
+    "Gemini"
+  ],
+  "how": [
+    "Take photos on our lane in the evening: potholes, stones, sleeping dogs and clear path (about 40 each).",
+    "Train an Image Project in Teachable Machine with these 4 classes and export the model.",
+    "In PictoBlox, add the Machine Learning extension and load the model.",
+    "Add blocks: if class is Dog or Pothole, play a loud beep sound and say the warning.",
+    "Ask Gemini to write short Telugu warning words for each obstacle.",
+    "Test it slowly with grandpa, with a family member walking next to him."
+  ],
+  "prompt": "I am a Class 8 student making a walking helper for my grandfather. Write very short warning messages (5 words or less) in Telugu and English for: dog ahead, pothole ahead, stone ahead, path is clear."
+}

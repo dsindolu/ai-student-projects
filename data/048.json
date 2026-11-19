@@ -1,0 +1,123 @@
+{
+  "id": 48,
+  "emoji": "📱",
+  "title": "Warning Cards Against Fake Instant Loan Apps",
+  "title_te": "నకిలీ తక్షణ రుణ యాప్‌లపై హెచ్చరిక కార్డులు",
+  "problem": "Young boys in our area download illegal loan apps on mobile phones and get trapped when scammers demand double money and send bad messages.",
+  "idea": "Warning cards and a check game. Before installing a loan app, tap what the app asks for and see if it is dangerous.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: The loan app asks for…",
+      "intro": "Tap what the app asks when you install it.",
+      "question": "The loan app wants:",
+      "options": [
+        {
+          "icon": "👥",
+          "label": "Access to all your contacts",
+          "result": "🚩 DANGER! Fake apps use contacts to shame you by messaging your family and friends. Do not install.",
+          "te": "🚩 ప్రమాదం! మీ కాంటాక్ట్‌లకు చెడు మెసేజ్‌లు పంపుతారు. ఇన్‌స్టాల్ చేయవద్దు.",
+          "level": "bad"
+        },
+        {
+          "icon": "🖼️",
+          "label": "Access to all your photos and gallery",
+          "result": "🚩 DANGER! They may misuse your photos. Uninstall now.",
+          "te": "🚩 ప్రమాదం! మీ ఫోటోలను దుర్వినియోగం చేయవచ్చు.",
+          "level": "bad"
+        },
+        {
+          "icon": "💸",
+          "label": "An 'upfront fee' before giving the loan",
+          "result": "🚩 SCAM! Real lenders don't ask you to pay first to get a loan.",
+          "te": "🚩 మోసం! నిజమైన రుణదాతలు ముందుగా ఫీజు అడగరు.",
+          "level": "bad"
+        },
+        {
+          "icon": "🏦",
+          "label": "Linked to a known bank / RBI-registered company with clear interest",
+          "result": "Safer – but still read the interest and charges. Ask an elder before borrowing.",
+          "te": "కొంచెం సురక్షితం – అయినా వడ్డీ, ఛార్జీలు చదవండి. పెద్దవాళ్ళను అడగండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🛑 Loan App Warning Cards",
+      "items": [
+        {
+          "icon": "🏛️",
+          "title": "Check RBI registration",
+          "text": "The lender must be a bank or an RBI-registered company. Check the lender's name on the app.",
+          "te": "రుణదాత బ్యాంక్ లేదా ఆర్‌బీఐ నమోదు అయిన సంస్థ అయి ఉండాలి."
+        },
+        {
+          "icon": "⏱️",
+          "title": "'Loan in 5 minutes' = trap",
+          "text": "Too easy money often brings very high hidden charges.",
+          "te": "5 నిమిషాల్లో లోన్ అంటే ఉచ్చు కావచ్చు."
+        },
+        {
+          "icon": "🗣️",
+          "title": "Being threatened?",
+          "text": "Don't pay more out of fear. Tell parents and call 1930 or go to the police.",
+          "te": "బెదిరిస్తే భయపడి డబ్బు ఇవ్వవద్దు. ఇంట్లో చెప్పి 1930కి ఫోన్ చేయండి."
+        },
+        {
+          "icon": "🤝",
+          "title": "Better options",
+          "text": "Ask the bank, self-help group or family before any app.",
+          "te": "యాప్ కంటే ముందు బ్యాంక్, స్వయం సహాయక సంఘం అడగండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "A loan app wants all your contacts. Safe?",
+          "options": [
+            "Yes",
+            "No, it's a big red flag"
+          ],
+          "answer": 1,
+          "why": "Illegal apps use contacts to shame and threaten borrowers."
+        },
+        {
+          "q": "Who should a real lender be registered with?",
+          "options": [
+            "RBI",
+            "Nobody"
+          ],
+          "answer": 0,
+          "why": "Banks and lending companies must follow RBI rules."
+        },
+        {
+          "q": "The app sends bad messages to your friends. What now?",
+          "options": [
+            "Pay double quickly",
+            "Tell family, call 1930 / police"
+          ],
+          "answer": 1,
+          "why": "This is a crime. Get help, don't pay out of fear."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Take screenshots of app permission screens (do NOT install unknown apps – use pictures from news articles).",
+    "Use Google Lens to read the text in the screenshots.",
+    "Ask Gemini which permissions and charges are dangerous and why.",
+    "Ask Gemini to write 4 short warning lines in English and Telugu.",
+    "Open Canva, pick an alert poster template, and add red warning icons.",
+    "Print the cards and share them with older boys in the village and the school notice board."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple English and Telugu how to spot an illegal instant loan app: dangerous permissions (contacts, photos), upfront fees, very high hidden charges, threats. Give 5 safety tips and say to check RBI registration and call 1930 or go to the police if threatened."
+}

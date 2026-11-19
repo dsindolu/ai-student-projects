@@ -1,0 +1,106 @@
+{
+  "id": 19,
+  "emoji": "🔥",
+  "title": "Stopping Toothpaste on Kitchen Skin Burns",
+  "title_te": "వంటింటి కాలిన గాయాలపై టూత్‌పేస్ట్ ఆపడం",
+  "problem": "When Amma burned her hand on the hot cooking pot, aunties immediately rubbed toothpaste on it, which actually made the skin blister worse.",
+  "idea": "A burn voice helper that says the right first aid: 'Use cool running water, not toothpaste!'. Here you can test what you know about burns.",
+  "widgets": [
+    {
+      "type": "quiz",
+      "heading": "🧠 Burn First-Aid Quiz",
+      "questions": [
+        {
+          "q": "Amma's hand touched a hot pot. What first?",
+          "options": [
+            "Rub toothpaste",
+            "Put the burn under cool running water",
+            "Put ice directly"
+          ],
+          "answer": 1,
+          "why": "Cool (not ice-cold) running water for about 20 minutes cools the skin and reduces damage."
+        },
+        {
+          "q": "Should we put oil, ghee or turmeric on a burn?",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "answer": 1,
+          "why": "Oil and pastes trap heat and can cause infection."
+        },
+        {
+          "q": "A blister came up on the skin. What do we do?",
+          "options": [
+            "Burst it with a needle",
+            "Leave it alone and cover loosely with a clean cloth"
+          ],
+          "answer": 1,
+          "why": "The blister protects the skin underneath. Don't burst it."
+        },
+        {
+          "q": "Amma is wearing bangles and the hand is burnt. What do we do?",
+          "options": [
+            "Remove bangles and rings gently, quickly",
+            "Leave them on"
+          ],
+          "answer": 0,
+          "why": "Burnt skin swells. Remove them before swelling starts."
+        },
+        {
+          "q": "When should we go to the doctor?",
+          "options": [
+            "Never",
+            "Big burns, burns on face or hands of children, or deep burns - go at once"
+          ],
+          "answer": 1,
+          "why": "Big or deep burns need a doctor. Call 108 for serious burns."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "💧 What the Voice Helper Says",
+      "items": [
+        {
+          "title": "Cool water",
+          "text": "Hold the burn under cool running water for about 20 minutes.",
+          "te": "చల్లని పారే నీటి కింద సుమారు 20 నిమిషాలు ఉంచండి."
+        },
+        {
+          "title": "Remove tight things",
+          "text": "Take off rings and bangles before the skin swells.",
+          "te": "ఉబ్బే ముందు ఉంగరాలు, గాజులు తీసేయండి."
+        },
+        {
+          "title": "Cover",
+          "text": "Cover loosely with a clean cloth or cling film.",
+          "te": "శుభ్రమైన గుడ్డతో వదులుగా కప్పండి."
+        },
+        {
+          "title": "No toothpaste",
+          "text": "Don't use toothpaste, oil, ice or powders.",
+          "te": "టూత్‌పేస్ట్, నూనె, ఐస్, పొడి వేయవద్దు."
+        },
+        {
+          "title": "See a doctor",
+          "text": "For big, deep or face burns, go to the PHC or call 108.",
+          "te": "పెద్ద గాయాలకు పీహెచ్‌సీకి వెళ్ళండి లేదా 108కి ఫోన్ చేయండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Scratch"
+  ],
+  "how": [
+    "Ask Gemini for safe burn first-aid steps in simple English and Telugu.",
+    "Check the steps with the school nurse or PHC staff.",
+    "Open Scratch and add the Text to Speech extension.",
+    "Make a big red button sprite called 'BURN!'. When clicked, the helper speaks the steps one by one.",
+    "Add a picture of a tap with running water for each step.",
+    "Show it to Amma and the aunties in our street."
+  ],
+  "prompt": "I am a Class 8 student. Give me safe first-aid steps for small kitchen burns in very simple English and Telugu. Tell what NOT to do (toothpaste, oil, ice) and when to go to a doctor or call 108."
+}

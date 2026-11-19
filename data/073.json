@@ -1,0 +1,51 @@
+{
+  "id": 73,
+  "emoji": "🏨",
+  "title": "Working Women Hostel Safety Inspection Checklist",
+  "title_te": "ఉద్యోగ మహిళల హాస్టల్ భద్రతా తనిఖీ చెక్‌లిస్ట్",
+  "problem": "Older girls moving to town for work struggle to check if private hostel rooms have safe doors and working window latches.",
+  "idea": "A pocket safety checklist. Akka ticks each point while visiting a hostel and the page tells her if it looks safe or if she should look for another place.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "✅ Hostel Room Safety Check",
+      "intro": "Tick only what you saw working with your own eyes.",
+      "items": [
+        {"text": "Room door has a strong lock from inside", "te": "గది తలుపుకు లోపల నుండి బలమైన తాళం ఉంది"},
+        {"text": "Window latches close properly", "te": "కిటికీ గొళ్ళాలు సరిగ్గా మూసుకుంటాయి"},
+        {"text": "Lights work in corridors and stairs", "te": "కారిడార్, మెట్లలో లైట్లు పనిచేస్తాయి"},
+        {"text": "A lady warden stays at the hostel", "te": "హాస్టల్‌లో లేడీ వార్డెన్ ఉంటారు"},
+        {"text": "Visitor register at the gate", "te": "గేటు వద్ద సందర్శకుల రిజిస్టర్ ఉంది"},
+        {"text": "CCTV at the entrance", "te": "ప్రవేశ ద్వారం వద్ద సీసీటీవీ ఉంది"},
+        {"text": "Fire extinguisher and a clear exit", "te": "అగ్నిమాపక పరికరం, బయటకు వెళ్ళే దారి ఉన్నాయి"},
+        {"text": "Clean bathroom with a working door lock", "te": "తాళం పనిచేసే శుభ్రమైన బాత్రూం"},
+        {"text": "Hostel gives a written receipt for rent", "te": "అద్దెకు రాతపూర్వక రసీదు ఇస్తారు"}
+      ],
+      "bands": [
+        {"min": 0.9, "text": "This hostel looks safe. Share the address with your family.", "level": "good"},
+        {"min": 0.6, "text": "Some things are missing. Ask the owner to fix them before you join.", "level": "warn"},
+        {"min": 0, "text": "Not safe enough. Look for another hostel.", "level": "bad"}
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "💡 Extra Tips for Akka",
+      "items": [
+        {"icon": "👨‍👩‍👧", "title": "Visit with family", "text": "Visit the hostel first with a parent or relative, in daytime.", "te": "మొదట పగలు, కుటుంబ సభ్యులతో హాస్టల్ చూడండి."},
+        {"icon": "🗣️", "title": "Talk to girls there", "text": "Ask girls already staying there how they feel.", "te": "అక్కడ ఉన్న అమ్మాయిలను అడిగి తెలుసుకోండి."},
+        {"icon": "📍", "title": "Share location", "text": "Send the hostel address and owner's number to home.", "te": "హాస్టల్ చిరునామా, యజమాని నంబర్ ఇంటికి పంపండి."},
+        {"icon": "📞", "title": "Save helplines", "text": "Save 100/112 (police) and 181 (women helpline) in your phone.", "te": "100/112, 181 నంబర్లు ఫోన్‌లో సేవ్ చేసుకోండి."}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Ask Gemini to list safety points a girl should check in a working women's hostel.",
+    "Discuss the list with my mother and an older sister to add their ideas.",
+    "Keep the 8–10 most important points.",
+    "Open Canva and choose a small 'pocket card' or bookmark size template.",
+    "Add tick boxes, icons and Telugu-English text.",
+    "Print and give the cards to older girls moving to town for jobs."
+  ],
+  "prompt": "I am a Class 8 student. Make a checklist of 10 short safety points for a young woman checking a private working women's hostel in a town (doors, windows, warden, lights, fire safety). Write each point in simple English and simple Telugu."
+}

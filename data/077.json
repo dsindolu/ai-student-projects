@@ -1,0 +1,50 @@
+{
+  "id": 77,
+  "emoji": "👶",
+  "title": "Adding Baby Sister to Our Ration Card",
+  "title_te": "మా రేషన్ కార్డులో చెల్లి పేరు చేర్చడం",
+  "problem": "Amma stands in long lines at the Meeseva center to add my new baby sister's name to our ration card, but gets sent back because one document is missing.",
+  "idea": "A one-trip guide. It shows the simple steps to add a new member to the ration card and a checklist so Amma carries every paper the first time.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🪪 Steps to Add a New Member",
+      "intro": "General steps. The process can change – confirm at your Mee Seva centre or the Civil Supplies website.",
+      "items": [
+        {"title": "Get birth certificate", "text": "Get the baby's birth certificate from the hospital or Gram Panchayat.", "te": "ఆసుపత్రి లేదా గ్రామ పంచాయతీ నుండి పుట్టిన తేదీ ధృవపత్రం తీసుకోండి."},
+        {"title": "Get baby's Aadhaar", "text": "Enrol the baby for Aadhaar at an Aadhaar centre.", "te": "ఆధార్ కేంద్రంలో పాపకు ఆధార్ నమోదు చేయించండి."},
+        {"title": "Go to Mee Seva", "text": "Ask for 'member addition in ration card' and give the papers.", "te": "మీసేవలో 'రేషన్ కార్డులో సభ్యుల చేర్పు' కోసం అడగండి."},
+        {"title": "Keep the receipt", "text": "Keep the application number receipt safely.", "te": "దరఖాస్తు నంబర్ రసీదు జాగ్రత్తగా ఉంచండి."},
+        {"title": "Check status", "text": "Check the status later at Mee Seva or online using the application number.", "te": "దరఖాస్తు నంబర్‌తో తర్వాత స్టేటస్ చూడండి."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Amma's Paper Bag Check",
+      "intro": "Commonly needed papers. Ask Mee Seva for the exact list before you go.",
+      "items": [
+        {"text": "Baby's birth certificate", "te": "పాప పుట్టిన తేదీ ధృవపత్రం"},
+        {"text": "Baby's Aadhaar card", "te": "పాప ఆధార్ కార్డు"},
+        {"text": "Our present ration card", "te": "ప్రస్తుత రేషన్ కార్డు"},
+        {"text": "Amma's / head of family's Aadhaar", "te": "అమ్మ / కుటుంబ పెద్ద ఆధార్"},
+        {"text": "Photocopies of all papers", "te": "అన్ని కాగితాల జిరాక్స్‌లు"},
+        {"text": "Mobile phone linked to Aadhaar (for OTP)", "te": "ఆధార్‌కు లింక్ అయిన మొబైల్ (OTP కోసం)"}
+      ],
+      "bands": [
+        {"min": 1, "text": "Everything is ready. One trip is enough!", "level": "good"},
+        {"min": 0.5, "text": "Some papers missing. Get them first to avoid a wasted trip.", "level": "warn"},
+        {"min": 0, "text": "Not ready yet. Start with the birth certificate.", "level": "bad"}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Ask Gemini for the general steps to add a child to a Telangana ration card.",
+    "Visit or call the Mee Seva centre and write down the exact papers they ask for.",
+    "Correct the Gemini steps using what the Mee Seva staff said.",
+    "Open Canva and make a one-page guide with 4–5 big numbered steps in Telugu.",
+    "Add a tick-box list of papers at the bottom.",
+    "Print it and keep it with the family file. Share it with neighbours too."
+  ],
+  "prompt": "I am a Class 8 student. In simple Telugu, give the general steps to add a newborn baby's name to a family ration card in Telangana. Say clearly that the family should confirm the exact documents at the Mee Seva centre. Keep it to 5 short steps."
+}

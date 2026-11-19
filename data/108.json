@@ -1,0 +1,108 @@
+{
+  "id": 108,
+  "emoji": "📄",
+  "title": "First-Time Resume & Bio-Data Helper",
+  "title_te": "మొదటి బయోడేటా / రెజ్యూమ్ సహాయకుడు",
+  "problem": "My cousin wants to apply for a billing job at a town supermarket, but he feels embarrassed because he doesn't know how to write a bio-data.",
+  "idea": "A bio-data helper. Tick what your bio-data has, follow the steps, and try a quick quiz on what to put and what to leave out.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "✅ Does my bio-data have everything?",
+      "intro": "Tick each part you have written.",
+      "items": [
+        {
+          "text": "Full name, phone number and village/town",
+          "te": "పూర్తి పేరు, ఫోన్ నంబర్, ఊరు"
+        },
+        {
+          "text": "Job I am applying for (e.g., Billing Assistant)",
+          "te": "ఏ ఉద్యోగానికి దరఖాస్తు చేస్తున్నానో"
+        },
+        {
+          "text": "Education with year and marks/grade",
+          "te": "చదువు, సంవత్సరం, మార్కులు"
+        },
+        {
+          "text": "Skills: computer basics, billing, Telugu, English, Hindi",
+          "te": "నైపుణ్యాలు: కంప్యూటర్, బిల్లింగ్, భాషలు"
+        },
+        {
+          "text": "Work experience (even helping in a family shop)",
+          "te": "అనుభవం (ఇంటి దుకాణంలో సహాయం కూడా)"
+        },
+        {
+          "text": "Short line about me: honest, punctual, good with customers",
+          "te": "నా గురించి చిన్న వాక్యం"
+        },
+        {
+          "text": "Checked spelling and kept it to 1 page",
+          "te": "స్పెల్లింగ్ చూశాను, ఒక పేజీలో ఉంది"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.8,
+          "text": "Super! Your bio-data is ready to print. 🎉",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Almost there. Fill the missing parts.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Let's add more details before printing.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Bio-Data Do's and Don'ts",
+      "questions": [
+        {
+          "q": "Should you write false marks to look better?",
+          "options": [
+            "Yes",
+            "No, always be honest"
+          ],
+          "answer": 1,
+          "why": "Employers check certificates. Honesty builds trust."
+        },
+        {
+          "q": "Is helping in your father's kirana shop 'experience'?",
+          "options": [
+            "Yes, write it",
+            "No, hide it"
+          ],
+          "answer": 0,
+          "why": "Handling customers and money is real billing experience!"
+        },
+        {
+          "q": "Do you need to write your Aadhaar number on a bio-data?",
+          "options": [
+            "Yes, always",
+            "No, keep it private"
+          ],
+          "answer": 1,
+          "why": "Share Aadhaar only when officially asked, not on every bio-data."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Sit with your cousin and write his details on paper: name, education, skills, experience.",
+    "Type the details into Gemini and ask it to write a clean 1-page bio-data.",
+    "Check every line is true and correct.",
+    "Open Canva, search 'Simple resume' and pick a clean template.",
+    "Paste the text, keep fonts simple, and download it as PDF.",
+    "Print 3 copies and practise a short self-introduction for the interview."
+  ],
+  "prompt": "Write a simple 1-page bio-data for my cousin applying for a Billing Assistant job at a supermarket. Details: Name Ravi Kumar, Intermediate (CEC) passed 2024, knows MS Excel basics and Tally basics, speaks Telugu, Hindi and English, helped in family kirana shop for 2 years. Keep it honest and simple."
+}

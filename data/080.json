@@ -1,0 +1,43 @@
+{
+  "id": 80,
+  "emoji": "🍚",
+  "title": "Rice Stock Arrival Alert Screen for Ration Shop",
+  "title_te": "రేషన్ షాపు బియ్యం స్టాక్ సమాచార స్క్రీన్",
+  "problem": "Grandmothers walk 2 kilometers in hot sun to the ration shop, only to find the shop closed because rice stocks have not arrived yet.",
+  "idea": "A simple display board. The ration dealer taps one button to show if rice is available, coming tomorrow, or the shop is closed. A photo of the board can be sent to the village WhatsApp group.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Dealer updates the board",
+      "intro": "This works like my Scratch display. Tap the button the dealer presses.",
+      "question": "Today the ration shop status is…",
+      "options": [
+        {"icon": "🟢", "label": "Rice available", "result": "RICE AVAILABLE TODAY. Come with your ration card.", "te": "ఈరోజు బియ్యం అందుబాటులో ఉంది. రేషన్ కార్డుతో రండి.", "level": "good"},
+        {"icon": "🟡", "label": "Coming tomorrow", "result": "Stock arriving TOMORROW. Please don't walk today.", "te": "స్టాక్ రేపు వస్తుంది. ఈరోజు రావద్దు.", "level": "warn"},
+        {"icon": "🔴", "label": "Shop closed", "result": "SHOP CLOSED TODAY.", "te": "ఈరోజు షాపు మూసి ఉంది.", "level": "bad"},
+        {"icon": "⏳", "label": "Long queue", "result": "Rice available, but long queue now. Come after 4 pm.", "te": "బియ్యం ఉంది, కానీ ఇప్పుడు పెద్ద క్యూ. సాయంత్రం 4 తర్వాత రండి.", "level": "warn"}
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "🚶‍♀️ How Many Wasted Walks Does It Save?",
+      "inputs": [
+        {"id": "km", "label": "Distance to ration shop, one way (km)", "value": 2},
+        {"id": "wasted", "label": "Wasted trips in a month (shop closed / no stock)", "value": 2},
+        {"id": "people", "label": "Grandmothers making the trip", "value": 10}
+      ],
+      "formula": "if ([km, wasted, people].some(function(x){return typeof x !== 'number' || x < 0;})) return null; var total = km * 2 * wasted * people; var hours = total / 3; return {total: total, hours: Math.round(hours * 10) / 10, level: total > 0 ? 'good' : 'warn'};",
+      "result": "The board can save {total} km of walking every month.\nThat is about {hours} hours in the hot sun (walking about 3 km per hour)."
+    }
+  ],
+  "tools": ["Scratch", "Canva"],
+  "how": [
+    "Talk to the ration dealer and ask if he would update a simple board every morning.",
+    "In Scratch, make one sprite with 4 costumes: green 'Available', yellow 'Tomorrow', red 'Closed', orange 'Long queue'.",
+    "Make 4 buttons. When a button is clicked, switch to that costume and say the message.",
+    "Add a Telugu voice using the Text to Speech extension.",
+    "In Canva, make a printed version with the same colours for people without phones.",
+    "The dealer can take a screenshot of the board and send it to the village WhatsApp group."
+  ],
+  "prompt": "I am a Class 8 student making a ration shop status board in Scratch. Write 4 short, polite messages in simple Telugu and English for: rice available today, stock coming tomorrow, shop closed today, and long queue now."
+}

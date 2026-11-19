@@ -1,0 +1,41 @@
+{
+  "id": 64,
+  "emoji": "🧵",
+  "title": "Handloom Saree Weaving Pattern Inspector",
+  "title_te": "చేనేత చీర నేత నమూనా తనిఖీదారు",
+  "problem": "Women weavers in our street work long hours on handlooms, but master weavers cut their wage if tiny thread breaks go unnoticed.",
+  "idea": "A weave checker. The weaver shows a part of the saree to the camera, and it says if the pattern is perfect or has a broken thread, so she can fix it early. Here you can tap what the camera sees.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What does the camera see on the loom?",
+      "intro": "In my real project, Teachable Machine compares the cloth with photos of good and faulty weaving. Here, tap what the camera sees.",
+      "question": "The camera looks at this part of the saree:",
+      "options": [
+        {"icon": "✅", "label": "Even, neat pattern", "result": "Weave looks perfect. Keep going!", "te": "నేత చక్కగా ఉంది. అలాగే కొనసాగించండి!", "level": "good"},
+        {"icon": "✂️", "label": "Broken thread line", "result": "Broken thread found! Stop and tie the thread before weaving more.", "te": "దారం తెగింది! ఇంకా నేసే ముందు దారం ముడి వేయండి.", "level": "bad"},
+        {"icon": "〰️", "label": "Loose or uneven area", "result": "Weave looks loose here. Check the tension of the threads.", "te": "ఇక్కడ నేత వదులుగా ఉంది. దారాల బిగువు చూడండి.", "level": "warn"}
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Weaver's Daily Care Tips",
+      "items": [
+        {"icon": "🔍", "title": "Check every hour", "text": "Look at the woven part every hour, not only at the end.", "te": "చివర్లో కాదు, ప్రతి గంటకు నేసిన భాగం చూడండి."},
+        {"icon": "💡", "title": "Good light", "text": "Weave near a window or bright bulb so small faults are easy to see.", "te": "కిటికీ దగ్గర లేదా మంచి వెలుతురులో నేయండి."},
+        {"icon": "👀", "title": "Rest your eyes", "text": "Look far away for one minute every 30 minutes.", "te": "ప్రతి 30 నిమిషాలకు ఒక నిమిషం దూరంగా చూడండి."},
+        {"icon": "📸", "title": "Keep photos", "text": "Take a photo of good work. It is proof if there is a wage argument.", "te": "మంచి పని ఫోటో తీసి పెట్టుకోండి. కూలీ గొడవలో సాక్ష్యంగా పనికొస్తుంది."}
+      ]
+    }
+  ],
+  "tools": ["Teachable Machine", "PictoBlox", "Gemini"],
+  "how": [
+    "Ask a weaver aunty to show me good saree parts and parts with broken threads.",
+    "Open Teachable Machine, choose Image Project and make 3 classes: Good weave, Broken thread, Loose weave.",
+    "Take about 40 close-up photos for each class in good light.",
+    "Train the model, test it on a new saree, then Export and copy the link.",
+    "In PictoBlox, add the ML extension, paste the link and make the sprite say a warning in Telugu when a broken thread is seen.",
+    "Ask Gemini for simple eye-care and checking tips for weavers."
+  ],
+  "prompt": "I am a Class 8 student helping handloom weavers in my street. Give 5 simple tips to find and fix broken threads early while weaving a saree, and 2 eye-care tips. Use simple English and simple Telugu."
+}

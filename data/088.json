@@ -1,0 +1,52 @@
+{
+  "id": 88,
+  "emoji": "⚖️",
+  "title": "Free Legal Aid Awareness Poster",
+  "title_te": "ఉచిత న్యాయ సహాయ అవగాహన పోస్టర్",
+  "problem": "Poor villagers give up on resolving illegal land boundary encroachments because they think hiring lawyers in court costs thousands of rupees.",
+  "idea": "A poster and quiz that tell villagers: free lawyers are available through the Legal Services Authority. Tap a person to see if they can usually get free legal help.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Can this person get free legal aid?",
+      "intro": "Under the Legal Services Authorities Act, many groups can get a free lawyer. Final decision is made by the Legal Services Authority.",
+      "question": "Who needs help?",
+      "options": [
+        {"icon": "👩", "label": "A woman", "result": "Yes – women are eligible for free legal aid.", "te": "అవును – మహిళలకు ఉచిత న్యాయ సహాయం లభిస్తుంది.", "level": "good"},
+        {"icon": "🧒", "label": "A child", "result": "Yes – children are eligible.", "te": "అవును – పిల్లలకు లభిస్తుంది.", "level": "good"},
+        {"icon": "🧑‍🌾", "label": "SC / ST person", "result": "Yes – SC and ST persons are eligible.", "te": "అవును – ఎస్సీ, ఎస్టీ వారికి లభిస్తుంది.", "level": "good"},
+        {"icon": "♿", "label": "Person with disability", "result": "Yes – persons with disabilities are eligible.", "te": "అవును – వికలాంగులకు లభిస్తుంది.", "level": "good"},
+        {"icon": "👨", "label": "Poor farmer (low income)", "result": "Usually yes, if income is below the limit. Ask the DLSA.", "te": "ఆదాయం పరిమితి లోపు ఉంటే సాధారణంగా అవును. DLSA లో అడగండి.", "level": "warn"}
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📌 Where to Get Free Legal Help",
+      "items": [
+        {"icon": "🏛️", "title": "District Legal Services Authority", "text": "Office at the district court. Ask for a free lawyer.", "te": "జిల్లా కోర్టులో DLSA ఆఫీసు ఉంటుంది. ఉచిత లాయర్ అడగండి."},
+        {"icon": "🏢", "title": "Mandal Legal Services Committee", "text": "At the court in the mandal/taluk town.", "te": "మండల కోర్టులో లీగల్ సర్వీసెస్ కమిటీ ఉంటుంది."},
+        {"icon": "📞", "title": "Call 15100", "text": "NALSA free legal aid helpline.", "te": "ఉచిత న్యాయ సహాయ హెల్ప్‌లైన్ 15100."},
+        {"icon": "🤝", "title": "Lok Adalat", "text": "Disputes can be settled by talking, without long court cases.", "te": "లోక్ అదాలత్‌లో మాట్లాడుకుని సమస్యలు పరిష్కరించుకోవచ్చు."}
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Legal Aid Quiz",
+      "questions": [
+        {"q": "The free legal aid helpline number is…", "options": ["15100", "1098", "1930"], "answer": 0, "why": "15100 is the NALSA legal aid helpline."},
+        {"q": "Where is the DLSA office usually?", "options": ["At the district court", "At the bus stand"], "answer": 0, "why": "The District Legal Services Authority sits at the district court."},
+        {"q": "Must a poor villager pay thousands for a lawyer?", "options": ["Yes, always", "No, free legal aid may be available"], "answer": 1, "why": "Eligible people get a lawyer free of cost."}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Ask Gemini who can get free legal aid in India and how to reach the District Legal Services Authority.",
+    "Check the facts on the official NALSA or Telangana State Legal Services Authority website.",
+    "Open Canva and choose a clean poster template.",
+    "Add a big heading 'Free Lawyer – Your Right!', the eligible groups, the DLSA address and 15100.",
+    "Write everything in Telugu and English with simple icons.",
+    "Print and stick the poster at the Gram Panchayat office and ration shop."
+  ],
+  "prompt": "I am a Class 8 student. In simple Telugu and English, explain who can get free legal aid in India under the Legal Services Authorities Act and how a villager can contact the District Legal Services Authority or call 15100. Keep it under 100 words for a poster."
+}

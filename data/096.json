@@ -1,0 +1,128 @@
+{
+  "id": 96,
+  "emoji": "☀️",
+  "title": "Low-Cost Solar Water Disinfection DIY Poster",
+  "title_te": "సూర్యరశ్మితో నీటి శుద్ధి – తక్కువ ఖర్చు పోస్టర్",
+  "problem": "Poor families who cannot afford water purifiers get sick from drinking untreated well water during summer power cuts.",
+  "idea": "A simple guide to SODIS – cleaning water with sunlight in clear plastic bottles. Follow the steps, then check if your bottle is ready.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "☀️ SODIS in 5 steps",
+      "items": [
+        {
+          "title": "Pick the bottle",
+          "text": "Use a clean, clear PET plastic bottle (1 or 2 litres). No coloured or scratched bottles.",
+          "te": "శుభ్రమైన, పారదర్శక PET బాటిల్ తీసుకోండి."
+        },
+        {
+          "title": "Check the water",
+          "text": "Water must be clear. If it is very muddy, let it settle and filter it through cloth first.",
+          "te": "నీరు స్పష్టంగా ఉండాలి. బురదగా ఉంటే ముందు బట్టతో వడకట్టండి."
+        },
+        {
+          "title": "Fill and close",
+          "text": "Fill the bottle full and close the cap tightly.",
+          "te": "బాటిల్ నిండా నింపి మూత గట్టిగా పెట్టండి."
+        },
+        {
+          "title": "Keep in the sun",
+          "text": "Lay it flat on a roof or tin sheet in full sun for at least 6 hours.",
+          "te": "కనీసం 6 గంటలు పూర్తి ఎండలో పడుకోబెట్టండి."
+        },
+        {
+          "title": "Cloudy day?",
+          "text": "If the sky is cloudy, keep it in the sun for 2 full days.",
+          "te": "మబ్బుగా ఉంటే 2 రోజులు ఎండలో ఉంచండి."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Is my SODIS bottle ready to drink?",
+      "intro": "Tick only what is true.",
+      "items": [
+        {
+          "text": "Bottle is clear PET plastic, not coloured",
+          "te": "బాటిల్ పారదర్శక ప్లాస్టిక్"
+        },
+        {
+          "text": "Water was clear, not muddy",
+          "te": "నీరు బురద లేకుండా స్పష్టంగా ఉంది"
+        },
+        {
+          "text": "Kept in full sun for 6 hours (2 days if cloudy)",
+          "te": "6 గంటలు ఎండలో ఉంచాం (మబ్బుగా ఉంటే 2 రోజులు)"
+        },
+        {
+          "text": "Cap was closed the whole time",
+          "te": "మూత మొత్తం సమయం మూసి ఉంది"
+        },
+        {
+          "text": "Drinking straight from the bottle or a clean glass",
+          "te": "బాటిల్ నుండి లేదా శుభ్రమైన గ్లాసులో తాగుతున్నాం"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Ready! Your water is safer to drink. 👍",
+          "level": "good"
+        },
+        {
+          "min": 0,
+          "text": "Not ready yet. Every box must be ticked before drinking.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 SODIS Quiz",
+      "questions": [
+        {
+          "q": "How long should the bottle stay in full sun?",
+          "options": [
+            "10 minutes",
+            "At least 6 hours",
+            "1 hour"
+          ],
+          "answer": 1,
+          "why": "Sunlight needs at least 6 hours to kill most germs."
+        },
+        {
+          "q": "Which bottle is best?",
+          "options": [
+            "Clear PET bottle",
+            "Green glass bottle",
+            "Steel bottle"
+          ],
+          "answer": 0,
+          "why": "Sunlight must pass through the bottle, so it must be clear."
+        },
+        {
+          "q": "Can SODIS clean very muddy water?",
+          "options": [
+            "Yes",
+            "No, filter and settle it first"
+          ],
+          "answer": 1,
+          "why": "Mud blocks the sunlight, so the germs survive."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini to explain the SODIS method in 5 simple steps.",
+    "Check the steps with your science teacher.",
+    "Open Canva and choose a Poster template.",
+    "Add one picture and one short line for each step, in English and Telugu.",
+    "Print the poster and stick it near the village well or Anganwadi.",
+    "Show one family how to do it with a real bottle."
+  ],
+  "prompt": "I am a Class 8 student. Explain the SODIS solar water disinfection method in 5 short steps for village families, in simple English and Telugu. Mention clear PET bottles, 6 hours of full sun, 2 days if cloudy, and that very muddy water must be filtered first."
+}

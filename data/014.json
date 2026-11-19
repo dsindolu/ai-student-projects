@@ -1,0 +1,97 @@
+{
+  "id": 14,
+  "emoji": "🩺",
+  "title": "Translating Village Dialect for Town Doctors",
+  "title_te": "పల్లె మాటలను పట్టణ డాక్టర్లకు అర్థమయ్యేలా చెప్పడం",
+  "problem": "When Amma goes to the hospital in town, she speaks in her deep Telangana rural dialect, and the hospital staff sometimes misunderstand her pain descriptions.",
+  "idea": "A word helper and pain chart. Gemini turns our village words into clear words for the doctor, and a Canva body chart shows where it hurts. Here you can tap what Amma says.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What is Amma saying?",
+      "intro": "Tap Amma's words to see how to tell the doctor clearly. The doctor will decide what it means after checking.",
+      "question": "Amma tells the nurse:",
+      "options": [
+        {
+          "icon": "🔥",
+          "label": "కడుపులో మంట",
+          "result": "Tell the doctor: 'Burning feeling in my stomach.'",
+          "te": "డాక్టర్‌కి: కడుపులో మంటగా ఉంది.",
+          "level": "good"
+        },
+        {
+          "icon": "💫",
+          "label": "తల తిరుగుతోంది",
+          "result": "Tell the doctor: 'I feel dizzy. My head is spinning.'",
+          "te": "డాక్టర్‌కి: తల తిరుగుతోంది.",
+          "level": "good"
+        },
+        {
+          "icon": "💓",
+          "label": "గుండె దడ",
+          "result": "Tell the doctor: 'My heart is beating very fast.'",
+          "te": "డాక్టర్‌కి: గుండె వేగంగా కొట్టుకుంటోంది.",
+          "level": "warn",
+          "tip": "If there is chest pain or breathing trouble, call 108 at once."
+        },
+        {
+          "icon": "🦴",
+          "label": "నడుము నొప్పి",
+          "result": "Tell the doctor: 'Pain in my lower back.'",
+          "te": "డాక్టర్‌కి: నడుము కింద నొప్పి.",
+          "level": "good"
+        },
+        {
+          "icon": "🌡️",
+          "label": "ఒళ్ళు కాలిపోతోంది",
+          "result": "Tell the doctor: 'I have fever. My body is very hot.'",
+          "te": "డాక్టర్‌కి: జ్వరంగా ఉంది.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Tell the Doctor These 4 Things",
+      "items": [
+        {
+          "icon": "📍",
+          "title": "Where",
+          "text": "Point to the place on the body chart.",
+          "te": "ఎక్కడ నొప్పో చార్ట్‌లో చూపించండి."
+        },
+        {
+          "icon": "📅",
+          "title": "Since when",
+          "text": "How many days or hours has it been?",
+          "te": "ఎన్ని రోజులుగా ఉంది?"
+        },
+        {
+          "icon": "🔢",
+          "title": "How strong",
+          "text": "Say a number from 1 (little) to 10 (very bad).",
+          "te": "1 నుంచి 10 వరకు ఎంత నొప్పో చెప్పండి."
+        },
+        {
+          "icon": "💊",
+          "title": "Medicines",
+          "text": "Show all tablets you are already taking.",
+          "te": "వేసుకుంటున్న మాత్రలన్నీ చూపించండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Make a list of words Amma and the elders use for pain and illness.",
+    "Ask Gemini to write each word in clear, simple English and standard Telugu.",
+    "Check the list with a nurse or ASHA worker to make sure it is correct.",
+    "Open Canva and make a front and back body outline with numbered parts.",
+    "Add a pain scale from 1 to 10 with happy and sad faces.",
+    "Print it, keep it in Amma's hospital file, and use it at the next visit."
+  ],
+  "prompt": "I am a Class 8 student from rural Telangana. Here are some village words my mother uses to describe pain: [list words]. For each, give the clear English meaning and standard Telugu so a town doctor can understand. Don't diagnose any illness."
+}

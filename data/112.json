@@ -1,0 +1,94 @@
+{
+  "id": 112,
+  "emoji": "🎓",
+  "title": "Post-Matric Scholarship Deadline Tracker",
+  "title_te": "పోస్ట్-మెట్రిక్ స్కాలర్‌షిప్ గడువు ట్రాకర్",
+  "problem": "Hardworking seniors miss out on government fee reimbursement and scholarship schemes because they miss the online portal closing date.",
+  "idea": "A deadline reminder. Enter how many days are left before the portal closes and how many documents are ready, and it tells you how urgent it is.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: How urgent is my application?",
+      "intro": "Find the last date on the official TS ePASS website (telanganaepass.cgg.gov.in). Never trust forwarded messages for dates.",
+      "inputs": [
+        {
+          "id": "daysLeft",
+          "label": "Days left before the portal closes",
+          "value": 15
+        },
+        {
+          "id": "docsReady",
+          "label": "Documents ready (out of 7)",
+          "value": 4
+        }
+      ],
+      "formula": "if (!(daysLeft >= 0 && docsReady >= 0 && docsReady <= 7)) return null; var missing = 7 - docsReady; var lvl, msg; if (daysLeft <= 7 || (missing > 2 && daysLeft <= 15)) { lvl = 'bad'; msg = 'URGENT! Get the missing documents this week and apply.'; } else if (missing > 0) { lvl = 'warn'; msg = 'Start now. Income and caste certificates can take time from MeeSeva.'; } else { lvl = 'good'; msg = 'All set! Apply early – don\\'t wait for the last day.'; } return {missing: missing, msg: msg, level: lvl};",
+      "result": "Documents still missing: {missing}\n{msg}"
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Scholarship document checklist",
+      "intro": "Tick what you already have. Confirm the exact list on the official site.",
+      "items": [
+        {
+          "text": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "text": "Income certificate (latest)",
+          "te": "ఆదాయ ధృవీకరణ పత్రం"
+        },
+        {
+          "text": "Caste certificate",
+          "te": "కుల ధృవీకరణ పత్రం"
+        },
+        {
+          "text": "Bank account linked with Aadhaar",
+          "te": "ఆధార్‌తో లింక్ అయిన బ్యాంక్ ఖాతా"
+        },
+        {
+          "text": "Previous class marks memo",
+          "te": "గత తరగతి మార్కుల మెమో"
+        },
+        {
+          "text": "College admission / fee receipt",
+          "te": "కాలేజీ అడ్మిషన్ / ఫీజు రసీదు"
+        },
+        {
+          "text": "Passport size photo",
+          "te": "పాస్‌పోర్ట్ సైజ్ ఫోటో"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "All documents ready! Apply on the official portal. 🎉",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Almost there. Get the rest soon.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Many documents missing. Visit MeeSeva this week.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Open the official TS ePASS website with a teacher and note the current dates.",
+    "Ask Gemini to make a simple document checklist for post-matric scholarships, and check it against the website.",
+    "Never copy dates from Gemini or WhatsApp – only from the official site.",
+    "Open Canva and make a bright calendar poster with the real dates.",
+    "Stick it on the hostel bulletin board and update it when dates change.",
+    "Help seniors tick their checklist one week before the deadline."
+  ],
+  "prompt": "I am a Class 8 student making a scholarship poster for seniors. Give a simple checklist of documents usually needed for Telangana post-matric scholarships (TS ePASS), and remind students to confirm dates and rules on the official website."
+}

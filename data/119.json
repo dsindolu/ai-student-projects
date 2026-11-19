@@ -1,0 +1,118 @@
+{
+  "id": 119,
+  "emoji": "🐐",
+  "title": "1-Page Business Plan Generator for Village Youth",
+  "title_te": "గ్రామ యువత కోసం ఒక పేజీ వ్యాపార ప్రణాళిక",
+  "problem": "Creative village boys who want to start small goat farms or poultry units get turned away by banks because they don't have a written business proposal.",
+  "idea": "A simple profit calculator for a small poultry unit, plus a checklist of what a 1-page business plan for the bank must have.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: Will my poultry batch make a profit?",
+      "intro": "Sample numbers only. Ask local farmers and shops for real prices before going to the bank.",
+      "inputs": [
+        {
+          "id": "birds",
+          "label": "Number of chicks",
+          "value": 200
+        },
+        {
+          "id": "chick",
+          "label": "Cost of one chick (₹)",
+          "value": 40
+        },
+        {
+          "id": "feed",
+          "label": "Feed + medicine per bird (₹)",
+          "value": 160
+        },
+        {
+          "id": "other",
+          "label": "Other costs: electricity, litter, transport (₹)",
+          "value": 3000
+        },
+        {
+          "id": "loss",
+          "label": "Birds that may die (%)",
+          "value": 5
+        },
+        {
+          "id": "price",
+          "label": "Selling price per bird (₹)",
+          "value": 280
+        }
+      ],
+      "formula": "if (!(birds > 0 && chick >= 0 && feed >= 0 && other >= 0 && loss >= 0 && loss < 100 && price > 0)) return null; var sold = Math.floor(birds * (100 - loss) / 100); var cost = birds * (chick + feed) + other; var income = sold * price; var profit = income - cost; return {sold: sold, cost: cost, income: income, profit: profit, level: profit > 0 ? 'good' : 'bad', msg: profit > 0 ? 'This batch makes a profit. Write it in your plan!' : 'Loss! Reduce costs or find a better selling price.'};",
+      "result": "Birds sold: {sold}\nTotal cost: ₹{cost}\nTotal income: ₹{income}\nProfit per batch: ₹{profit}\n{msg}"
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ My 1-page plan has…",
+      "intro": "Banks want to see these parts.",
+      "items": [
+        {
+          "text": "My name, village and phone number",
+          "te": "నా పేరు, ఊరు, ఫోన్ నంబర్"
+        },
+        {
+          "text": "What business and why (local demand)",
+          "te": "ఏ వ్యాపారం, ఎందుకు"
+        },
+        {
+          "text": "Money needed: shed, chicks, feed",
+          "te": "కావాల్సిన డబ్బు: షెడ్, కోడిపిల్లలు, మేత"
+        },
+        {
+          "text": "How much I can put in myself",
+          "te": "నా వాటా ఎంత"
+        },
+        {
+          "text": "Expected income and profit per batch",
+          "te": "ఆశించే ఆదాయం, లాభం"
+        },
+        {
+          "text": "Where I will sell (buyers, markets)",
+          "te": "ఎక్కడ అమ్ముతాను"
+        },
+        {
+          "text": "How I will repay the loan every month",
+          "te": "ప్రతి నెల రుణం ఎలా చెల్లిస్తాను"
+        },
+        {
+          "text": "Training or experience I have",
+          "te": "నాకున్న శిక్షణ/అనుభవం"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.8,
+          "text": "Strong plan! Ask the bank about schemes like Mudra loans. 🏦",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good start. Add the missing parts.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Fill more details before visiting the bank.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Talk to a local poultry or goat farmer and write down real costs and prices.",
+    "Use the calculator to check if the business makes a profit.",
+    "Give Gemini the idea and the numbers, and ask for a simple 1-page business proposal.",
+    "Check every number yourself – never copy numbers you did not verify.",
+    "Open Canva, choose a clean 'Business proposal' or 'One-pager' template and paste the plan.",
+    "Print it and visit the bank or the agriculture/animal husbandry office with an elder."
+  ],
+  "prompt": "Help me write a simple 1-page business plan for a village youth starting a 200-bird broiler poultry unit in Telangana. Chick cost ₹40, feed and medicine ₹160 per bird, other costs ₹3,000, 5% mortality, selling price ₹280 per bird. Include investment, profit per batch, market and loan repayment plan in simple English."
+}

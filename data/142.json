@@ -1,0 +1,136 @@
+{
+  "id": 142,
+  "emoji": "🔔",
+  "title": "Pembarthi Metal Craft Casting Process Guide",
+  "title_te": "పెంబర్తి లోహ కళ పోత ప్రక్రియ గైడ్",
+  "problem": "Old brass statue-making techniques in Pembarthi village are unknown to the school students who visit the heritage sites.",
+  "idea": "An easy visual guide that shows how metal statues are made with the old lost-wax method, plus facts about Pembarthi's famous brass sheet metal art. Read the steps and take the quiz.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🕯️ Lost-wax casting in 6 steps",
+      "intro": "This is the old method used in India to cast brass and bronze statues. Molten metal is very hot — only skilled artisans do it.",
+      "items": [
+        {
+          "title": "Clay core",
+          "text": "Make a rough shape of the statue in clay.",
+          "te": "మట్టితో విగ్రహ ఆకారం తయారు చేయండి."
+        },
+        {
+          "title": "Wax model",
+          "text": "Cover it with wax (often beeswax) and carve fine details in the wax.",
+          "te": "దానిపై మైనం పూసి చక్కటి వివరాలు చెక్కండి."
+        },
+        {
+          "title": "Clay coat",
+          "text": "Cover the wax model with layers of fine clay. Leave a small hole.",
+          "te": "మైనం బొమ్మపై మట్టి పొరలు వేయండి. చిన్న రంధ్రం వదలండి."
+        },
+        {
+          "title": "Melt the wax",
+          "text": "Heat the mould. The wax melts and flows out, leaving an empty space.",
+          "te": "అచ్చును వేడి చేస్తే మైనం కరిగి బయటకు వస్తుంది."
+        },
+        {
+          "title": "Pour metal",
+          "text": "Pour hot liquid brass into the empty space and let it cool.",
+          "te": "ఖాళీలోకి కరిగిన ఇత్తడి పోసి చల్లారనివ్వండి."
+        },
+        {
+          "title": "Break and polish",
+          "text": "Break the clay, then file and polish the shining statue.",
+          "te": "మట్టి పగలగొట్టి, విగ్రహాన్ని మెరుగుపెట్టండి."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🏛️ About Pembarthi",
+      "items": [
+        {
+          "icon": "📍",
+          "title": "Where",
+          "text": "Pembarthi is a village in Jangaon district, Telangana.",
+          "te": "పెంబర్తి జనగామ జిల్లాలోని గ్రామం."
+        },
+        {
+          "icon": "🔨",
+          "title": "Sheet metal art",
+          "text": "Pembarthi is most famous for beautiful designs hammered on brass and copper sheets.",
+          "te": "ఇత్తడి, రాగి రేకులపై సుత్తితో చేసే డిజైన్లకు పెంబర్తి ప్రసిద్ధి."
+        },
+        {
+          "icon": "🏅",
+          "title": "GI tag",
+          "text": "Pembarthi Metal Craft has a Geographical Indication (GI) tag.",
+          "te": "పెంబర్తి లోహ కళకు GI ట్యాగ్ ఉంది."
+        },
+        {
+          "icon": "🛕",
+          "title": "Temple art",
+          "text": "Artisans make lamps, vessels, temple decorations and gifts.",
+          "te": "దీపాలు, పాత్రలు, ఆలయ అలంకరణలు తయారు చేస్తారు."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "❓ Metal Craft Quiz",
+      "questions": [
+        {
+          "q": "In which district is Pembarthi?",
+          "options": [
+            "Jangaon",
+            "Nalgonda",
+            "Medak"
+          ],
+          "answer": 0,
+          "why": "Pembarthi is in Jangaon district."
+        },
+        {
+          "q": "In lost-wax casting, what happens to the wax?",
+          "options": [
+            "It is painted",
+            "It melts and flows out",
+            "It becomes metal"
+          ],
+          "answer": 1,
+          "why": "Heating melts the wax, leaving a hollow mould for the metal."
+        },
+        {
+          "q": "Brass is a mix of which metals?",
+          "options": [
+            "Copper and zinc",
+            "Iron and tin",
+            "Gold and silver"
+          ],
+          "answer": 0,
+          "why": "Brass is an alloy of copper and zinc."
+        },
+        {
+          "q": "Why should students watch casting from a distance?",
+          "options": [
+            "The metal is very hot and dangerous",
+            "It is boring",
+            "It is secret"
+          ],
+          "answer": 0,
+          "why": "Liquid metal is extremely hot. Safety first!"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini to explain the lost-wax casting steps in very simple English and Telugu.",
+    "If possible, visit Pembarthi with a teacher and ask an artisan to explain their work. Take photos with permission.",
+    "Check Gemini's steps with what the artisan said and correct anything different.",
+    "In Canva, search 'process infographic' and make a 6-step chart with a picture for each step.",
+    "Add a box about Pembarthi's sheet metal art and GI tag.",
+    "Print the chart for the school heritage club and share it before the next field trip."
+  ],
+  "prompt": "I am a Class 8 student. Explain the lost-wax metal casting method in 6 very simple steps in English and Telugu, for a school poster. Also write 3 lines about Pembarthi village in Jangaon district and its brass sheet metal craft."
+}

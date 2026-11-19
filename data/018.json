@@ -1,0 +1,108 @@
+{
+  "id": 18,
+  "emoji": "🦟",
+  "title": "Dirty Water Mosquito Scanner",
+  "title_te": "మురికి నీటిలో దోమల గుర్తింపు స్కానర్",
+  "problem": "Dirty water stands near our street pump for days, and soon everyone in the lane starts getting sick with high fever and chills.",
+  "idea": "A water scanner. The camera looks at water near our homes and says if mosquitoes can breed there, then asks people to clean the drain. Here you can tap the water the camera 'sees'.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What water does the camera see?",
+      "intro": "In my real project, Teachable Machine learns photos of clean and stagnant water. Here, tap one.",
+      "question": "The camera sees:",
+      "options": [
+        {
+          "icon": "🟢",
+          "label": "Green still water near pump",
+          "result": "ALERT! Mosquitoes can breed here. Please clean the drain and let the water flow.",
+          "te": "హెచ్చరిక! ఇక్కడ దోమలు పెరుగుతాయి. కాలువ శుభ్రం చేయండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🛞",
+          "label": "Rainwater in old tyre or pot",
+          "result": "ALERT! Empty this water and turn it upside down.",
+          "te": "హెచ్చరిక! ఈ నీరు పారబోసి బోర్లించండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🪣",
+          "label": "Uncovered water drum",
+          "result": "Careful! Cover the drum with a lid or cloth.",
+          "te": "జాగ్రత్త! డ్రమ్ మీద మూత పెట్టండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "💧",
+          "label": "Clean flowing water",
+          "result": "Good! Flowing water is not a mosquito home.",
+          "te": "బాగుంది! పారే నీటిలో దోమలు పెరగవు.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Our Street's Friday Dry Day",
+      "intro": "Tick what your family did this week to stop mosquitoes.",
+      "items": [
+        {
+          "text": "Emptied and dried water pots, coolers and buckets",
+          "te": "కుండలు, కూలర్లు, బకెట్లు ఖాళీ చేసి ఆరబెట్టాము"
+        },
+        {
+          "text": "Covered all water drums",
+          "te": "నీటి డ్రమ్ములన్నిటికీ మూతలు పెట్టాము"
+        },
+        {
+          "text": "Threw away old tyres, coconut shells, broken pots",
+          "te": "పాత టైర్లు, కొబ్బరి చిప్పలు, పగిలిన కుండలు తీసేశాము"
+        },
+        {
+          "text": "Cleared the drain near our house",
+          "te": "ఇంటి దగ్గర కాలువ శుభ్రం చేశాము"
+        },
+        {
+          "text": "Slept under a mosquito net",
+          "te": "దోమతెర కింద పడుకున్నాము"
+        },
+        {
+          "text": "Anyone with high fever went to the PHC",
+          "te": "ఎక్కువ జ్వరం ఉన్నవారు పీహెచ్‌సీకి వెళ్ళారు"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.84,
+          "text": "Mosquito fighter family! Great work.",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good! Finish the rest before Friday.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Mosquitoes love your street now. Start today!",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Take photos (from a safe distance) of clean water and of green, stagnant water around the village.",
+    "Open Teachable Machine, choose Image Project, and make 2 classes: Clean water and Stagnant water.",
+    "Upload about 50 photos for each, click Train, and Export the model.",
+    "In Scratch, load the model. When it sees stagnant water, play an alert and show 'Please clean the drain!'.",
+    "Ask Gemini to write a short Telugu message for neighbours about dry day.",
+    "Show the scanner at a Gram Sabha or school assembly."
+  ],
+  "prompt": "I am a Class 8 student. Write a short, friendly message in simple Telugu and English asking my neighbours to clean the stagnant water near our street pump to stop mosquitoes. Add 5 easy dry-day tips."
+}

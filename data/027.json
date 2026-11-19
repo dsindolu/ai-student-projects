@@ -1,0 +1,107 @@
+{
+  "id": 27,
+  "emoji": "📝",
+  "title": "Health Survey Paper Generator for ASHA Workers",
+  "title_te": "ఆశా వర్కర్ల కోసం ఆరోగ్య సర్వే పత్రం తయారీ",
+  "problem": "Our local ASHA worker akka walks door-to-door writing down household health details on torn scraps of paper in hot weather.",
+  "idea": "A clean, printable Telugu survey sheet. Gemini helps write simple questions and Canva makes a neat form. Here you can see the form sections and check if a survey sheet is good.",
+  "widgets": [
+    {
+      "type": "cards",
+      "heading": "📄 Sections of Our Survey Sheet",
+      "items": [
+        {
+          "icon": "🏠",
+          "title": "Family details",
+          "text": "House number, head of family, number of members.",
+          "te": "ఇంటి నంబర్, ఇంటి పెద్ద పేరు, సభ్యుల సంఖ్య."
+        },
+        {
+          "icon": "🤰",
+          "title": "Mothers and babies",
+          "text": "Pregnant women, babies under 1 year, vaccine dates.",
+          "te": "గర్భిణీలు, ఏడాది లోపు పిల్లలు, టీకా తేదీలు."
+        },
+        {
+          "icon": "👴",
+          "title": "Elders' health",
+          "text": "Elders with BP, sugar or other long illness.",
+          "te": "బీపీ, షుగర్ ఉన్న పెద్దలు."
+        },
+        {
+          "icon": "🤒",
+          "title": "Fever this week",
+          "text": "Anyone with fever, cough or loose motions.",
+          "te": "ఈ వారం జ్వరం, దగ్గు, విరేచనాలు ఉన్నవారు."
+        },
+        {
+          "icon": "🚰",
+          "title": "Water and toilet",
+          "text": "Drinking water source and toilet at home.",
+          "te": "తాగునీటి వనరు, ఇంట్లో టాయిలెట్."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Is Our Survey Sheet ASHA-Friendly?",
+      "intro": "Tick each point your sheet has.",
+      "items": [
+        {
+          "text": "Big, clear Telugu letters",
+          "te": "పెద్ద, స్పష్టమైన తెలుగు అక్షరాలు"
+        },
+        {
+          "text": "Tick boxes instead of long writing",
+          "te": "ఎక్కువ రాయకుండా టిక్ బాక్సులు"
+        },
+        {
+          "text": "One family fits on one page",
+          "te": "ఒక కుటుంబం ఒకే పేజీలో"
+        },
+        {
+          "text": "Space for date and ASHA's signature",
+          "te": "తేదీ, ఆశా సంతకం కోసం స్థలం"
+        },
+        {
+          "text": "Printed on thick paper or kept in a clipboard file",
+          "te": "మందపాటి పేపర్ లేదా క్లిప్‌బోర్డ్ ఫైల్"
+        },
+        {
+          "text": "ASHA akka tried it and said it is easy",
+          "te": "ఆశా అక్క వాడి చూసి సులభమని చెప్పారు"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.84,
+          "text": "Excellent form! Ready to print.",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good draft. Improve a few points.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Keep working on it with ASHA akka's ideas.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Meet ASHA akka and ask what details she writes at every house.",
+    "Ask Gemini to turn her list into simple Telugu questions with tick boxes.",
+    "Open Canva, choose an A4 document, and make a table with sections and tick boxes.",
+    "Use big fonts and leave space for the date and signature.",
+    "Print one copy and ask ASHA akka to try it at 2-3 houses.",
+    "Change it based on her ideas, then print copies for her. Keep family details private."
+  ],
+  "prompt": "I am a Class 8 student helping our village ASHA worker. Make a simple one-page household health survey form in Telugu and English with tick boxes, with sections for family details, pregnant women and babies, elders with BP or sugar, fever this week, and water and toilet."
+}

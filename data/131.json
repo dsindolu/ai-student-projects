@@ -1,0 +1,126 @@
+{
+  "id": 131,
+  "emoji": "💧",
+  "title": "Drinking Water Filter Maintenance Alarm",
+  "title_te": "మంచినీటి ఫిల్టర్ నిర్వహణ అలారం",
+  "problem": "Hostel RO water purifiers break down often because the filter candles get clogged with mud, and nobody remembers the last replacement date.",
+  "idea": "A filter counter. It counts the days since the last cleaning and rings an alarm when cleaning or changing is due. Enter your dates to see.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Is filter cleaning due?",
+      "intro": "Check the purifier book for how often the filter should be cleaned. Many candle filters need cleaning every few weeks, and more often if the water is muddy.",
+      "inputs": [
+        {
+          "id": "since",
+          "label": "Days since last cleaning",
+          "value": 25
+        },
+        {
+          "id": "every",
+          "label": "Clean every ___ days (from the purifier book)",
+          "value": 30
+        },
+        {
+          "id": "water",
+          "label": "Water type",
+          "type": "select",
+          "value": "1",
+          "options": [
+            {
+              "label": "Clear borewell / tap water",
+              "value": "1"
+            },
+            {
+              "label": "Muddy water (rainy season)",
+              "value": "0.5"
+            }
+          ]
+        }
+      ],
+      "formula": "if (typeof since !== 'number' || typeof every !== 'number' || typeof water !== 'number') return null; if (since < 0 || every <= 0) return null; var limit = Math.round(every * water); var left = limit - since; var msg, level; if (left < 0) { msg = '🔔 ALARM! Cleaning is ' + (-left) + ' days late. Tell the warden today.'; level = 'bad'; } else if (left <= 5) { msg = '🟡 Cleaning due in ' + left + ' days. Get ready.'; level = 'warn'; } else { msg = '🟢 OK. Next cleaning in ' + left + ' days.'; level = 'good'; } return {limit: limit, msg: msg, level: level};",
+      "result": "Cleaning needed every {limit} days for this water.\n{msg}"
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Signs the filter needs attention",
+      "intro": "Tick what you notice.",
+      "items": [
+        {
+          "text": "Water comes out very slowly",
+          "te": "నీళ్ళు చాలా నెమ్మదిగా వస్తున్నాయి"
+        },
+        {
+          "text": "Water looks cloudy or yellow",
+          "te": "నీళ్ళు మసకగా లేదా పసుపుగా ఉన్నాయి"
+        },
+        {
+          "text": "Bad smell or taste",
+          "te": "చెడు వాసన లేదా రుచి"
+        },
+        {
+          "text": "Machine makes a strange noise",
+          "te": "మెషిన్ వింత శబ్దం చేస్తోంది"
+        },
+        {
+          "text": "Nobody knows the last cleaning date",
+          "te": "చివరిసారి ఎప్పుడు శుభ్రం చేశారో ఎవరికీ తెలియదు"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.4,
+          "text": "Call the warden and the service person. Use boiled water meanwhile.",
+          "level": "bad"
+        },
+        {
+          "min": 0.2,
+          "text": "Watch closely and check the cleaning date.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Filter looks fine. Keep the date register updated.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Filter Care Rules",
+      "items": [
+        {
+          "icon": "📅",
+          "title": "Write the date",
+          "text": "Stick a date card on the purifier every time it is cleaned.",
+          "te": "శుభ్రం చేసిన ప్రతిసారీ తేదీ కార్డు అతికించండి."
+        },
+        {
+          "icon": "🧑‍🔧",
+          "title": "Adults only",
+          "text": "Only the trained staff or service person opens the machine.",
+          "te": "శిక్షణ పొందిన సిబ్బందే మెషిన్ తెరవాలి."
+        },
+        {
+          "icon": "🔥",
+          "title": "Backup plan",
+          "text": "If the purifier is broken, boil water for at least 1 minute and cool it.",
+          "te": "ఫిల్టర్ పాడైతే నీళ్ళను కనీసం 1 నిమిషం మరిగించి చల్లార్చండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Read the purifier book (or ask the service person) to find how often the filter should be cleaned or changed.",
+    "In Scratch, use the 'days since 2000' block to count days since the last cleaning date.",
+    "Make a variable 'days left' = cleaning gap minus days passed.",
+    "If days left is 0 or less, play an alarm sound and show 'Clean the filter!' in red.",
+    "Keep a paper date card on the machine too, in case the computer is off.",
+    "Ask Gemini for safe drinking water tips to add to the screen."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple English and Telugu why water purifier filters must be cleaned on time, the signs of a clogged filter, and what to do for safe drinking water if the purifier stops working."
+}

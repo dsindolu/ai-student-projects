@@ -1,0 +1,116 @@
+{
+  "id": 53,
+  "emoji": "📈",
+  "title": "Daily Loan Interest Comparison Posters",
+  "title_te": "రోజువారీ అప్పు వడ్డీ పోలిక పోస్టర్లు",
+  "problem": "Daily wage workers take small ₹2,000 loans from local moneylenders, not realising that paying ₹100 interest every week eats away their food money.",
+  "idea": "A calculator that turns 'small weekly interest' into a yearly interest rate, and compares it with a bank or self-help group loan.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: How costly is this loan really?",
+      "intro": "Type the loan and the weekly interest. Bank / SHG rates are only examples – check at your bank.",
+      "inputs": [
+        {
+          "id": "loan",
+          "label": "Loan amount (₹)",
+          "value": 2000
+        },
+        {
+          "id": "weeklyInt",
+          "label": "Interest paid every week (₹)",
+          "value": 100
+        },
+        {
+          "id": "weeks",
+          "label": "Weeks until you repay",
+          "value": 20
+        },
+        {
+          "id": "bankRate",
+          "label": "Bank / SHG yearly interest (%)",
+          "value": 12
+        }
+      ],
+      "formula": "if (loan <= 0 || weeklyInt < 0 || weeks <= 0 || bankRate < 0) return null; var paid = weeklyInt * weeks; var yearly = weeklyInt * 52 / loan * 100; var bank = loan * bankRate / 100 * weeks / 52; return {paid: paid, yearly: Math.round(yearly), bank: Math.round(bank), save: Math.round(paid - bank), level: yearly > 36 ? 'bad' : (yearly > bankRate ? 'warn' : 'good')};",
+      "result": "Moneylender interest = ₹{paid}\nThat is about {yearly}% per year!\nSame loan from bank/SHG ≈ ₹{bank} interest\nYou could save ≈ ₹{save}"
+    },
+    {
+      "type": "cards",
+      "heading": "💡 Better Ways to Borrow",
+      "items": [
+        {
+          "icon": "👩‍👩‍👧",
+          "title": "Self-help group",
+          "text": "SHG loans have low interest and friendly members.",
+          "te": "స్వయం సహాయక సంఘం అప్పులపై వడ్డీ తక్కువ."
+        },
+        {
+          "icon": "🏦",
+          "title": "Bank loans",
+          "text": "Banks give small loans with written, fair interest.",
+          "te": "బ్యాంకులు రాతపూర్వక, న్యాయమైన వడ్డీతో అప్పు ఇస్తాయి."
+        },
+        {
+          "icon": "🪙",
+          "title": "Save a little first",
+          "text": "Saving ₹20 a day = ₹600 a month for emergencies.",
+          "te": "రోజుకు ₹20 పొదుపు = నెలకు ₹600."
+        },
+        {
+          "icon": "📋",
+          "title": "Ask in writing",
+          "text": "Always ask: 'What is the total I must pay back?'",
+          "te": "'మొత్తం ఎంత తిరిగి ఇవ్వాలి?' అని అడగండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "₹100 interest every week on ₹2,000. How much in one year (52 weeks)?",
+          "options": [
+            "₹1,200",
+            "₹5,200",
+            "₹100"
+          ],
+          "answer": 1,
+          "why": "100 × 52 = ₹5,200. That is more than double the loan!"
+        },
+        {
+          "q": "Which loan is usually cheaper?",
+          "options": [
+            "Bank / SHG loan",
+            "Local moneylender"
+          ],
+          "answer": 0,
+          "why": "Bank and SHG rates are usually much lower."
+        },
+        {
+          "q": "What question should you ask before any loan?",
+          "options": [
+            "Total amount to repay",
+            "Colour of the notes"
+          ],
+          "answer": 0,
+          "why": "Knowing the total helps you compare."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Collect real examples (no names) of small local loans from elders in the village.",
+    "Ask Gemini to convert weekly interest into yearly percentage for each example.",
+    "Ask the bank or SHG leader for their usual loan interest rate.",
+    "Make a comparison table with Gemini: moneylender vs bank vs SHG.",
+    "Design a bar-chart poster in Canva with big numbers and Telugu labels.",
+    "Put the poster at the ration shop or Gram Panchayat."
+  ],
+  "prompt": "I am a Class 8 student. A worker borrows ₹2,000 and pays ₹100 interest every week. Calculate the total interest in a year and the yearly interest rate. Compare it with a bank or SHG loan at 12% per year. Explain in very simple English and Telugu, and give 4 tips for safer borrowing."
+}

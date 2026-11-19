@@ -1,0 +1,102 @@
+{
+  "id": 12,
+  "emoji": "♿",
+  "title": "Finding Ramp Entrance for My Uncle's Tricycle",
+  "title_te": "మామయ్య ట్రైసైకిల్ కోసం ర్యాంప్ దారి కనుక్కోవడం",
+  "problem": "My uncle uses a hand-tricycle and gets stranded in front of big government buildings because he cannot see where the wheelchair ramp is located.",
+  "idea": "A ramp check list and simple maps. We check each building, and Canva maps show where the ramp is. Here you can check how friendly a building is for wheelchairs.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "✅ Is This Building Wheelchair-Friendly?",
+      "intro": "Go with an adult to a building (Panchayat office, bank, PHC, school) and tick what you see.",
+      "items": [
+        {
+          "text": "There is a ramp at the entrance",
+          "te": "ప్రవేశం దగ్గర ర్యాంప్ ఉంది"
+        },
+        {
+          "text": "The ramp is not too steep and has a handrail",
+          "te": "ర్యాంప్ నిటారుగా లేదు, పట్టుకునే రెయిలింగ్ ఉంది"
+        },
+        {
+          "text": "A sign shows where the ramp is",
+          "te": "ర్యాంప్ ఎక్కడుందో బోర్డు ఉంది"
+        },
+        {
+          "text": "The door is wide enough for a tricycle",
+          "te": "ట్రైసైకిల్ వెళ్ళేంత వెడల్పు తలుపు ఉంది"
+        },
+        {
+          "text": "The main office counter is on the ground floor",
+          "te": "ముఖ్య కౌంటర్ కింది అంతస్తులోనే ఉంది"
+        },
+        {
+          "text": "There is a toilet a wheelchair can enter",
+          "te": "వీల్‌చైర్ వెళ్ళగలిగే టాయిలెట్ ఉంది"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.84,
+          "text": "Very friendly building! Put it on our map in green.",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Partly friendly. Mark it yellow and note what is missing.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Hard to enter. Mark it red and kindly tell the office.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🗺️ What Our Ramp Map Shows",
+      "items": [
+        {
+          "icon": "🟢",
+          "title": "Green building",
+          "text": "Ramp at the front. Easy to enter.",
+          "te": "ముందు ర్యాంప్ ఉంది. సులభంగా వెళ్ళవచ్చు."
+        },
+        {
+          "icon": "🟡",
+          "title": "Yellow building",
+          "text": "Ramp is at the side or back. Follow the arrow.",
+          "te": "ర్యాంప్ పక్కన లేదా వెనక ఉంది. బాణం చూడండి."
+        },
+        {
+          "icon": "🔴",
+          "title": "Red building",
+          "text": "No ramp. Ask the staff to come out and help.",
+          "te": "ర్యాంప్ లేదు. సిబ్బందిని బయటికి రమ్మనండి."
+        },
+        {
+          "icon": "✉️",
+          "title": "Ask for a ramp",
+          "text": "Write a polite letter to the office asking for a ramp.",
+          "te": "ర్యాంప్ కోసం ఆఫీసుకు మర్యాదగా లేఖ రాయండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva",
+    "Google Lens"
+  ],
+  "how": [
+    "Make a list of important buildings in our mandal: Panchayat, bank, PHC, MRO office, school.",
+    "Ask Gemini to make a simple checklist for wheelchair access (like the one above).",
+    "Visit each building with an adult and tick the checklist. Take a photo of the entrance.",
+    "Open Canva and draw a simple map for each building with an arrow to the ramp.",
+    "Colour each building green, yellow or red.",
+    "Print the maps and give one to uncle and to the Panchayat office."
+  ],
+  "prompt": "I am a Class 8 student. My uncle uses a hand tricycle. Make a simple checklist in English and Telugu to check if a government building is easy to enter for wheelchair users, and write a short polite letter asking an office to build a ramp."
+}

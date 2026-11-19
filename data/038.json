@@ -1,0 +1,118 @@
+{
+  "id": 38,
+  "emoji": "🐄",
+  "title": "Spotting Mouth Wounds in Our Cattle",
+  "title_te": "మా పశువుల నోటి పుండ్లను గుర్తించడం",
+  "problem": "Our cow stopped eating grass and started drooling saliva, but we didn't realise it was foot-and-mouth disease until other cows got infected too.",
+  "idea": "A cattle health checker. When the camera sees mouth wounds or drooling, it tells us to keep the cow apart and call the vet at once. Tap what you see to try it.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What do you see in the cow's mouth?",
+      "intro": "In my real project, Teachable Machine learned photos of healthy and sick cattle mouths.",
+      "question": "The camera sees:",
+      "options": [
+        {
+          "icon": "😊",
+          "label": "Pink, clean mouth, eating well",
+          "result": "Healthy cow. Keep giving clean water and feed.",
+          "te": "ఆరోగ్యకరమైన ఆవు. శుభ్రమైన నీళ్ళు, మేత ఇవ్వండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🤤",
+          "label": "Lots of drooling, not eating",
+          "result": "Warning! Check the mouth and feet. Call the veterinary doctor today.",
+          "te": "జాగ్రత్త! నోరు, కాళ్ళు చూడండి. ఈరోజే పశువైద్యుడిని పిలవండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🩸",
+          "label": "Blisters or wounds in mouth / between hooves",
+          "result": "Possible foot-and-mouth disease! Keep this cow away from others and call the vet or 1962 animal helpline now.",
+          "te": "గాలికుంటు వ్యాధి కావచ్చు! ఈ ఆవును వేరుగా కట్టేయండి. వెంటనే పశువైద్యుడిని లేదా 1962కి ఫోన్ చేయండి.",
+          "level": "bad",
+          "tip": "Wash hands after touching a sick animal. Give soft feed and clean water."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🚑 Emergency Care Until the Vet Comes",
+      "items": [
+        {
+          "icon": "🚧",
+          "title": "Keep apart",
+          "text": "Tie the sick cow away from other animals.",
+          "te": "జబ్బు ఆవును మిగతా పశువులకు దూరంగా కట్టండి."
+        },
+        {
+          "icon": "📞",
+          "title": "Call for help",
+          "text": "Call the local veterinary hospital or the 1962 animal care helpline.",
+          "te": "పశువైద్యశాల లేదా 1962 హెల్ప్‌లైన్‌కు ఫోన్ చేయండి."
+        },
+        {
+          "icon": "🥣",
+          "title": "Soft food, clean water",
+          "text": "Give soft feed and fresh water. Do not force-feed.",
+          "te": "మెత్తని మేత, శుభ్రమైన నీళ్ళు ఇవ్వండి."
+        },
+        {
+          "icon": "💉",
+          "title": "Vaccinate on time",
+          "text": "Free FMD vaccine is given in camps. Don't miss it!",
+          "te": "గాలికుంటు టీకా ఉచితంగా వేస్తారు. తప్పకుండా వేయించండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "A cow drools and has mouth blisters. First step?",
+          "options": [
+            "Keep it apart and call the vet",
+            "Send it to graze with others"
+          ],
+          "answer": 0,
+          "why": "Foot-and-mouth spreads fast. Separate the cow and call the vet."
+        },
+        {
+          "q": "How do we protect cattle from foot-and-mouth disease?",
+          "options": [
+            "Vaccination",
+            "More salt"
+          ],
+          "answer": 0,
+          "why": "Regular vaccination is the best protection."
+        },
+        {
+          "q": "After touching a sick cow, we should…",
+          "options": [
+            "Wash hands and change clothes",
+            "Touch other cows quickly"
+          ],
+          "answer": 0,
+          "why": "Germs can travel on hands and clothes."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Open teachablemachine.withgoogle.com and choose Image Project.",
+    "Make classes: Healthy mouth, Drooling, Mouth wounds. Add about 30 clear photos to each class (from our field or from the Agriculture Officer's pictures).",
+    "Click Train Model. Test it with new photos it has never seen.",
+    "Click Export, upload the model and copy the shareable link.",
+    "In PictoBlox, add the Machine Learning extension and paste the model link.",
+    "When class is 'Mouth wounds', say 'Keep the cow apart and call the vet' in Telugu and show the vet's phone number.",
+    "Ask the village vet to check the care steps before showing the project."
+  ],
+  "prompt": "I am a Class 8 student from a village. Explain foot-and-mouth disease in cattle in simple English and Telugu: signs to look for, why it spreads fast, 5 safe things to do until the vet arrives, and why vaccination is important. Do not suggest medicine doses."
+}

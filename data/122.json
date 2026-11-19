@@ -1,0 +1,101 @@
+{
+  "id": 122,
+  "emoji": "🚰",
+  "title": "Overhead Water Tank Overflow Alarm",
+  "title_te": "ట్యాంక్ నీరు పొంగిపోయే అలారం",
+  "problem": "The water pump on our hostel building runs continuously, making the roof tanks overflow for hours and wasting drinking water.",
+  "idea": "A camera watches a floating marker in the tank. When the water reaches the top mark, a loud alarm tells the watchman to switch off the motor. Try the alarm and see how much water we save.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Where is the floating marker?",
+      "intro": "In my real project, PictoBlox watches a bright coloured float through a camera. Tap where the float is now.",
+      "question": "The camera sees the float at:",
+      "options": [
+        {
+          "icon": "⬇️",
+          "label": "Bottom mark",
+          "result": "Tank is almost empty. Switch ON the motor.",
+          "te": "ట్యాంక్ దాదాపు ఖాళీ. మోటర్ ఆన్ చేయండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "↔️",
+          "label": "Middle mark",
+          "result": "Tank is half full. Motor can keep running.",
+          "te": "ట్యాంక్ సగం నిండింది. మోటర్ నడవనివ్వండి.",
+          "level": "good"
+        },
+        {
+          "icon": "⬆️",
+          "label": "Top mark",
+          "result": "ALARM! Tank is full. Switch OFF the motor now!",
+          "te": "అలారం! ట్యాంక్ నిండిపోయింది. వెంటనే మోటర్ ఆపండి!",
+          "level": "bad",
+          "tip": "The alarm keeps ringing until someone switches off the motor."
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "🧮 How much water is wasted by overflow?",
+      "intro": "Check how long the tank overflows each day. Use a bucket and a watch to find how many litres the pipe gives in one minute.",
+      "inputs": [
+        {
+          "id": "lpm",
+          "label": "Water flow from pipe (litres per minute)",
+          "value": 30
+        },
+        {
+          "id": "mins",
+          "label": "Minutes the tank overflows each day",
+          "value": 60
+        },
+        {
+          "id": "days",
+          "label": "Days in a month",
+          "value": 30
+        }
+      ],
+      "formula": "if (typeof lpm !== 'number' || typeof mins !== 'number' || typeof days !== 'number') return null; if (lpm <= 0 || mins < 0 || days <= 0) return null; var day = lpm * mins; var month = day * days; var buckets = Math.round(month / 15); var level = mins === 0 ? 'good' : (mins <= 15 ? 'warn' : 'bad'); return {day: day, month: month, buckets: buckets, level: level};",
+      "result": "Wasted per day: {day} litres\nWasted per month: {month} litres\nThat is about {buckets} buckets of water (15 L each)!"
+    },
+    {
+      "type": "cards",
+      "heading": "💧 Water Saving Tips for the Hostel",
+      "items": [
+        {
+          "icon": "⏰",
+          "title": "Note the fill time",
+          "text": "Find how many minutes the tank takes to fill and set a timer.",
+          "te": "ట్యాంక్ నిండడానికి ఎంత సమయం పడుతుందో చూసి టైమర్ పెట్టండి."
+        },
+        {
+          "icon": "🔌",
+          "title": "Ask for an auto switch",
+          "text": "Ask the school to fit a cheap automatic water level controller.",
+          "te": "ఆటోమేటిక్ వాటర్ లెవెల్ కంట్రోలర్ పెట్టమని అడగండి."
+        },
+        {
+          "icon": "🚿",
+          "title": "Close taps",
+          "text": "Close dripping taps. A dripping tap wastes many litres in a day.",
+          "te": "కారుతున్న నల్లాలను మూసేయండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Make a float: tie a bright red plastic ball to a thin stick so it rises with the water.",
+    "Mark Bottom, Middle and Top lines on the tank wall (or on a clear test bottle at first).",
+    "In PictoBlox, add the camera / Computer Vision extension and detect the red colour position.",
+    "Use 'if y position > top mark' to play a loud alarm sound and show 'Switch OFF motor'.",
+    "Test with a bottle of water at your desk before trying on the real tank (always with a teacher, never alone on the roof).",
+    "Ask Gemini to write the alarm message in Telugu and English."
+  ],
+  "prompt": "I am a Class 8 student. Write a short, loud alarm message in Telugu and English that tells our hostel watchman to switch off the water motor because the tank is full. Also give 3 simple tips to stop tank overflow."
+}

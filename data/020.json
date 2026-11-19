@@ -1,0 +1,88 @@
+{
+  "id": 20,
+  "emoji": "☀️",
+  "title": "Summer Water Reminder for Abba Working in Fields",
+  "title_te": "పొలంలో పనిచేసే అబ్బాకు వేసవిలో నీళ్ళ గుర్తు",
+  "problem": "Abba works under the scorching May sun in the fields and forgets to drink water, coming home with severe headaches and dizzy spells.",
+  "idea": "A water helper and a daily tracking chart. Here you can work out roughly how much water Abba should carry to the field. It is only a rough guide.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: How much water should Abba carry?",
+      "intro": "A rough guide for a healthy adult. People with kidney or heart problems should ask their doctor how much to drink.",
+      "inputs": [
+        {
+          "id": "hours",
+          "label": "Hours of work in the sun",
+          "value": 6
+        },
+        {
+          "id": "heat",
+          "label": "How hot is it today?",
+          "type": "select",
+          "value": "hot",
+          "options": [
+            {
+              "label": "Warm (below 35°C)",
+              "value": "warm"
+            },
+            {
+              "label": "Hot (35-40°C)",
+              "value": "hot"
+            },
+            {
+              "label": "Very hot (above 40°C)",
+              "value": "veryhot"
+            }
+          ]
+        }
+      ],
+      "formula": "if (!(hours >= 0) || hours > 14) return null;\nvar perHour = heat === 'veryhot' ? 0.75 : (heat === 'hot' ? 0.6 : 0.4);\nvar litres = Math.round((hours * perHour) * 2) / 2;\nif (litres < 1) litres = 1;\nvar glasses = Math.round(litres * 4);\nvar lvl = heat === 'veryhot' ? 'bad' : (heat === 'hot' ? 'warn' : 'good');\nvar tip = heat === 'veryhot' ? 'Very hot! Rest in shade from 12 to 3 pm.' : 'Drink a glass every 20-30 minutes, even if not thirsty.';\nreturn {litres: litres, glasses: glasses, tip: tip, level: lvl};",
+      "result": "Carry about {litres} litres to the field (about {glasses} glasses).\n{tip}"
+    },
+    {
+      "type": "cards",
+      "heading": "⚠️ Heat Stroke Danger Signs",
+      "intro": "If Abba has these signs, move him to shade, cool him with wet cloth, and call 108.",
+      "items": [
+        {
+          "icon": "🤕",
+          "title": "Bad headache and dizziness",
+          "text": "Stop work and rest in the shade.",
+          "te": "బాగా తలనొప్పి, కళ్ళు తిరగడం - నీడలో విశ్రాంతి."
+        },
+        {
+          "icon": "🥵",
+          "title": "Very hot, dry skin",
+          "text": "Cool the body with wet cloths and fan.",
+          "te": "చర్మం బాగా వేడిగా, పొడిగా - తడి గుడ్డతో చల్లబరచండి."
+        },
+        {
+          "icon": "😵",
+          "title": "Confused or fainting",
+          "text": "This is an emergency. Call 108 now.",
+          "te": "అయోమయం, స్పృహ తప్పడం - వెంటనే 108."
+        },
+        {
+          "icon": "🧂",
+          "title": "Drink ORS or buttermilk",
+          "text": "ORS, buttermilk or lemon water help in heat.",
+          "te": "ఓఆర్ఎస్, మజ్జిగ, నిమ్మరసం తాగండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini how much water outdoor workers need in hot weather and the signs of heat stroke.",
+    "Check the answer with the ASHA worker or PHC nurse.",
+    "Open Canva and make a daily chart with 12 glass pictures for each day of the week.",
+    "Add the heat stroke warning signs and '108' at the bottom.",
+    "Print the chart and stick it near the door. Abba ticks a glass every time he drinks.",
+    "Make a copy for other farm workers in our village."
+  ],
+  "prompt": "I am a Class 8 student. My father works in the fields in May. In simple English and Telugu, tell me roughly how much water outdoor workers should drink in hot weather, how often, and the warning signs of heat stroke. Remind people with health problems to ask a doctor."
+}

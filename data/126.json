@@ -1,0 +1,125 @@
+{
+  "id": 126,
+  "emoji": "🌡️",
+  "title": "Sick Room High-Fever Digital Register",
+  "title_te": "సిక్ రూమ్ జ్వరం డిజిటల్ రిజిస్టర్",
+  "problem": "Students resting in the hostel sick room lie for hours without temperature tracking, because fever readings stay recorded in handwritten paper logs.",
+  "idea": "A digital fever register. The health captain types the thermometer reading and the screen turns red for high fever so the warden acts fast. Try it with a reading.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🌡️ Enter the thermometer reading",
+      "intro": "Use a digital thermometer. Choose °F or °C.",
+      "inputs": [
+        {
+          "id": "temp",
+          "label": "Temperature reading",
+          "value": 101.2
+        },
+        {
+          "id": "unit",
+          "label": "Unit",
+          "type": "select",
+          "value": "F",
+          "options": [
+            {
+              "label": "°F (Fahrenheit)",
+              "value": "F"
+            },
+            {
+              "label": "°C (Celsius)",
+              "value": "C"
+            }
+          ]
+        },
+        {
+          "id": "hours",
+          "label": "Hours since fever started",
+          "value": 6
+        }
+      ],
+      "formula": "if (typeof temp !== 'number' || typeof hours !== 'number') return null; var f = unit === 'C' ? temp * 9 / 5 + 32 : temp; if (f < 90 || f > 110) return null; var msg, level; if (f >= 103) { msg = '🔴 VERY HIGH FEVER. Tell the warden NOW. Call 108 or go to the PHC.'; level = 'bad'; } else if (f >= 100.4) { msg = '🔴 FEVER. Show to the nurse / PHC doctor. Check again every 2 hours.'; level = 'bad'; } else if (f >= 99.1) { msg = '🟡 Slightly warm. Rest, drink water, check again in 2 hours.'; level = 'warn'; } else { msg = '🟢 Normal temperature.'; level = 'good'; } if (f >= 100.4 && hours >= 48) msg += ' Fever for 2+ days: must see a doctor today.'; return {f: f, msg: msg, level: level};",
+      "result": "Reading: {f} °F\n{msg}"
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Health captain's checklist (every 2 hours)",
+      "items": [
+        {
+          "text": "Wrote the name, time and temperature.",
+          "te": "పేరు, సమయం, జ్వరం రాశాను."
+        },
+        {
+          "text": "Gave the student clean drinking water.",
+          "te": "విద్యార్థికి మంచినీళ్ళు ఇచ్చాను."
+        },
+        {
+          "text": "Told the warden about any reading of 100.4 °F or more.",
+          "te": "100.4 °F లేదా ఎక్కువైతే వార్డెన్‌కి చెప్పాను."
+        },
+        {
+          "text": "Checked for danger signs: fits, very sleepy, breathing trouble, rash.",
+          "te": "ప్రమాద సంకేతాలు చూశాను: ఫిట్స్, మగత, ఊపిరి ఇబ్బంది, దద్దుర్లు."
+        },
+        {
+          "text": "Washed my hands after helping.",
+          "te": "సహాయం తర్వాత చేతులు కడుక్కున్నాను."
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Excellent care! 💚",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Good. Finish the remaining steps.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Please follow every step. A sick friend needs you.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📞 Important",
+      "items": [
+        {
+          "icon": "🚑",
+          "title": "Call 108",
+          "text": "For very high fever, fits or breathing trouble, call 108 ambulance.",
+          "te": "ఎక్కువ జ్వరం, ఫిట్స్, ఊపిరి ఇబ్బందికి 108కి ఫోన్ చేయండి."
+        },
+        {
+          "icon": "🏥",
+          "title": "Go to the PHC",
+          "text": "Fever of 100.4 °F or more should be checked by the nurse or PHC doctor.",
+          "te": "100.4 °F పైన జ్వరం ఉంటే నర్స్ లేదా PHC డాక్టర్‌కి చూపించండి."
+        },
+        {
+          "icon": "💊",
+          "title": "No self medicine",
+          "text": "Students should not take tablets on their own. Only the nurse or doctor gives medicine.",
+          "te": "సొంతంగా మాత్రలు వేసుకోవద్దు. నర్స్ లేదా డాక్టర్ మాత్రమే ఇవ్వాలి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "In Scratch, make two lists: 'Name' and 'Temperature', and a variable for time.",
+    "Add an 'ask' block: 'Enter student name' and 'Enter temperature'.",
+    "Use 'if temperature ≥ 100.4 then' to change the backdrop to bright red and play a beep.",
+    "Use 'if temperature ≥ 103' to show 'Call warden now — 108'.",
+    "Show the full list on screen so the warden can see everyone at one look.",
+    "Ask Gemini for the danger signs of fever in simple Telugu and add them to the screen."
+  ],
+  "prompt": "I am a Class 8 health captain in a hostel. In simple English and Telugu, tell me which body temperatures are normal, fever and very high fever (in °F), and list 5 danger signs when we must call 108 or take the student to the PHC."
+}

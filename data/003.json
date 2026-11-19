@@ -1,0 +1,96 @@
+{
+  "id": 3,
+  "emoji": "🚌",
+  "title": "Helping Nani Know Which Bus Arrived at the Stand",
+  "title_te": "ఏ బస్సు వచ్చిందో నానికి తెలియజేయడం",
+  "problem": "My Nani cannot read the bus numbers written in Telugu or English when standing at the noisy bus stop. She feels helpless waiting for someone to help her board.",
+  "idea": "A bus board reader. The phone camera looks at the board on the front of the bus, and the phone says the place name out loud. Here you can tap the board the camera 'sees'.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Which bus came to the stand?",
+      "intro": "In my real project, Teachable Machine learns photos of our local bus boards. Here, tap the board to hear the helper.",
+      "question": "The camera sees this bus board:",
+      "options": [
+        {
+          "icon": "🟢",
+          "label": "Board: Warangal",
+          "result": "This bus goes to WARANGAL. Nani, this is your bus!",
+          "te": "ఇది వరంగల్ బస్సు. నానీ, ఇదే మీ బస్సు!",
+          "level": "good"
+        },
+        {
+          "icon": "🔵",
+          "label": "Board: Karimnagar",
+          "result": "This bus goes to KARIMNAGAR. Not your bus. Please wait.",
+          "te": "ఇది కరీంనగర్ బస్సు. మీ బస్సు కాదు. కొంచెం ఆగండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🟠",
+          "label": "Board: Hyderabad",
+          "result": "This bus goes to HYDERABAD. Not your bus. Please wait.",
+          "te": "ఇది హైదరాబాద్ బస్సు. మీ బస్సు కాదు. కొంచెం ఆగండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "❓",
+          "label": "Board not clear",
+          "result": "I cannot read this board. Please ask the conductor.",
+          "te": "ఈ బోర్డు సరిగ్గా కనిపించడం లేదు. కండక్టర్‌ని అడగండి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Bus Stand Safety Quiz",
+      "questions": [
+        {
+          "q": "The bus is moving slowly. What should Nani do?",
+          "options": [
+            "Climb in quickly",
+            "Wait until the bus stops fully",
+            "Run behind it"
+          ],
+          "answer": 1,
+          "why": "Always get in only after the bus stops fully."
+        },
+        {
+          "q": "Nani is not sure if it is the right bus. What is best?",
+          "options": [
+            "Get in anyway",
+            "Ask the conductor before getting in",
+            "Go home"
+          ],
+          "answer": 1,
+          "why": "The conductor can tell the route. Asking is always okay."
+        },
+        {
+          "q": "Where should Nani keep the phone number of family?",
+          "options": [
+            "On a paper in her bag or pocket",
+            "Nowhere",
+            "Only in memory"
+          ],
+          "answer": 0,
+          "why": "A paper with family numbers helps if she gets lost."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Take photos of the boards of 3 buses that stop in our village (about 30 photos each, from front and side).",
+    "Open Teachable Machine, choose Image Project, and make one class for each bus place plus a 'No bus' class.",
+    "Upload the photos, click Train, then Export and copy the model link.",
+    "In Scratch (or PictoBlox), add the ML extension and paste the model link.",
+    "Add a Text-to-Speech block that says the place name in Telugu when that class is seen.",
+    "Test at the bus stand with Nani, standing in a safe place away from the road."
+  ],
+  "prompt": "I am a Class 8 student making a bus helper for my grandmother. Write short, clear Telugu and English sentences for: 'This bus goes to Warangal, this is your bus', 'This is not your bus, please wait', and 'I cannot read the board, please ask the conductor'."
+}

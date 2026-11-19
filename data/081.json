@@ -1,0 +1,50 @@
+{
+  "id": 81,
+  "emoji": "♿",
+  "title": "Disability Pension Medical Board Step Guide",
+  "title_te": "వికలాంగుల పెన్షన్ మెడికల్ బోర్డు దశల గైడ్",
+  "problem": "My polio-affected uncle feels overwhelmed trying to book doctor checkups at the district hospital for his Sadarem disability pension card.",
+  "idea": "A big, clear step guide. It shows Mamayya the order: book a slot, go to the medical board, get the Sadarem certificate, then apply for the pension. A checklist tells him what to carry.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🪜 Mamayya's Step-by-Step Path",
+      "intro": "General steps. Please confirm the latest process at the Mee Seva centre or MPDO office.",
+      "items": [
+        {"title": "Book a slot", "text": "Go to Mee Seva and book a Sadarem medical camp / board slot. Keep the slot slip.", "te": "మీసేవలో సదరం క్యాంప్ స్లాట్ బుక్ చేసి, స్లిప్ దగ్గర ఉంచుకోండి."},
+        {"title": "Go on the date", "text": "Reach the hospital early on the given date with all papers and one helper.", "te": "ఇచ్చిన తేదీన కాగితాలు, ఒక సహాయకుడితో ఆసుపత్రికి ముందుగా వెళ్ళండి."},
+        {"title": "Medical check", "text": "Doctors on the board examine him and decide the disability percentage.", "te": "బోర్డు డాక్టర్లు పరీక్షించి వైకల్య శాతం నిర్ణయిస్తారు."},
+        {"title": "Get the certificate", "text": "Collect the Sadarem certificate when it is ready. Keep copies.", "te": "సదరం సర్టిఫికేట్ తీసుకుని, కాపీలు ఉంచుకోండి."},
+        {"title": "Apply for pension", "text": "Apply for the disability pension as told by the MPDO office / Gram Panchayat, with the certificate.", "te": "సర్టిఫికేట్‌తో ఎంపీడీఓ ఆఫీసు / గ్రామ పంచాయతీ చెప్పినట్లు పెన్షన్‌కు దరఖాస్తు చేయండి."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "🎒 What to Carry on Medical Board Day",
+      "intro": "Common items – confirm the exact list on the slot slip or at Mee Seva.",
+      "items": [
+        {"text": "Mee Seva slot booking slip", "te": "మీసేవ స్లాట్ బుకింగ్ స్లిప్"},
+        {"text": "Aadhaar card", "te": "ఆధార్ కార్డు"},
+        {"text": "Old medical reports and prescriptions", "te": "పాత వైద్య రిపోర్టులు, ప్రిస్క్రిప్షన్లు"},
+        {"text": "Passport-size photos", "te": "పాస్‌పోర్ట్ సైజు ఫోటోలు"},
+        {"text": "Water, food and his walking aid", "te": "నీళ్ళు, ఆహారం, నడక సహాయ పరికరం"},
+        {"text": "One family member to help", "te": "సహాయానికి ఒక కుటుంబ సభ్యుడు"}
+      ],
+      "bands": [
+        {"min": 1, "text": "Ready for the medical board!", "level": "good"},
+        {"min": 0.5, "text": "Almost ready. Pack the rest tonight.", "level": "warn"},
+        {"min": 0, "text": "Start with the slot slip and Aadhaar.", "level": "bad"}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Ask Gemini to explain the Sadarem certificate and disability pension steps in Telangana in simple words.",
+    "Confirm the steps at the Mee Seva centre and MPDO office, and correct anything that is different.",
+    "Open Canva and choose a large poster template.",
+    "Make 5 big numbered boxes with icons: slip, hospital, doctor, certificate, pension.",
+    "Use very large Telugu letters so Mamayya can read easily.",
+    "Print it and also a small checklist to keep in his file."
+  ],
+  "prompt": "I am a Class 8 student. My uncle has a polio disability. Explain in 5 simple Telugu steps how a person in Telangana gets a Sadarem disability certificate and then applies for a disability pension. Do not give amounts. Tell him to confirm at Mee Seva or the MPDO office."
+}

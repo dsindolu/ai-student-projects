@@ -1,0 +1,125 @@
+{
+  "id": 60,
+  "emoji": "☎️",
+  "title": "Cyber Fraud Helpline 1930 Emergency Poster",
+  "title_te": "సైబర్ మోసం హెల్ప్‌లైన్ 1930 అత్యవసర పోస్టర్",
+  "problem": "People who lose money to phone scams waste days before going to police stations, missing the early hours when stolen money can still be frozen.",
+  "idea": "An emergency poster and practice dialer. It shows exactly what to do in the first hour after a cyber fraud: call 1930, then report at cybercrime.gov.in.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🚨 What To Do Right Away",
+      "items": [
+        {
+          "title": "Call 1930 fast",
+          "text": "Call the national cyber fraud helpline 1930 as soon as possible. The first hour matters most.",
+          "te": "వెంటనే 1930కి ఫోన్ చేయండి. మొదటి గంట చాలా ముఖ్యం."
+        },
+        {
+          "title": "Keep details ready",
+          "text": "Bank name, account number, date, time, amount and transaction ID / UTR number.",
+          "te": "బ్యాంక్ పేరు, ఖాతా నంబర్, తేదీ, సమయం, మొత్తం, ట్రాన్సాక్షన్ ఐడీ సిద్ధంగా ఉంచండి."
+        },
+        {
+          "title": "Report online",
+          "text": "Also file a complaint at cybercrime.gov.in and note the complaint number.",
+          "te": "cybercrime.gov.in లో కూడా ఫిర్యాదు చేసి నంబర్ రాసుకోండి."
+        },
+        {
+          "title": "Tell your bank",
+          "text": "Call your bank's official helpline to block the card / UPI.",
+          "te": "బ్యాంక్ అధికారిక హెల్ప్‌లైన్‌కు ఫోన్ చేసి కార్డ్ / యూపీఐ బ్లాక్ చేయించండి."
+        },
+        {
+          "title": "Save proof",
+          "text": "Keep screenshots, SMS and the scammer's number. Do not delete anything.",
+          "te": "స్క్రీన్‌షాట్లు, ఎస్ఎంఎస్‌లు దాచి ఉంచండి. ఏమీ డిలీట్ చేయవద్దు."
+        }
+      ]
+    },
+    {
+      "type": "picker",
+      "heading": "📞 Try it: Practice dialer – what do you do first?",
+      "intro": "Ravi Uncle just lost ₹5,000 to a fake call. Tap what he should do first.",
+      "question": "Ravi Uncle decides to…",
+      "options": [
+        {
+          "icon": "☎️",
+          "label": "Call 1930 right now",
+          "result": "Correct! Fast reporting gives the best chance to freeze the stolen money.",
+          "te": "సరైనది! త్వరగా ఫిర్యాదు చేస్తే డబ్బు నిలిపివేసే అవకాశం ఎక్కువ.",
+          "level": "good"
+        },
+        {
+          "icon": "😴",
+          "label": "Wait till tomorrow",
+          "result": "Too late! Scammers move money fast. Call 1930 now.",
+          "te": "ఆలస్యం! మోసగాళ్ళు డబ్బు త్వరగా తరలిస్తారు. ఇప్పుడే 1930కి ఫోన్ చేయండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "📲",
+          "label": "Call the scammer back",
+          "result": "No! They may cheat you again. Call 1930.",
+          "te": "వద్దు! మళ్ళీ మోసం చేస్తారు. 1930కి ఫోన్ చేయండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🗑️",
+          "label": "Delete the messages out of shame",
+          "result": "No! Messages are proof. Don't feel ashamed – report it.",
+          "te": "వద్దు! మెసేజ్‌లు సాక్ష్యం. సిగ్గుపడకండి – ఫిర్యాదు చేయండి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "What is the cyber fraud helpline number?",
+          "options": [
+            "1930",
+            "108",
+            "1098"
+          ],
+          "answer": 0,
+          "why": "1930 is for cyber money fraud. 108 is ambulance, 1098 is child help."
+        },
+        {
+          "q": "Which website is for cyber crime complaints?",
+          "options": [
+            "cybercrime.gov.in",
+            "Any random site"
+          ],
+          "answer": 0,
+          "why": "cybercrime.gov.in is the official national portal."
+        },
+        {
+          "q": "When should you report?",
+          "options": [
+            "As soon as possible",
+            "After a week"
+          ],
+          "answer": 0,
+          "why": "The faster you report, the better the chance to stop the money."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Canva",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Ask Gemini what to do in the first hour after an online money fraud in India.",
+    "Open Canva and choose a bright emergency poster template (red and yellow).",
+    "Write '1930' in very big numbers and add 4 short steps with icons in Telugu and English.",
+    "In Scratch, draw a phone keypad. Each number is a button sprite.",
+    "When the player dials 1-9-3-0 and presses call, show 'Connected! Tell them your bank details and transaction ID'.",
+    "Print the poster and stick it at the bus stop, ration shop and school."
+  ],
+  "prompt": "I am a Class 8 student. Make text for an emergency poster in simple English and Telugu: what to do immediately after losing money in an online or phone fraud in India. Include calling 1930, reporting at cybercrime.gov.in, calling the bank, and saving proof. Keep each step to one short line."
+}

@@ -1,0 +1,132 @@
+{
+  "id": 150,
+  "emoji": "📱",
+  "title": "Phone Rumor & Fake News Checker Cards",
+  "title_te": "ఫోన్ పుకార్లు & తప్పుడు వార్తల తనిఖీ కార్డులు",
+  "problem": "Unverified WhatsApp rumours about kidnappers or false health panics spread quickly across village phones, frightening elders needlessly.",
+  "idea": "A 5-step 'Stop and Check' card for every phone user in our village. Test a message below and use the checklist before you forward anything.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: A message arrives on WhatsApp",
+      "question": "Which message did you get?",
+      "options": [
+        {
+          "icon": "😱",
+          "label": "\"Kidnappers in our area! Forward to all!\"",
+          "result": "STOP! Very likely a rumour. Don't forward. Ask the local police (dial 112). Never hurt anyone because of a message.",
+          "te": "ఆగండి! ఇది పుకారు కావచ్చు. ఫార్వర్డ్ చేయవద్దు. పోలీసులను అడగండి (112). మెసేజ్ వల్ల ఎవరినీ కొట్టవద్దు.",
+          "level": "bad"
+        },
+        {
+          "icon": "💊",
+          "label": "\"Drink this mixture, it cures every disease!\"",
+          "result": "FAKE! No drink cures every disease. Ask the ANM, ASHA worker or PHC doctor.",
+          "te": "తప్పుడు వార్త! అన్ని రోగాలు తగ్గించే పానీయం లేదు. ఆశా, ANM లేదా PHC డాక్టర్‌ని అడగండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "💰",
+          "label": "\"You won ₹10 lakh! Click this link\"",
+          "result": "SCAM! Don't click. Delete it. Report cyber fraud at 1930.",
+          "te": "మోసం! క్లిక్ చేయవద్దు. డిలీట్ చేయండి. సైబర్ మోసం 1930కి ఫిర్యాదు చేయండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🏫",
+          "label": "School notice from the class teacher",
+          "result": "Looks real. Still, check with the teacher if anything seems strange.",
+          "te": "నిజమైనదిలా ఉంది. ఏదైనా అనుమానంగా ఉంటే టీచర్‌ని అడగండి.",
+          "level": "good"
+        },
+        {
+          "icon": "📰",
+          "label": "News that only one unknown page shares",
+          "result": "Not sure. Search if trusted news channels or PIB Fact Check say the same.",
+          "te": "అనుమానం. నమ్మదగిన వార్తల్లో లేదా PIB ఫ్యాక్ట్ చెక్‌లో చూడండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ 5-step Stop and Check (before you forward)",
+      "items": [
+        {
+          "text": "STOP: I did not forward it in a hurry.",
+          "te": "ఆగు: తొందరపడి ఫార్వర్డ్ చేయలేదు."
+        },
+        {
+          "text": "SOURCE: I know who first wrote it.",
+          "te": "మూలం: మొదట ఎవరు రాశారో తెలుసు."
+        },
+        {
+          "text": "SEARCH: Trusted news or officials say the same thing.",
+          "te": "వెతుకు: నమ్మదగిన వార్తలు, అధికారులు అదే చెప్పారు."
+        },
+        {
+          "text": "SIGNS: No 'forward to all', no scary words, no strange links.",
+          "te": "సంకేతాలు: 'అందరికీ పంపండి', భయపెట్టే మాటలు, వింత లింకులు లేవు."
+        },
+        {
+          "text": "ASK: I checked with a teacher, police, ASHA or elder.",
+          "te": "అడుగు: టీచర్, పోలీస్, ఆశా లేదా పెద్దవాళ్ళను అడిగాను."
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "All 5 checked. If it is true and useful, you may share. ✅",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Not fully checked. Wait before forwarding.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Do NOT forward. It may be a rumour.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📞 Who to ask",
+      "items": [
+        {
+          "icon": "🚓",
+          "title": "Police — 112",
+          "text": "For danger or rumours about crime, call 112.",
+          "te": "ప్రమాదం, నేరాల పుకార్లకు 112కి ఫోన్ చేయండి."
+        },
+        {
+          "icon": "💻",
+          "title": "Cyber fraud — 1930",
+          "text": "Lost money in an online scam? Call 1930 quickly.",
+          "te": "ఆన్‌లైన్ మోసంలో డబ్బు పోతే వెంటనే 1930కి ఫోన్ చేయండి."
+        },
+        {
+          "icon": "🏥",
+          "title": "Health — ASHA / PHC",
+          "text": "For health news, ask the ASHA worker, ANM or PHC doctor.",
+          "te": "ఆరోగ్య వార్తలకు ఆశా, ANM, PHC డాక్టర్‌ని అడగండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini for a simple 5-step checklist to check WhatsApp messages before forwarding.",
+    "Collect 3 examples of rumours that reached your village (remove people's names and numbers).",
+    "In Canva, search 'awareness card' and make a small card with the 5 steps in Telugu and English.",
+    "Add the helpline numbers 112 (Police) and 1930 (Cyber fraud).",
+    "Print the cards and give them to elders at the panchayat, temple, mosque, church and ration shop.",
+    "Make a WhatsApp image version and ask the sarpanch to share it in the village group."
+  ],
+  "prompt": "I am a Class 8 student in a Telangana village. Make a 5-step checklist in very simple Telugu and English that elders can follow before forwarding a WhatsApp message, with examples of kidnapper rumours, fake health cures and prize scams."
+}

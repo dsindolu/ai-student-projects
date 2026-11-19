@@ -1,0 +1,96 @@
+{
+  "id": 10,
+  "emoji": "👵",
+  "title": "Face Remembering Game for My Forgetful Grandma",
+  "title_te": "మతిమరుపు ఉన్న అమ్మమ్మ కోసం ముఖాలు గుర్తించే ఆట",
+  "problem": "Grandma gets confused and forgets the names of relatives who visit us from other towns, which makes her feel embarrassed and quiet.",
+  "idea": "A friendly face helper. When a relative stands in front of the camera, the helper softly tells grandma who it is. Here you can tap who is standing at the door.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Who came to visit?",
+      "intro": "In my real project, Teachable Machine learns family photos (with their permission). Here, tap the visitor.",
+      "question": "The camera sees this person:",
+      "options": [
+        {
+          "icon": "👨",
+          "label": "Tall man with glasses",
+          "result": "This is your nephew Ramesh from Nizamabad!",
+          "te": "ఇతను నిజామాబాద్ నుంచి వచ్చిన మీ మేనల్లుడు రమేష్!",
+          "level": "good"
+        },
+        {
+          "icon": "👩",
+          "label": "Lady with long plait",
+          "result": "This is your daughter Lakshmi!",
+          "te": "ఈమె మీ కూతురు లక్ష్మి!",
+          "level": "good"
+        },
+        {
+          "icon": "👦",
+          "label": "Small boy",
+          "result": "This is your grandson Chintu!",
+          "te": "వీడు మీ మనవడు చింటు!",
+          "level": "good"
+        },
+        {
+          "icon": "❓",
+          "label": "Someone new",
+          "result": "I don't know this person. Let's ask their name kindly.",
+          "te": "ఈ వ్యక్తి నాకు తెలియదు. వారి పేరు అడుగుదాం.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 How to Help Grandma Kindly",
+      "questions": [
+        {
+          "q": "Grandma forgets a name. What should we say?",
+          "options": [
+            "'You forgot again!'",
+            "'Grandma, this is Ramesh, your nephew.'",
+            "Nothing"
+          ],
+          "answer": 1,
+          "why": "Gently telling the name keeps grandma happy and calm."
+        },
+        {
+          "q": "What helps grandma remember people?",
+          "options": [
+            "A photo album with names",
+            "Shouting",
+            "Testing her many times"
+          ],
+          "answer": 0,
+          "why": "Looking at named photos together is a nice memory game."
+        },
+        {
+          "q": "Grandma forgets very often and gets lost. What should the family do?",
+          "options": [
+            "Ignore it",
+            "Take her to a doctor for a check-up",
+            "Scold her"
+          ],
+          "answer": 1,
+          "why": "A doctor can check her and guide the family."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Ask each family member if they are okay to be in the project.",
+    "Open Teachable Machine, choose Image Project, and make one class per person plus a 'Nobody' class.",
+    "Take about 40 photos of each person's face from different sides.",
+    "Click Train and Export, then load the model in PictoBlox.",
+    "Add a block that says 'This is your nephew Ramesh!' in a soft Telugu voice for each class.",
+    "Play it like a game with grandma and keep the photos private."
+  ],
+  "prompt": "I am a Class 8 student making a memory game for my grandmother. Write kind, short Telugu and English sentences to introduce family members to her, like 'This is your nephew Ramesh from Nizamabad'. Also give 3 tips to help elders with memory problems feel respected."
+}

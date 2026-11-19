@@ -1,0 +1,138 @@
+{
+  "id": 51,
+  "emoji": "📜",
+  "title": "Land Paper Ownership Verification Guide",
+  "title_te": "భూమి పత్రాల యాజమాన్య తనిఖీ గైడ్",
+  "problem": "A farmer family near our house lost their savings buying a small land plot because the seller gave them fake, unregistered title papers.",
+  "idea": "A simple land paper checklist. Before paying any money, the family ticks each check. If checks are missing, the page warns them to stop and verify.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "✅ Try it: Before you buy land, check…",
+      "intro": "Tick only what you have really checked yourself.",
+      "items": [
+        {
+          "text": "Seller's name matches the official land record online (Telangana land portal – Bhu Bharati, earlier Dharani)",
+          "te": "అమ్మేవారి పేరు ప్రభుత్వ భూ రికార్డులో (భూ భారతి) ఉంది"
+        },
+        {
+          "text": "Survey number and land size match the papers",
+          "te": "సర్వే నంబర్, విస్తీర్ణం పత్రాలతో సరిపోతున్నాయి"
+        },
+        {
+          "text": "Seller showed the original pattadar passbook and title deed",
+          "te": "అమ్మేవారు అసలు పట్టాదార్ పాస్‌బుక్, దస్తావేజు చూపించారు"
+        },
+        {
+          "text": "Encumbrance Certificate (EC) checked – no loan or case on the land",
+          "te": "ఈసీ చూశాం – భూమిపై అప్పు, కేసు లేదు"
+        },
+        {
+          "text": "Visited the MRO / Tahsildar office to confirm",
+          "te": "తహసీల్దార్ కార్యాలయంలో నిర్ధారించుకున్నాం"
+        },
+        {
+          "text": "Walked the land and talked to neighbours",
+          "te": "భూమి చూసి, పక్కవారితో మాట్లాడాం"
+        },
+        {
+          "text": "Sale will be registered at the Sub-Registrar office",
+          "te": "సబ్-రిజిస్ట్రార్ కార్యాలయంలో రిజిస్ట్రేషన్ చేస్తాం"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1.0,
+          "text": "Good checking! Still take a lawyer's advice before paying.",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Some checks missing. Do NOT pay yet.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "STOP! Too many checks missing. You may lose your money.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🚩 Red Flags",
+      "items": [
+        {
+          "icon": "⏰",
+          "title": "Hurry deals",
+          "text": "'Pay today or lose the deal' – a big warning sign.",
+          "te": "'ఈరోజే డబ్బు ఇవ్వండి' అంటే జాగ్రత్త."
+        },
+        {
+          "icon": "💵",
+          "title": "Cash only",
+          "text": "Pay through bank, never big cash amounts without registration.",
+          "te": "రిజిస్ట్రేషన్ లేకుండా పెద్ద నగదు ఇవ్వవద్దు."
+        },
+        {
+          "icon": "📄",
+          "title": "Only photocopies",
+          "text": "Seller won't show originals = danger.",
+          "te": "అసలు పత్రాలు చూపించకపోతే ప్రమాదం."
+        },
+        {
+          "icon": "💲",
+          "title": "Too cheap",
+          "text": "Much cheaper than nearby land? Find out why.",
+          "te": "చుట్టుపక్కల కంటే చాలా తక్కువ ధర అయితే కారణం తెలుసుకోండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "Where is land sale officially registered?",
+          "options": [
+            "Sub-Registrar office",
+            "Tea shop"
+          ],
+          "answer": 0,
+          "why": "Only a registered sale deed makes you the legal owner."
+        },
+        {
+          "q": "What does an Encumbrance Certificate show?",
+          "options": [
+            "If the land has loans or cases",
+            "The weather"
+          ],
+          "answer": 0,
+          "why": "EC shows past transactions and loans on the land."
+        },
+        {
+          "q": "Seller gives only photocopies and wants cash today.",
+          "options": [
+            "Pay quickly",
+            "Stop and verify"
+          ],
+          "answer": 1,
+          "why": "These are classic fraud signs."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini for the official steps to check land ownership in Telangana.",
+    "Visit the official land portal website with a parent to see how a land record looks.",
+    "Make a 7-point checklist with Gemini in English and Telugu.",
+    "Ask the MRO office staff or a teacher to check the steps.",
+    "Design an awareness guide in Canva with a big red 'STOP – Check first!' sign.",
+    "Put the guide at the Gram Panchayat notice board."
+  ],
+  "prompt": "I am a Class 8 student in Telangana. Give a simple 7-step checklist in English and Telugu for a village family to verify land papers before buying: official land records portal, pattadar passbook, encumbrance certificate, MRO office, Sub-Registrar registration. Add 4 red flags of land fraud and advise talking to a lawyer."
+}

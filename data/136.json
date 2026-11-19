@@ -1,0 +1,122 @@
+{
+  "id": 136,
+  "emoji": "🎨",
+  "title": "Cheriyal Scroll Painting Digital Picture Book",
+  "title_te": "చేర్యాల పటం చిత్రాల డిజిటల్ బొమ్మల పుస్తకం",
+  "problem": "Traditional Cheriyal story painters in our district struggle to sell their hand-painted scrolls, because tourists don't know the folk stories behind them.",
+  "idea": "A digital picture book that tells the story behind each Cheriyal scroll panel in simple English and Telugu. When buyers know the story, they value the painting more. Learn about the art and try the quiz.",
+  "widgets": [
+    {
+      "type": "cards",
+      "heading": "🖼️ What makes Cheriyal scrolls special",
+      "items": [
+        {
+          "icon": "📍",
+          "title": "From Cheriyal",
+          "text": "Cheriyal is a town in Siddipet district, Telangana. The art is named after it.",
+          "te": "చేర్యాల సిద్దిపేట జిల్లాలోని ఒక పట్టణం. ఈ కళకు ఆ పేరు వచ్చింది."
+        },
+        {
+          "icon": "👨‍🎨",
+          "title": "Nakashi artists",
+          "text": "The painters come from the Nakashi family tradition. Skills pass from parents to children.",
+          "te": "చిత్రకారులు నకాషి కుటుంబ సంప్రదాయానికి చెందినవారు."
+        },
+        {
+          "icon": "📜",
+          "title": "Painted stories",
+          "text": "Long cloth scrolls show a story panel by panel. Wandering storytellers opened them and sang the story in villages.",
+          "te": "పొడవైన వస్త్రంపై కథ బొమ్మలుగా ఉంటుంది. కథకులు ఊరూరా పాడుతూ చెప్పేవారు."
+        },
+        {
+          "icon": "🔴",
+          "title": "Bright red background",
+          "text": "Most scrolls have a bold red background with figures in yellow, blue, green and white.",
+          "te": "ఎక్కువగా ఎరుపు నేపథ్యం, పసుపు, నీలం, ఆకుపచ్చ బొమ్మలు ఉంటాయి."
+        },
+        {
+          "icon": "🏅",
+          "title": "GI tag",
+          "text": "Cheriyal scroll painting has a Geographical Indication (GI) tag, which shows it belongs to this place.",
+          "te": "చేర్యాల పటాలకు భౌగోళిక గుర్తింపు (GI) ట్యాగ్ ఉంది."
+        },
+        {
+          "icon": "🎭",
+          "title": "Masks and dolls too",
+          "text": "Today artists also make small paintings, masks and dolls so more people can buy them.",
+          "te": "ఇప్పుడు చిన్న చిత్రాలు, ముసుగులు, బొమ్మలు కూడా తయారు చేస్తున్నారు."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "❓ Cheriyal Quiz",
+      "questions": [
+        {
+          "q": "In which district of Telangana is Cheriyal?",
+          "options": [
+            "Adilabad",
+            "Siddipet",
+            "Khammam"
+          ],
+          "answer": 1,
+          "why": "Cheriyal is in Siddipet district."
+        },
+        {
+          "q": "Who traditionally paints Cheriyal scrolls?",
+          "options": [
+            "Nakashi artists",
+            "Potters",
+            "Weavers"
+          ],
+          "answer": 0,
+          "why": "The Nakashi artist families keep this art alive."
+        },
+        {
+          "q": "What was a Cheriyal scroll used for?",
+          "options": [
+            "Wrapping food",
+            "Telling a story while singing",
+            "Curtains"
+          ],
+          "answer": 1,
+          "why": "Storytellers unrolled the scroll panel by panel and sang the story."
+        },
+        {
+          "q": "What colour is the background of most Cheriyal scrolls?",
+          "options": [
+            "Red",
+            "Black",
+            "White"
+          ],
+          "answer": 0,
+          "why": "A bright red background is the most famous Cheriyal style."
+        },
+        {
+          "q": "What does a GI tag show?",
+          "options": [
+            "The price",
+            "That a product comes from a special place",
+            "The weight"
+          ],
+          "answer": 1,
+          "why": "A Geographical Indication shows a product is linked to its place of origin."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Visit a Cheriyal artist (with a teacher) and ask permission to photograph a scroll, panel by panel.",
+    "Ask the artist to tell the story in their own words. Write down the main points.",
+    "Use Google Lens on any printed labels or brochures to copy the text.",
+    "Give your notes to Gemini and ask for a 2-line caption per panel in simple English and Telugu.",
+    "In Canva, choose a 'storybook' template and put one panel photo and caption on each page.",
+    "Add the artist's name and phone number on the last page, then share the PDF with tourists and the school."
+  ],
+  "prompt": "I am a Class 8 student. Here are my notes about a Cheriyal scroll story told by the artist: [paste notes]. Write a 2-line caption for each panel in simple English and simple Telugu, for a picture book for tourists. Do not add facts that are not in my notes."
+}

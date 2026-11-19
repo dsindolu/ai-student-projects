@@ -1,0 +1,62 @@
+{
+  "id": 66,
+  "emoji": "🪡",
+  "title": "Small Business Loan Eligibility Guide for Tailors",
+  "title_te": "దర్జీలకు చిన్న వ్యాపార రుణ అర్హత గైడ్",
+  "problem": "Women tailors in our village want to buy electric sewing machines, but they don't know how to apply for low-interest government loans.",
+  "idea": "A loan helper. It shows where tailor aunties can ask for small business loans, a checklist of common papers, and a calculator to see if the monthly payment fits their income.",
+  "widgets": [
+    {
+      "type": "cards",
+      "heading": "🏦 Where Can Aunty Ask for a Loan?",
+      "intro": "These are common places to ask. Rules and interest rates change, so always confirm at the bank or Mee Seva centre.",
+      "items": [
+        {"icon": "👩‍👩‍👧", "title": "Self-Help Group (SHG)", "text": "Women in SHGs can get group loans through the bank and Stree Nidhi. Ask your SHG leader or village organisation.", "te": "స్వయం సహాయక సంఘ మహిళలు బ్యాంకు, స్త్రీ నిధి ద్వారా రుణం పొందవచ్చు. సంఘ నాయకురాలిని అడగండి."},
+        {"icon": "🏛️", "title": "Mudra loan at the bank", "text": "Banks give small business loans under the PM Mudra scheme. Ask at your nearest bank branch.", "te": "బ్యాంకులు ప్రధానమంత్రి ముద్రా పథకం కింద చిన్న వ్యాపార రుణాలు ఇస్తాయి. దగ్గరి బ్యాంకులో అడగండి."},
+        {"icon": "🏢", "title": "Corporation schemes", "text": "SC, ST, BC and Minority corporations sometimes give loans with subsidy. Ask at the MPDO office or Mee Seva.", "te": "ఎస్సీ, ఎస్టీ, బీసీ, మైనారిటీ కార్పొరేషన్లు సబ్సిడీ రుణాలు ఇస్తాయి. ఎంపీడీఓ ఆఫీసులో అడగండి."},
+        {"icon": "⚠️", "title": "Avoid money lenders", "text": "Private lenders often charge very high interest. Never sign blank papers.", "te": "ప్రైవేటు వడ్డీ వ్యాపారులు ఎక్కువ వడ్డీ వేస్తారు. ఖాళీ కాగితాలపై సంతకం పెట్టవద్దు."}
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "📄 Common Papers to Keep Ready",
+      "intro": "Banks usually ask for papers like these. The exact list can be different – confirm at the bank.",
+      "items": [
+        {"text": "Aadhaar card", "te": "ఆధార్ కార్డు"},
+        {"text": "Bank passbook", "te": "బ్యాంకు పాస్‌బుక్"},
+        {"text": "Passport-size photos", "te": "పాస్‌పోర్ట్ సైజు ఫోటోలు"},
+        {"text": "Caste / income certificate (if asking for a corporation scheme)", "te": "కుల / ఆదాయ ధృవపత్రం (కార్పొరేషన్ పథకానికి)"},
+        {"text": "Price quotation of the sewing machine from a shop", "te": "షాపు నుండి కుట్టు మిషన్ ధర కొటేషన్"},
+        {"text": "Simple plan: how much you earn from tailoring each month", "te": "కుట్టుపని ద్వారా నెలకు ఎంత సంపాదిస్తారో చిన్న ప్లాన్"}
+      ],
+      "bands": [
+        {"min": 1, "text": "All set! Go to the bank with these papers.", "level": "good"},
+        {"min": 0.5, "text": "Almost there. Collect the remaining papers first.", "level": "warn"},
+        {"min": 0, "text": "Start collecting papers. Ask the SHG leader for help.", "level": "bad"}
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "🧮 Can Aunty Pay the Loan Every Month?",
+      "intro": "Sample numbers only. Put the real interest rate the bank tells you.",
+      "inputs": [
+        {"id": "loan", "label": "Loan amount (₹)", "value": 15000},
+        {"id": "rate", "label": "Interest rate per year (%) – ask the bank", "value": 10},
+        {"id": "months", "label": "Number of months to repay", "value": 12},
+        {"id": "earn", "label": "Extra money earned per month with the new machine (₹)", "value": 3000}
+      ],
+      "formula": "if ([loan, rate, months, earn].some(function(x){return typeof x !== 'number' || x < 0;}) || months < 1) return null; var interest = loan * rate / 100 * months / 12; var total = loan + interest; var monthly = total / months; var lvl = monthly <= earn * 0.5 ? 'good' : (monthly <= earn ? 'warn' : 'bad'); var msg = lvl === 'good' ? 'Easy to repay!' : (lvl === 'warn' ? 'Possible, but tight. Plan carefully.' : 'Too heavy. Take a smaller loan or more months.'); return {interest: Math.round(interest), total: Math.round(total), monthly: Math.round(monthly), msg: msg, level: lvl};",
+      "result": "Interest (simple, approx.): ₹{interest}\nTotal to pay back: ₹{total}\nMonthly payment: ₹{monthly}\n{msg}"
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Talk to 3 tailor aunties and write what they need: machine price and monthly earnings.",
+    "Ask Gemini which kinds of small business loans women tailors in Telangana can ask about.",
+    "Visit or call the bank and SHG leader to confirm which papers they really need.",
+    "Open Canva and make a one-page 'Loan Ready Checklist' with tick boxes in Telugu.",
+    "Make a small table showing loan amount, months and monthly payment.",
+    "Print copies and give them at the SHG meeting."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple Telugu and English what kinds of small business loans a village woman tailor in Telangana can ask about (SHG bank loan, Mudra loan, corporation schemes). Do not give exact amounts. Tell her to confirm at the bank or Mee Seva. Keep it under 120 words."
+}

@@ -1,0 +1,111 @@
+{
+  "id": 35,
+  "emoji": "💧",
+  "title": "Dry Soil Checker to Save Pump Electricity",
+  "title_te": "మోటార్ కరెంట్ ఆదా చేసే పొడి మట్టి చెకర్",
+  "problem": "Abba leaves the motor pump running all night even when the soil is already wet. It wastes electricity and washes away good soil nutrients.",
+  "idea": "A soil checker. The camera looks at the soil and tells if it needs water or not. A calculator also shows how much power is wasted by extra pump hours.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What soil does the camera see?",
+      "intro": "In my real project, Teachable Machine learned wet soil and cracked dry soil from photos.",
+      "question": "The soil near the plant roots looks like:",
+      "options": [
+        {
+          "icon": "🟫",
+          "label": "Dark, wet, sticks together",
+          "result": "Soil is wet. NO pumping needed today. Switch off the motor!",
+          "te": "మట్టి తడిగా ఉంది. ఈరోజు నీళ్ళు అవసరం లేదు. మోటార్ ఆపండి!",
+          "level": "good"
+        },
+        {
+          "icon": "🤎",
+          "label": "Slightly damp, crumbles",
+          "result": "Soil is OK. Water lightly tomorrow morning.",
+          "te": "మట్టి సరిపోతుంది. రేపు ఉదయం కొంచెం నీళ్ళు పెట్టండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🏜️",
+          "label": "Light colour, big cracks",
+          "result": "Soil is dry. Plants need water now. Water in the early morning or evening.",
+          "te": "మట్టి పొడిగా ఉంది. ఇప్పుడు నీళ్ళు పెట్టండి.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "heading": "⚡ How much power does extra pumping waste?",
+      "intro": "1 HP motor uses about 0.75 units (kWh) per hour. Change the numbers for your motor.",
+      "inputs": [
+        {
+          "id": "hp",
+          "label": "Motor size (HP)",
+          "value": 5
+        },
+        {
+          "id": "extraHours",
+          "label": "Extra hours run on wet soil (per night)",
+          "value": 4
+        },
+        {
+          "id": "nights",
+          "label": "Number of nights in a month",
+          "value": 15
+        }
+      ],
+      "formula": "if (hp <= 0 || extraHours < 0 || nights < 0) return null; var u = hp * 0.746 * extraHours * nights; var lvl = u > 100 ? 'bad' : (u > 30 ? 'warn' : 'good'); return {units: Math.round(u), level: lvl};",
+      "result": "About {units} units of electricity wasted in a month.\nThat power and groundwater could be saved for dry days!"
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "Soil is dark and sticks in your hand. Pump?",
+          "options": [
+            "Yes, all night",
+            "No, soil is already wet"
+          ],
+          "answer": 1,
+          "why": "Wet soil does not need more water. Extra water washes nutrients away."
+        },
+        {
+          "q": "Best time to water crops?",
+          "options": [
+            "Hot afternoon",
+            "Early morning or evening"
+          ],
+          "answer": 1,
+          "why": "Less water is lost to the sun in the morning or evening."
+        },
+        {
+          "q": "What else is lost when we over-water?",
+          "options": [
+            "Soil nutrients",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "Extra water washes good nutrients deep below the roots."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Open teachablemachine.withgoogle.com and choose Image Project.",
+    "Make classes: Wet soil, Damp soil, Dry cracked soil. Add about 50 clear photos to each class (from our field or from the Agriculture Officer's pictures).",
+    "Click Train Model. Test it with new photos it has never seen.",
+    "Click Export, upload the model and copy the shareable link.",
+    "In PictoBlox, load the model and add 'If Wet soil → say Switch off the motor' in Telugu.",
+    "Add an extra calculator: ask motor HP and hours, say units = HP × 0.746 × hours.",
+    "Ask Gemini for simple water-saving tips and test the project in our field with Abba."
+  ],
+  "prompt": "I am a Class 8 student. Explain to a farmer in simple English and Telugu how to check by hand if soil needs water (squeeze test), why over-watering at night wastes electricity and soil nutrients, and give 5 easy water-saving tips."
+}

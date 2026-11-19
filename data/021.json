@@ -1,0 +1,99 @@
+{
+  "id": 21,
+  "emoji": "📏",
+  "title": "Checking Arm-Tape Colors for Toddler Health",
+  "title_te": "పిల్లల ఆరోగ్యం కోసం చేతి టేపు రంగులు తెలుసుకోవడం",
+  "problem": "The Anganwadi sister measures small babies' arms with colored tapes to check their growth, but mothers sometimes misunderstand what red or yellow colors mean.",
+  "idea": "A MUAC tape helper. The camera sees which colour the tape shows on the baby's arm and gives simple advice for the mother. Here you can tap the colour.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What colour does the arm tape show?",
+      "intro": "The MUAC tape is used for children aged 6 months to 5 years. In my real project, Teachable Machine learns tape photos. Here, tap a colour.",
+      "question": "The tape around the baby's upper arm shows:",
+      "options": [
+        {
+          "icon": "🟢",
+          "label": "GREEN",
+          "result": "Green means the child's growth looks fine. Keep giving good food and go for monthly check-ups.",
+          "te": "ఆకుపచ్చ అంటే పెరుగుదల బాగుంది. మంచి ఆహారం ఇస్తూ, ప్రతి నెల చెకప్‌కి వెళ్ళండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🟡",
+          "label": "YELLOW",
+          "result": "Yellow means the child is a little weak. Follow the Anganwadi sister's food advice and check again soon.",
+          "te": "పసుపు అంటే పిల్లలు కొంచెం బలహీనంగా ఉన్నారు. అంగన్‌వాడీ అక్క చెప్పిన ఆహారం ఇవ్వండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🔴",
+          "label": "RED",
+          "result": "Red means the child is very weak. Go to the doctor or health centre right away for special care.",
+          "te": "ఎరుపు అంటే పిల్లలు చాలా బలహీనంగా ఉన్నారు. వెంటనే డాక్టర్ దగ్గరికి వెళ్ళండి.",
+          "level": "bad",
+          "tip": "Red is serious but can be treated. The doctor and Anganwadi will help."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Arm Tape Quiz for Mothers",
+      "questions": [
+        {
+          "q": "Where on the body is the MUAC tape put?",
+          "options": [
+            "Around the upper arm",
+            "Around the head",
+            "Around the leg"
+          ],
+          "answer": 0,
+          "why": "It goes around the middle of the upper arm, usually the left arm."
+        },
+        {
+          "q": "The tape shows RED. What should the mother do?",
+          "options": [
+            "Wait a few months",
+            "Go to the doctor or health centre right away",
+            "Hide it"
+          ],
+          "answer": 1,
+          "why": "Red needs quick care. Early help makes children strong again."
+        },
+        {
+          "q": "Which food helps a child grow strong?",
+          "options": [
+            "Only biscuits and chips",
+            "Dal, eggs, milk, green leaves and Anganwadi food",
+            "Only tea"
+          ],
+          "answer": 1,
+          "why": "Home food with dal, eggs, milk, vegetables and Anganwadi meals helps growth."
+        },
+        {
+          "q": "Who can explain the tape result?",
+          "options": [
+            "The Anganwadi teacher or ASHA",
+            "Nobody"
+          ],
+          "answer": 0,
+          "why": "Always ask the Anganwadi teacher or ASHA if you don't understand."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Ask the Anganwadi teacher to show you a MUAC tape (only use photos of the tape, not of babies without permission).",
+    "Take about 40 photos each of the tape showing green, yellow and red.",
+    "Open Teachable Machine, make 3 classes (Green, Yellow, Red), Train and Export.",
+    "In PictoBlox, load the model and show a simple advice card for each colour.",
+    "Ask Gemini to write the advice in simple Telugu, and check it with the Anganwadi teacher.",
+    "Show the helper at the next Anganwadi mothers' meeting."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple Telugu and English what green, yellow and red mean on a MUAC arm tape for children aged 6 months to 5 years, with one kind line of advice for the mother for each colour. Tell them to follow the Anganwadi worker and doctor."
+}

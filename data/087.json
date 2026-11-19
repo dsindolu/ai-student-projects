@@ -1,0 +1,50 @@
+{
+  "id": 87,
+  "emoji": "💍",
+  "title": "Kalyana Lakshmi Scheme Paper Checker",
+  "title_te": "కళ్యాణ లక్ష్మి పథకం కాగితాల తనిఖీ",
+  "problem": "A sister in our street faced major financial delay for her wedding support money because the bridegroom's age proof certificate was missing from the file.",
+  "idea": "A paper checker game. The family ticks every paper before submitting the Kalyana Lakshmi / Shaadi Mubarak application, so nothing is missing and the money is not delayed.",
+  "widgets": [
+    {
+      "type": "checklist",
+      "heading": "✅ Is the Application File Complete?",
+      "intro": "Papers commonly asked for. The official list can change – confirm on the official website or at Mee Seva.",
+      "items": [
+        {"text": "Bride's age proof (birth certificate / school certificate)", "te": "వధువు వయస్సు ధృవపత్రం"},
+        {"text": "Bridegroom's age proof", "te": "వరుడి వయస్సు ధృవపత్రం"},
+        {"text": "Caste certificate (if applicable)", "te": "కుల ధృవపత్రం (అవసరమైతే)"},
+        {"text": "Income certificate of the bride's family", "te": "వధువు కుటుంబ ఆదాయ ధృవపత్రం"},
+        {"text": "Aadhaar of bride, groom and bride's mother", "te": "వధువు, వరుడు, వధువు తల్లి ఆధార్"},
+        {"text": "Bank passbook of the person receiving the money", "te": "డబ్బు అందుకునే వారి బ్యాంకు పాస్‌బుక్"},
+        {"text": "Wedding card / marriage photo", "te": "పెళ్ళి పత్రిక / పెళ్ళి ఫోటో"},
+        {"text": "Photocopies of everything and passport-size photos", "te": "అన్నింటి జిరాక్స్‌లు, పాస్‌పోర్ట్ ఫోటోలు"}
+      ],
+      "bands": [
+        {"min": 1, "text": "File complete! Submit it and keep the application number.", "level": "good"},
+        {"min": 0.7, "text": "Almost! One or two papers missing – that can delay the money.", "level": "warn"},
+        {"min": 0, "text": "Many papers missing. Do not submit yet.", "level": "bad"}
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Know the Basics",
+      "questions": [
+        {"q": "By law, the minimum marriage age for a girl in India is…", "options": ["16", "18", "21"], "answer": 1, "why": "Girls must be at least 18. Child marriage is a crime."},
+        {"q": "By law, the minimum marriage age for a boy is…", "options": ["18", "21", "25"], "answer": 1, "why": "Boys must be at least 21."},
+        {"q": "Why keep photocopies of every paper?", "options": ["For decoration", "As proof if the file is lost or questioned"], "answer": 1, "why": "Copies help you follow up quickly."},
+        {"q": "Someone says 'Pay me ₹5,000 and I'll get the scheme money fast'. You…", "options": ["Pay", "Refuse and apply through the official process"], "answer": 1, "why": "Government schemes do not need bribes. Use the official way."}
+      ]
+    }
+  ],
+  "tools": ["Scratch", "Gemini"],
+  "how": [
+    "Ask Gemini for the general eligibility and documents for Kalyana Lakshmi / Shaadi Mubarak in Telangana.",
+    "Confirm the latest list on the official website or at the Mee Seva centre.",
+    "In Scratch, make a sprite for each paper with a tick button.",
+    "Use a variable 'papers ready' that increases by 1 for every tick.",
+    "If all papers are ticked, show a green 'Ready to submit!' screen; otherwise show which ones are missing.",
+    "Test it with a family in our street before their application."
+  ],
+  "prompt": "I am a Class 8 student making a checklist game. In simple Telugu and English, list the documents usually needed for the Kalyana Lakshmi / Shaadi Mubarak scheme in Telangana. Do not give amounts. Remind families to confirm the list on the official website or at Mee Seva."
+}

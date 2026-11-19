@@ -1,0 +1,103 @@
+{
+  "id": 103,
+  "emoji": "🔥",
+  "title": "Gobar Gas Pressure Fix Quiz",
+  "title_te": "గోబర్ గ్యాస్ ప్రెషర్ సమస్య పరిష్కార క్విజ్",
+  "problem": "Our village biogas plant stays idle because farmers get confused when the gas pressure drops and do not know how to clear pipe blockages.",
+  "idea": "A troubleshooter. Pick what is happening with your gobar gas and it tells the most likely cause and a safe fix.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What is the problem?",
+      "intro": "Answer like a farmer: what do you see at the stove?",
+      "question": "At the gas stove I see:",
+      "options": [
+        {
+          "icon": "💧",
+          "label": "Flame flickers, gurgling sound in pipe",
+          "result": "Water has collected in the gas pipe. Open the water drain (water trap) at the lowest point and let the water out.",
+          "te": "పైపులో నీరు చేరింది. వాటర్ ట్రాప్ తెరిచి నీరు తీసేయండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "🐄",
+          "label": "Very little gas for many days",
+          "result": "The plant is hungry! Feed fresh dung mixed with equal water every day.",
+          "te": "ప్లాంట్‌కు మేత కావాలి! రోజూ పేడ, సమానంగా నీరు కలిపి వేయండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "👃",
+          "label": "Gas smell near the pipe",
+          "result": "There may be a leak. Turn off the gas valve. Check joints with soap water – bubbles show the leak. Never use a flame to check!",
+          "te": "లీక్ ఉండొచ్చు. వాల్వ్ ఆపండి. సబ్బు నీటితో చెక్ చేయండి. మంటతో ఎప్పుడూ చూడవద్దు!",
+          "level": "bad"
+        },
+        {
+          "icon": "🥶",
+          "label": "Less gas only in cold winter",
+          "result": "This is normal. Gas comes slower in cold weather. Feed regularly and use warm water if possible.",
+          "te": "చలికాలంలో గ్యాస్ తక్కువ రావడం సహజం.",
+          "level": "good"
+        },
+        {
+          "icon": "❓",
+          "label": "Something else",
+          "result": "Call the biogas technician or the agriculture office. Do not open the plant yourself.",
+          "te": "బయోగ్యాస్ టెక్నీషియన్‌ను పిలవండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Gobar Gas Quiz",
+      "questions": [
+        {
+          "q": "How should we check for a gas leak?",
+          "options": [
+            "With a matchstick",
+            "With soap water",
+            "By smelling closely for a long time"
+          ],
+          "answer": 1,
+          "why": "Soap water makes bubbles at a leak. A flame can cause fire."
+        },
+        {
+          "q": "What is the usual mix for feeding the plant?",
+          "options": [
+            "Dung and equal water",
+            "Only plastic",
+            "Dung and kerosene"
+          ],
+          "answer": 0,
+          "why": "Fresh dung mixed with about equal water keeps the plant working."
+        },
+        {
+          "q": "Water in the pipe makes the flame…",
+          "options": [
+            "Stronger",
+            "Flicker and weak",
+            "Blue and steady"
+          ],
+          "answer": 1,
+          "why": "Water blocks the gas, so drain the water trap."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Talk to a farmer who runs a biogas plant and note the common problems.",
+    "Ask Gemini for the causes and safe fixes for each problem.",
+    "In Scratch, make a sprite ask 3 questions with 'ask and wait'.",
+    "Use 'if' blocks to show the right fix for each answer.",
+    "Add a big warning: never check leaks with fire.",
+    "Make a small Canva poster of the fixes to stick near the plant."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple English and Telugu the 4 most common reasons a village gobar gas plant gives low gas (water in pipe, not enough feeding, leak, cold weather) and a safe fix for each."
+}

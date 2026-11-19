@@ -1,0 +1,102 @@
+{
+  "id": 135,
+  "emoji": "🤝",
+  "title": "Subject-Wise Peer Study-Buddy Matcher",
+  "title_te": "సబ్జెక్టు వారీగా స్టడీ బడ్డీ జోడీ",
+  "problem": "Students struggling in maths feel shy to ask teachers for help, and don't know which friends in their rooms are strong in maths problem-solving.",
+  "idea": "A study-buddy matcher. Each student writes their strong and weak subjects, Gemini makes pairs, and we put a colourful buddy chart on the dorm wall. Try finding your buddy type.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Which subject do you need help with?",
+      "intro": "Tap your weak subject to see the kind of buddy you will get.",
+      "question": "I need help with:",
+      "options": [
+        {
+          "icon": "➗",
+          "label": "Maths",
+          "result": "Your buddy: a friend strong in Maths. Meet 20 minutes after dinner to solve 5 sums together.",
+          "te": "మీ బడ్డీ: లెక్కల్లో బాగా చేసే స్నేహితుడు. భోజనం తర్వాత 20 నిమిషాలు 5 లెక్కలు చేయండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🔬",
+          "label": "Science",
+          "result": "Your buddy: a friend strong in Science. Draw and explain one diagram each day.",
+          "te": "మీ బడ్డీ: సైన్స్‌లో బాగా చేసే స్నేహితుడు. రోజూ ఒక బొమ్మ గీసి వివరించుకోండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🔤",
+          "label": "English",
+          "result": "Your buddy: a friend strong in English. Read one page aloud to each other every day.",
+          "te": "మీ బడ్డీ: ఇంగ్లీష్‌లో బాగా చేసే స్నేహితుడు. రోజూ ఒక పేజీ బిగ్గరగా చదవండి.",
+          "level": "good"
+        },
+        {
+          "icon": "😊",
+          "label": "I am strong in all",
+          "result": "Great! Become a buddy-teacher and help a junior friend.",
+          "te": "చాలా బాగుంది! ఒక జూనియర్‌కి బడ్డీ టీచర్‌గా సహాయం చేయండి.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Am I a good study buddy?",
+      "items": [
+        {
+          "text": "I explain slowly and don't laugh at mistakes.",
+          "te": "నెమ్మదిగా వివరిస్తాను, తప్పులను చూసి నవ్వను."
+        },
+        {
+          "text": "I let my buddy try first before showing the answer.",
+          "te": "జవాబు చెప్పే ముందు బడ్డీని ప్రయత్నించనిస్తాను."
+        },
+        {
+          "text": "We meet at the same time every day.",
+          "te": "రోజూ ఒకే సమయానికి కలుస్తాము."
+        },
+        {
+          "text": "I ask a teacher when we both are stuck.",
+          "te": "ఇద్దరికీ రాకపోతే టీచర్‌ని అడుగుతాను."
+        },
+        {
+          "text": "I say thank you to my buddy.",
+          "te": "నా బడ్డీకి ధన్యవాదాలు చెబుతాను."
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.8,
+          "text": "Super buddy! 🌟",
+          "level": "good"
+        },
+        {
+          "min": 0.4,
+          "text": "Good buddy. Add a few more habits.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Start with being kind and patient.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Give each student a small slip: name, room, strong subject, weak subject (with the warden's permission).",
+    "Type the list (first names only) into Gemini and ask it to make pairs: strong in one subject + weak in the same subject.",
+    "Check the pairs with the class teacher and change any that won't work.",
+    "Open Canva, search 'chart' and make a colourful buddy chart with one colour per subject.",
+    "Print it and stick it on the dorm notice board.",
+    "After 2 weeks, ask everyone if their buddy is helping, and make new pairs if needed."
+  ],
+  "prompt": "I am a Class 8 student. Here is a list of my classmates with their strong and weak subjects: [paste list]. Make study-buddy pairs so each weak student gets a friend who is strong in that subject. Show the result as a simple table."
+}

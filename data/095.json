@@ -1,0 +1,111 @@
+{
+  "id": 95,
+  "emoji": "🌳",
+  "title": "Tree Sapling Survival Tracker for School Drives",
+  "title_te": "పాఠశాల మొక్కల బతుకు ట్రాకర్",
+  "problem": "We plant 100 saplings during Haritha Haram every year, but most of them dry up and die within two months because nobody takes care of them.",
+  "idea": "A sapling care planner. It shares the saplings among 'garden buddies' and shows how much water we need each week, plus a weekly care checklist.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: Garden buddy planner",
+      "intro": "Enter how many saplings and students you have. In summer, a young sapling needs about 5 litres, two or three times a week.",
+      "inputs": [
+        {
+          "id": "saplings",
+          "label": "Number of saplings",
+          "value": 100
+        },
+        {
+          "id": "students",
+          "label": "Number of garden buddies",
+          "value": 40
+        },
+        {
+          "id": "season",
+          "label": "Season",
+          "type": "select",
+          "value": "summer",
+          "options": [
+            {
+              "label": "Summer (water 3 times a week)",
+              "value": "summer"
+            },
+            {
+              "label": "Winter (water 2 times a week)",
+              "value": "winter"
+            },
+            {
+              "label": "Rainy (water only if no rain)",
+              "value": "rainy"
+            }
+          ]
+        }
+      ],
+      "formula": "if (!(saplings > 0 && students > 0)) return null; var times = season === 'summer' ? 3 : (season === 'winter' ? 2 : 1); var each = Math.ceil(saplings / students); var water = saplings * 5 * times; return {each: each, times: times, water: water, buckets: Math.ceil(water / 15), level: each > 4 ? 'warn' : 'good', note: each > 4 ? 'That is a lot for one student. Invite more buddies!' : 'Nice, easy job for each buddy!'};",
+      "result": "Each buddy looks after {each} saplings. {note}\nWater {times} times a week.\nWater needed per week: {water} litres (about {buckets} buckets)."
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Weekly sapling check",
+      "intro": "Tick what your buddy team did this week.",
+      "items": [
+        {
+          "text": "Watered in the morning or evening, not hot noon",
+          "te": "మధ్యాహ్నం కాకుండా ఉదయం/సాయంత్రం నీళ్ళు పోశాం"
+        },
+        {
+          "text": "Made a small round basin around the sapling",
+          "te": "మొక్క చుట్టూ చిన్న పాదు చేశాం"
+        },
+        {
+          "text": "Put dry leaves around it to keep soil wet",
+          "te": "మట్టి తడిగా ఉండటానికి ఎండు ఆకులు వేశాం"
+        },
+        {
+          "text": "Tree guard is safe from goats and cows",
+          "te": "మేకలు, ఆవుల నుండి కంచె బాగుంది"
+        },
+        {
+          "text": "Removed weeds around the sapling",
+          "te": "మొక్క చుట్టూ కలుపు తీశాం"
+        },
+        {
+          "text": "Took a photo for our tracker",
+          "te": "ట్రాకర్ కోసం ఫోటో తీశాం"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.8,
+          "text": "Super buddies! Your sapling will grow strong. 🌳",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good, but finish the rest this week.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Your sapling needs help. Please water and protect it soon!",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Number each sapling with a small tag and note its name using Google Lens.",
+    "Ask Gemini to make a weekly watering schedule for each type of sapling.",
+    "Pair each student with 2 or 3 saplings as 'garden buddies'.",
+    "Make a buddy chart in Canva with student names and sapling numbers.",
+    "Every Friday, take a photo of each sapling and mark it alive, weak or dead.",
+    "After two months, count how many survived and share the result in assembly."
+  ],
+  "prompt": "I am a Class 8 student. Make a simple weekly care schedule in a table for 100 young saplings (neem, guava, jamun) planted in our school in Telangana during summer. Include watering, mulching and protection tips."
+}

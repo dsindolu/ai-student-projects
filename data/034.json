@@ -1,0 +1,120 @@
+{
+  "id": 34,
+  "emoji": "🌶️",
+  "title": "Chilli Leaf Curl Warning Alarm",
+  "title_te": "మిరప ఆకు ముడత హెచ్చరిక అలారం",
+  "problem": "Our neighbours' red chilli plants dried up completely because leaf curl virus spread through the entire field before anyone noticed it.",
+  "idea": "A chilli leaf checker that beeps. When the camera sees a curled leaf, Scratch plays an alarm so the farmer acts early. Tap a leaf to try it.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What leaf does the camera see?",
+      "intro": "In my real project, Teachable Machine checks the leaf and Scratch plays a beep for a curled leaf.",
+      "question": "The chilli leaf looks like:",
+      "options": [
+        {
+          "icon": "🌿",
+          "label": "Flat, green leaf",
+          "result": "Normal leaf. No alarm. Check again in 3 days.",
+          "te": "సాధారణ ఆకు. 3 రోజుల తర్వాత మళ్ళీ చూడండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🌀",
+          "label": "Curled up, small, wrinkled leaf",
+          "result": "🚨 BEEP! Leaf curl warning! Pull out this plant and keep it away from the field. Call the Agriculture Officer.",
+          "te": "🚨 బీప్! ఆకు ముడత హెచ్చరిక! ఈ మొక్కను పీకి పొలం దూరంగా పెట్టండి. అధికారిని పిలవండి.",
+          "level": "bad",
+          "tip": "The virus has no cure. Tiny insects like whitefly and thrips carry it, so we must stop them."
+        },
+        {
+          "icon": "🐜",
+          "label": "Tiny insects under the leaf",
+          "result": "Warning! Small sucking insects spread the virus. Put yellow sticky traps and ask about neem oil spray.",
+          "te": "జాగ్రత్త! చిన్న పురుగులు వైరస్ వ్యాపింపజేస్తాయి. పసుపు జిగురు అట్టలు పెట్టండి.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🛡️ Stop Leaf Curl Early",
+      "items": [
+        {
+          "icon": "🟨",
+          "title": "Yellow sticky traps",
+          "text": "Hang yellow sticky cards to catch whiteflies.",
+          "te": "తెల్లదోమల కోసం పసుపు జిగురు అట్టలు వేలాడదీయండి."
+        },
+        {
+          "icon": "🌳",
+          "title": "Neem oil spray",
+          "text": "Neem oil is a natural spray. Ask Rythu Vedika for the right mix.",
+          "te": "వేప నూనె సహజ మందు. సరైన మోతాదు రైతు వేదికలో అడగండి."
+        },
+        {
+          "icon": "🗑️",
+          "title": "Remove sick plants",
+          "text": "Pull out curled plants early and destroy them far from the field.",
+          "te": "ముడత మొక్కలను త్వరగా పీకి దూరంగా నాశనం చేయండి."
+        },
+        {
+          "icon": "🌱",
+          "title": "Healthy seedlings",
+          "text": "Buy seedlings from a trusted nursery.",
+          "te": "నమ్మకమైన నర్సరీ నుండి మొక్కలు కొనండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "Can medicine cure a virus-curled chilli plant?",
+          "options": [
+            "Yes, easily",
+            "No, we remove it and stop spread"
+          ],
+          "answer": 1,
+          "why": "There is no cure for the virus. Removing sick plants protects the others."
+        },
+        {
+          "q": "Who carries leaf curl virus from plant to plant?",
+          "options": [
+            "Tiny sucking insects",
+            "Rain clouds",
+            "Birds singing"
+          ],
+          "answer": 0,
+          "why": "Whiteflies, thrips and mites carry or cause curling."
+        },
+        {
+          "q": "What is a safe way to catch whiteflies?",
+          "options": [
+            "Yellow sticky traps",
+            "Burning the field",
+            "Loud music"
+          ],
+          "answer": 0,
+          "why": "Yellow sticky traps are cheap and safe."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Open teachablemachine.withgoogle.com and choose Image Project.",
+    "Make classes: Normal leaf, Curled leaf, Background. Add about 50 clear photos to each class (from our field or from the Agriculture Officer's pictures).",
+    "Click Train Model. Test it with new photos it has never seen.",
+    "Click Export, upload the model and copy the shareable link.",
+    "Open Scratch with the TM2Scratch extension (stretch3) and paste the model link.",
+    "Add: when model sees 'Curled leaf' → play 'Siren' sound and say 'Leaf curl! Call the officer'.",
+    "Ask Gemini for safe, natural steps and put them on a Scratch backdrop."
+  ],
+  "prompt": "I am a Class 8 student. Explain chilli leaf curl to farmers in very simple English and Telugu: how it looks, which tiny insects spread it, and 5 safe natural ways to stop it spreading (like yellow sticky traps and neem). Do not give chemical doses; tell them to ask the Agriculture Extension Officer."
+}

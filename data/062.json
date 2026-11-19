@@ -1,0 +1,41 @@
+{
+  "id": 62,
+  "emoji": "🫙",
+  "title": "Checking Leaky Lids on Amma's Pickle Jars",
+  "title_te": "అమ్మ ఊరగాయ జాడీల మూతలు లీక్ అవుతున్నాయా చూద్దాం",
+  "problem": "Amma makes delicious mango pickle to sell in town, but shopkeepers reject her jars when the oil leaks out from loose plastic caps.",
+  "idea": "A jar checker. Amma shows each closed jar cap to the camera and it tells her 'sealed well' or 'oily, leaking – close again'. Here you can tap what the camera sees.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Which jar cap is the camera seeing?",
+      "intro": "In my real project, Teachable Machine looks at the cap. Here, tap the cap to see the answer.",
+      "question": "Amma holds this jar in front of the camera:",
+      "options": [
+        {"icon": "✅", "label": "Clean, tight cap", "result": "Sealed well! This jar is ready to pack.", "te": "మూత బాగా బిగించారు! ఈ జాడీ ప్యాక్ చేయడానికి సిద్ధం.", "level": "good"},
+        {"icon": "💧", "label": "Oily drops on cap", "result": "Oil is leaking! Wipe the rim, close the cap tighter and check again.", "te": "నూనె కారుతోంది! అంచు తుడిచి, మూత గట్టిగా బిగించి మళ్ళీ చూడండి.", "level": "bad"},
+        {"icon": "🔓", "label": "Cap sitting crooked", "result": "Cap is not straight. Open and close it again properly.", "te": "మూత వంకరగా ఉంది. తీసి మళ్ళీ సరిగ్గా పెట్టండి.", "level": "warn"}
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "📋 Leak-Free Packing Tips",
+      "items": [
+        {"icon": "🧻", "title": "Wipe the rim", "text": "Wipe the jar mouth with a dry clean cloth before closing.", "te": "మూత పెట్టే ముందు జాడీ అంచు పొడి గుడ్డతో తుడవండి."},
+        {"icon": "📏", "title": "Leave a little space", "text": "Do not fill pickle right up to the top. Leave a small gap.", "te": "జాడీ పూర్తిగా నింపకండి. పైన కొంచెం ఖాళీ ఉంచండి."},
+        {"icon": "🧴", "title": "Use a plastic sheet", "text": "Put a small plastic or wax-paper sheet under the cap for an extra seal.", "te": "మూత కింద చిన్న ప్లాస్టిక్ కాగితం పెడితే బాగా సీల్ అవుతుంది."},
+        {"icon": "🙃", "title": "Upside-down test", "text": "Keep one jar upside down on paper for 10 minutes. No oil mark = good seal.", "te": "ఒక జాడీని 10 నిమిషాలు తలకిందులుగా పెట్టండి. నూనె మరక లేకపోతే సీల్ బాగుంది."}
+      ]
+    }
+  ],
+  "tools": ["Teachable Machine", "PictoBlox", "Gemini"],
+  "how": [
+    "Open teachablemachine.withgoogle.com and choose Image Project.",
+    "Make 3 classes: Sealed cap, Leaking cap, Crooked cap.",
+    "Take about 40 photos of each kind of jar cap using the webcam in good light.",
+    "Click Train, test with new jars, then Export and copy the model link.",
+    "In PictoBlox, add the Machine Learning extension, paste the link, and make the sprite say 'Ready to pack' or 'Close again'.",
+    "Ask Gemini for packing tips and show them to Amma."
+  ],
+  "prompt": "I am a Class 8 student helping my mother who sells mango pickle in plastic jars. Give 5 simple tips to stop oil leaking from jar caps, in simple English and simple Telugu. Keep each tip short."
+}

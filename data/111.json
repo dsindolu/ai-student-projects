@@ -1,0 +1,123 @@
+{
+  "id": 111,
+  "emoji": "⌨️",
+  "title": "Computer Keyboard Finger Placement Game",
+  "title_te": "కీబోర్డ్ వేళ్ళ స్థానం ఆట",
+  "problem": "First-time students in our school lab type with just one finger while looking at the keys, taking 5 minutes to type one sentence.",
+  "idea": "A typing game where a sprite moves only when you press the right home-row key. Here, test yourself: which finger presses which key?",
+  "widgets": [
+    {
+      "type": "quiz",
+      "heading": "🧠 Which finger presses this key?",
+      "questions": [
+        {
+          "q": "Key F",
+          "options": [
+            "Left index finger",
+            "Right thumb",
+            "Left little finger"
+          ],
+          "answer": 0,
+          "why": "Left hand rests on A S D F. F is the index finger. It has a small bump!"
+        },
+        {
+          "q": "Key J",
+          "options": [
+            "Left index finger",
+            "Right index finger",
+            "Right little finger"
+          ],
+          "answer": 1,
+          "why": "Right hand rests on J K L ;. J has a bump too."
+        },
+        {
+          "q": "Key A",
+          "options": [
+            "Left little finger",
+            "Left index finger",
+            "Right middle finger"
+          ],
+          "answer": 0,
+          "why": "The little finger rests on A."
+        },
+        {
+          "q": "Space bar",
+          "options": [
+            "Any thumb",
+            "Index finger",
+            "Little finger"
+          ],
+          "answer": 0,
+          "why": "Thumbs press the space bar."
+        },
+        {
+          "q": "Key K",
+          "options": [
+            "Right middle finger",
+            "Left ring finger",
+            "Right thumb"
+          ],
+          "answer": 0,
+          "why": "J = index, K = middle, L = ring, ; = little finger."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Good typing habits",
+      "intro": "Tick what you did in today's lab class.",
+      "items": [
+        {
+          "text": "Fingers resting on A S D F and J K L ;",
+          "te": "వేళ్ళు హోమ్ రో కీలపై ఉంచాను"
+        },
+        {
+          "text": "Felt the bumps on F and J without looking",
+          "te": "చూడకుండా F, J మీద గుర్తులు తాకాను"
+        },
+        {
+          "text": "Sat straight with the screen at eye level",
+          "te": "నిటారుగా కూర్చున్నాను"
+        },
+        {
+          "text": "Looked at the screen, not the keys",
+          "te": "కీలను కాదు, స్క్రీన్‌ను చూశాను"
+        },
+        {
+          "text": "Practised for 10 minutes",
+          "te": "10 నిమిషాలు సాధన చేశాను"
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.8,
+          "text": "Typing star! Speed will come with practice. ⌨️",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "Good. Keep your eyes on the screen.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Start with the home row today. Slow is okay!",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Ask Gemini to explain home-row finger placement in simple steps.",
+    "In Scratch, make a sprite and a 'target key' that shows a random letter from A S D F J K L.",
+    "Use 'when key pressed' blocks: if it matches the target, move the sprite forward and add 1 to score.",
+    "If the wrong key is pressed, play a soft sound and show the right finger.",
+    "Add a 60-second timer and show the score at the end.",
+    "Let lab students play it before each typing class."
+  ],
+  "prompt": "I am a Class 8 student making a Scratch typing game. Explain the home-row finger placement on a keyboard in 5 simple steps, and give me 10 easy practice words using only A S D F J K L keys."
+}

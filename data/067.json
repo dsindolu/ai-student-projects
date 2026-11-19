@@ -1,0 +1,50 @@
+{
+  "id": 67,
+  "emoji": "🌸",
+  "title": "Safe Sanitary Pad Disposal Guide for School Washrooms",
+  "title_te": "పాఠశాల వాష్‌రూమ్‌లలో శానిటరీ ప్యాడ్ సురక్షిత పారవేత గైడ్",
+  "problem": "Girls at school feel ashamed and drop out of classes during period days because washroom bins are unhygienic and poorly maintained.",
+  "idea": "A kind, respectful guide. It shows the right way to throw away pads, simple poster ideas for our washroom, and a quiz so everyone learns that periods are normal.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🧻 The Right Way to Dispose a Pad",
+      "items": [
+        {"title": "Roll it", "text": "Roll the used pad tightly.", "te": "వాడిన ప్యాడ్‌ను గట్టిగా చుట్టండి."},
+        {"title": "Wrap it", "text": "Wrap it in old newspaper or the pad's own cover.", "te": "పాత పేపర్‌లో లేదా ప్యాడ్ కవర్‌లో చుట్టండి."},
+        {"title": "Covered bin", "text": "Put it in the covered bin, or the incinerator if the school has one.", "te": "మూత ఉన్న డబ్బాలో లేదా స్కూల్‌లో ఇన్సినరేటర్ ఉంటే అందులో వేయండి."},
+        {"title": "Never flush", "text": "Never throw pads in the toilet. It blocks the pipe.", "te": "ప్యాడ్‌ను టాయిలెట్‌లో వేయకండి. పైపు మూసుకుపోతుంది."},
+        {"title": "Wash hands", "text": "Wash hands with soap and water.", "te": "సబ్బు, నీటితో చేతులు కడుక్కోండి."}
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🖼️ Poster Ideas for Our Washroom",
+      "items": [
+        {"icon": "💗", "title": "Periods are normal", "text": "Every girl has periods. No shame, no fear.", "te": "పీరియడ్స్ సహజం. సిగ్గు పడాల్సిన అవసరం లేదు."},
+        {"icon": "🗑️", "title": "Covered bin please", "text": "Ask the teacher for a bin with a lid, emptied every day.", "te": "ప్రతిరోజూ ఖాళీ చేసే మూత ఉన్న డబ్బా కావాలని టీచర్‌ని అడగండి."},
+        {"icon": "🎒", "title": "Keep a spare", "text": "Keep one spare pad in your school bag.", "te": "స్కూల్ బ్యాగ్‌లో ఒక అదనపు ప్యాడ్ ఉంచుకోండి."},
+        {"icon": "👩‍🏫", "title": "Talk to a teacher", "text": "If you have pain or need help, tell a lady teacher or the school nurse.", "te": "నొప్పి ఉంటే లేదా సహాయం కావాలంటే టీచర్‌కి చెప్పండి."}
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Hygiene Quiz",
+      "questions": [
+        {"q": "Where should a used pad go?", "options": ["Toilet", "Wrapped in paper, into a covered bin", "Out of the window"], "answer": 1, "why": "Wrap it and put it in a covered bin. Toilets get blocked."},
+        {"q": "How often should a pad usually be changed?", "options": ["Once a day", "Every 4 to 6 hours", "Every 2 days"], "answer": 1, "why": "Changing every 4–6 hours keeps you clean and healthy."},
+        {"q": "Are periods something to be ashamed of?", "options": ["Yes", "No, they are normal and healthy"], "answer": 1, "why": "Periods are a normal part of growing up."}
+      ]
+    }
+  ],
+  "tools": ["Gemini", "Canva"],
+  "how": [
+    "Talk to the class teacher and girls' group leader before starting, so it is done respectfully.",
+    "Ask Gemini for simple, kind disposal steps and hygiene tips.",
+    "Check the tips with a lady teacher or the school health nurse.",
+    "Open Canva, pick a clean poster template with soft colours.",
+    "Add 5 picture steps and short Telugu and English lines.",
+    "Print and stick the poster inside the girls' washroom, and ask for a covered bin."
+  ],
+  "prompt": "I am a Class 8 student making a respectful poster for our school girls' washroom. Write 5 short steps for safe sanitary pad disposal and 3 kind lines saying periods are normal. Use simple English and simple Telugu."
+}

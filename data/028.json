@@ -1,0 +1,104 @@
+{
+  "id": 28,
+  "emoji": "🩹",
+  "title": "Skin Rash Checker for Hostel Rooms",
+  "title_te": "హాస్టల్ గదుల కోసం చర్మ దద్దుర్ల తనిఖీ",
+  "problem": "Itchy red skin rashes spread from student to student in hostel rooms because boys ignore early spots until they become big wounds.",
+  "idea": "A rash helper that tells students to show the hostel nurse early. It does not diagnose. Here you can tap what kind of rash you see.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What kind of rash is it?",
+      "intro": "In my real project, Teachable Machine learns pictures of rashes from health charts. It is only a reminder. The nurse or doctor decides what it is.",
+      "question": "The rash looks like:",
+      "options": [
+        {
+          "icon": "🔴",
+          "label": "Tiny red dots after sweating",
+          "result": "May be heat rash (prickly heat). Wear loose cotton clothes and bathe. Show the nurse if it doesn't go away.",
+          "te": "చెమట పొక్కులు కావచ్చు. వదులైన కాటన్ బట్టలు వేసుకోండి. తగ్గకపోతే నర్సుకు చూపించండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "⭕",
+          "label": "Round itchy ring",
+          "result": "May be a fungal infection that spreads. Show the hostel nurse. Don't share towels.",
+          "te": "ఇది అంటువ్యాధి కావచ్చు. నర్సుకు చూపించండి. తువ్వాలు పంచుకోవద్దు.",
+          "level": "bad"
+        },
+        {
+          "icon": "🖐️",
+          "label": "Itching between fingers, worse at night",
+          "result": "May be scabies, which spreads fast. Tell the nurse today. Bed sheets and clothes need washing.",
+          "te": "ఇది త్వరగా అంటుకునే గజ్జి కావచ్చు. ఈరోజే నర్సుకు చెప్పండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🟡",
+          "label": "Spots with pus or yellow crust",
+          "result": "Infected skin. See the nurse today. Don't scratch or burst it.",
+          "te": "చీము ఉన్న మచ్చలు. ఈరోజే నర్సుకు చూపించండి. గోకవద్దు.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Our Room's Clean Skin Rules",
+      "intro": "Tick what your hostel room follows.",
+      "items": [
+        {
+          "text": "Everyone has their own towel, comb and soap",
+          "te": "ఎవరి తువ్వాలు, దువ్వెన, సబ్బు వారిదే"
+        },
+        {
+          "text": "We bathe daily and wear dry clothes",
+          "te": "రోజూ స్నానం చేసి పొడి బట్టలు వేసుకుంటాము"
+        },
+        {
+          "text": "Bedsheets are washed and dried in sun every week",
+          "te": "ప్రతి వారం దుప్పట్లు ఉతికి ఎండలో ఆరబెడతాము"
+        },
+        {
+          "text": "We tell the nurse about any itchy spot early",
+          "te": "దురద మచ్చ ఉంటే త్వరగా నర్సుకు చెబుతాము"
+        },
+        {
+          "text": "We keep nails short and don't scratch",
+          "te": "గోళ్ళు చిన్నగా ఉంచి, గోకము"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Clean room champions!",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Good! Fix the missing rules.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Rashes can spread fast. Talk to your warden today.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "PictoBlox",
+    "Gemini"
+  ],
+  "how": [
+    "Ask the hostel nurse for a health chart with pictures of common skin rashes.",
+    "Open Teachable Machine and make classes for each rash type from the chart pictures.",
+    "Train and Export the model, then load it in PictoBlox.",
+    "For every class, make the helper say 'Please show the hostel nurse' in Telugu.",
+    "Ask Gemini for simple skin hygiene rules for hostel rooms and check them with the nurse.",
+    "Show the helper at assembly and remind everyone: only the nurse or doctor can decide."
+  ],
+  "prompt": "I am a Class 8 hostel student. Give 6 simple skin hygiene rules in English and Telugu to stop itchy rashes spreading in hostel rooms, and tell students to show any rash to the hostel nurse early. Don't suggest any medicine."
+}

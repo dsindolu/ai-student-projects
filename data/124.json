@@ -1,0 +1,111 @@
+{
+  "id": 124,
+  "emoji": "📚",
+  "title": "School Library Bookshelf Location Finder",
+  "title_te": "పాఠశాల గ్రంథాలయ పుస్తకాల అలమరా గుర్తింపు",
+  "problem": "Younger students get lost in our school library looking for science storybooks, because books get misplaced across 12 different cupboards.",
+  "idea": "A digital library map. Pick the kind of book you want and the map tells you which cupboard to go to. I made the list by scanning book covers with Google Lens and sorting them with Gemini.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What book do you want?",
+      "intro": "Tap a book type and the library map shows its cupboard.",
+      "question": "I am looking for:",
+      "options": [
+        {
+          "icon": "🔬",
+          "label": "Science stories",
+          "result": "Go to Cupboard 3 (blue sticker), top two shelves.",
+          "te": "అలమరా 3 (నీలం స్టిక్కర్), పై రెండు అరలు.",
+          "level": "good"
+        },
+        {
+          "icon": "📖",
+          "label": "Telugu stories",
+          "result": "Go to Cupboard 5 (green sticker).",
+          "te": "అలమరా 5 (ఆకుపచ్చ స్టిక్కర్)కి వెళ్ళండి.",
+          "level": "good"
+        },
+        {
+          "icon": "🌍",
+          "label": "Maps & atlas",
+          "result": "Go to Cupboard 8 (yellow sticker), bottom shelf.",
+          "te": "అలమరా 8 (పసుపు స్టిక్కర్), కింది అర.",
+          "level": "good"
+        },
+        {
+          "icon": "🧮",
+          "label": "Maths puzzles",
+          "result": "Go to Cupboard 10 (red sticker).",
+          "te": "అలమరా 10 (ఎరుపు స్టిక్కర్)కి వెళ్ళండి.",
+          "level": "good"
+        },
+        {
+          "icon": "❓",
+          "label": "Not in the list",
+          "result": "Ask the library teacher. Maybe the book is borrowed now.",
+          "te": "లైబ్రరీ టీచర్‌ని అడగండి. పుస్తకం ఎవరైనా తీసుకుని ఉండవచ్చు.",
+          "level": "warn"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Am I a good library helper?",
+      "intro": "Tick what you do.",
+      "items": [
+        {
+          "text": "I put the book back in the same cupboard.",
+          "te": "పుస్తకాన్ని అదే అలమరాలో పెడతాను."
+        },
+        {
+          "text": "I check the colour sticker before keeping it.",
+          "te": "పెట్టే ముందు రంగు స్టిక్కర్ చూస్తాను."
+        },
+        {
+          "text": "I write my name in the register when I borrow.",
+          "te": "తీసుకునేటప్పుడు రిజిస్టర్‌లో పేరు రాస్తాను."
+        },
+        {
+          "text": "I return the book on time.",
+          "te": "సమయానికి పుస్తకం తిరిగి ఇస్తాను."
+        },
+        {
+          "text": "I help a younger student find a book.",
+          "te": "చిన్న పిల్లలకు పుస్తకం వెతకడంలో సహాయం చేస్తాను."
+        }
+      ],
+      "bands": [
+        {
+          "min": 0.8,
+          "text": "You are a library star! ⭐",
+          "level": "good"
+        },
+        {
+          "min": 0.4,
+          "text": "Good! Try a few more habits.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Start with putting books back in the right place.",
+          "level": "bad"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Scratch"
+  ],
+  "how": [
+    "Stick one colour sticker and a number on each of the 12 cupboards.",
+    "Use Google Lens to scan each book cover and copy the title text.",
+    "Paste all titles into Gemini and ask it to sort them into groups like Science, Stories, Maps, Maths.",
+    "Decide which group goes in which cupboard and put a matching sticker on each book spine.",
+    "In Scratch, draw the library map. Make a button for each group that makes the right cupboard flash.",
+    "Put the Scratch map on the library computer and teach the younger students to use it."
+  ],
+  "prompt": "I am a Class 8 student organising my school library. Here is a list of book titles: [paste titles]. Sort them into simple groups (Science stories, Telugu stories, English stories, Maps, Maths, General knowledge) and make a table with title and group."
+}

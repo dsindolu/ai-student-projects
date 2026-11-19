@@ -1,0 +1,134 @@
+{
+  "id": 133,
+  "emoji": "🦟",
+  "title": "Mosquito Net Hole Patching Manual",
+  "title_te": "దోమతెర రంధ్రాల మరమ్మతు గైడ్",
+  "problem": "Small tears in our dormitory window mesh let mosquitoes swarm inside at night, causing malaria and viral fevers among sleeping students.",
+  "idea": "Simple fix-it cards that show how to patch mesh and net holes with a needle and thread. Follow the steps and check your dorm with the checklist.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🪡 Patch a small hole in 5 steps",
+      "intro": "Ask a teacher before working on windows. Never climb on high window ledges.",
+      "items": [
+        {
+          "title": "Find the hole",
+          "text": "Hold a torch behind the mesh. Light shows the holes. Mark them with chalk.",
+          "te": "జాలీ వెనుక టార్చ్ పెడితే రంధ్రాలు కనిపిస్తాయి. సుద్దతో గుర్తు పెట్టండి."
+        },
+        {
+          "title": "Cut a patch",
+          "text": "Cut a piece of old net or mesh 2 cm bigger than the hole on every side.",
+          "te": "రంధ్రం కంటే అన్ని వైపులా 2 సెం.మీ. పెద్ద ముక్క కత్తిరించండి."
+        },
+        {
+          "title": "Place it",
+          "text": "Hold the patch flat over the hole with clothes pegs or tape.",
+          "te": "క్లిప్పులు లేదా టేప్‌తో ముక్కను రంధ్రం మీద పెట్టండి."
+        },
+        {
+          "title": "Stitch around",
+          "text": "Stitch all around the edge with nylon thread and small stitches.",
+          "te": "నైలాన్ దారంతో చుట్టూ చిన్న కుట్లు వేయండి."
+        },
+        {
+          "title": "Check",
+          "text": "Look again with the torch. No light gap means no mosquito gap!",
+          "te": "మళ్ళీ టార్చ్‌తో చూడండి. ఖాళీ లేకపోతే దోమలు రావు!"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Is our dorm mosquito-safe?",
+      "items": [
+        {
+          "text": "No holes in window mesh",
+          "te": "కిటికీ జాలీలో రంధ్రాలు లేవు"
+        },
+        {
+          "text": "Every bed net is tucked under the mattress",
+          "te": "ప్రతి దోమతెర పరుపు కింద దోపి ఉంది"
+        },
+        {
+          "text": "No stagnant water in coolers, pots or tyres nearby",
+          "te": "కూలర్లు, కుండలు, టైర్లలో నిల్వ నీరు లేదు"
+        },
+        {
+          "text": "Doors closed at dusk",
+          "te": "సాయంత్రం తలుపులు మూసేశాం"
+        },
+        {
+          "text": "Students with fever go to the nurse quickly",
+          "te": "జ్వరం వచ్చిన వాళ్ళు వెంటనే నర్స్ దగ్గరకు వెళ్తారు"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1,
+          "text": "Mosquito-safe dorm! 🛡️",
+          "level": "good"
+        },
+        {
+          "min": 0.6,
+          "text": "Almost there. Fix the rest this week.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Mosquitoes can get in easily. Start fixing today.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "❓ Mosquito Quiz",
+      "questions": [
+        {
+          "q": "Where do mosquitoes lay eggs?",
+          "options": [
+            "In dry sand",
+            "In standing water",
+            "On walls"
+          ],
+          "answer": 1,
+          "why": "Mosquitoes breed in still water. Empty pots, coolers and tyres every week."
+        },
+        {
+          "q": "Malaria spreads through the bite of an infected…",
+          "options": [
+            "Housefly",
+            "Mosquito",
+            "Cockroach"
+          ],
+          "answer": 1,
+          "why": "Malaria spreads through infected Anopheles mosquito bites, mostly at night."
+        },
+        {
+          "q": "What is the best thread for patching mesh?",
+          "options": [
+            "Wool",
+            "Nylon thread",
+            "Paper string"
+          ],
+          "answer": 1,
+          "why": "Nylon thread is strong and does not rot in rain."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Do a 'hole hunt' in every dorm room with a torch and write down how many holes each window has.",
+    "Ask Gemini for simple needle-stitching steps to patch mesh and bed net holes.",
+    "Collect old nets, nylon thread, big needles and clothes pegs (ask the warden).",
+    "Open Canva, search 'instruction steps' and make one card per step with a big picture.",
+    "Print the cards, laminate them with tape and keep them in the dorm repair box.",
+    "Hold a Saturday 'patch party' where friends fix holes together."
+  ],
+  "prompt": "I am a Class 8 hostel student. Give me 5 very simple steps in English and Telugu to patch small holes in window mesh and mosquito nets with a needle and nylon thread. Also give 3 tips to stop mosquitoes breeding near our hostel."
+}

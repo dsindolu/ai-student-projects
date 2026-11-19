@@ -1,0 +1,86 @@
+{
+  "id": 11,
+  "emoji": "📖",
+  "title": "Reading Science Lessons Out Loud for My Visually Impaired Friend",
+  "title_te": "చూపు తక్కువ ఉన్న స్నేహితుడికి సైన్స్ పాఠాలు చదివి వినిపించడం",
+  "problem": "My friend in our village has trouble reading small textbook fonts and has no one at home to read the science chapters out loud to him.",
+  "idea": "A lesson reader. We photo the textbook page with Google Lens, Gemini makes the hard words simple in Telugu, and Scratch reads it aloud. Here you can tap a hard word to hear it explained.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: Tap a hard science word",
+      "intro": "These are words from our science book. The helper explains each one simply.",
+      "question": "Which word is hard for my friend?",
+      "options": [
+        {
+          "icon": "🌿",
+          "label": "Photosynthesis",
+          "result": "Plants make their own food using sunlight, water and air.",
+          "te": "మొక్కలు సూర్యకాంతి, నీరు, గాలితో తమ ఆహారం తయారు చేసుకుంటాయి.",
+          "level": "good"
+        },
+        {
+          "icon": "💧",
+          "label": "Evaporation",
+          "result": "Water turns into vapour and goes into the air when heated.",
+          "te": "వేడికి నీరు ఆవిరిగా మారి గాలిలోకి వెళ్తుంది.",
+          "level": "good"
+        },
+        {
+          "icon": "🌱",
+          "label": "Germination",
+          "result": "A seed wakes up and starts to grow into a small plant.",
+          "te": "విత్తనం మొలకెత్తి చిన్న మొక్కగా పెరగడం.",
+          "level": "good"
+        },
+        {
+          "icon": "🧲",
+          "label": "Magnet",
+          "result": "A magnet pulls iron things towards it.",
+          "te": "అయస్కాంతం ఇనుప వస్తువులను తన వైపు లాగుతుంది.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "👣 How My Friend Uses the Reader",
+      "items": [
+        {
+          "title": "Photo",
+          "text": "Keep the page flat in daylight and take a clear photo with Google Lens.",
+          "te": "పేజీని వెలుతురులో పెట్టి గూగుల్ లెన్స్‌తో ఫోటో తీయండి."
+        },
+        {
+          "title": "Copy",
+          "text": "Tap 'Text' and copy all the words.",
+          "te": "'టెక్స్ట్' నొక్కి పదాలన్నీ కాపీ చేయండి."
+        },
+        {
+          "title": "Simplify",
+          "text": "Paste in Gemini and ask it to explain in simple Telugu.",
+          "te": "జెమినైలో పేస్ట్ చేసి సులభమైన తెలుగులో చెప్పమనండి."
+        },
+        {
+          "title": "Listen",
+          "text": "Play the text with Scratch text-to-speech or the speaker button.",
+          "te": "స్క్రాచ్ లేదా స్పీకర్ బటన్‌తో వినండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Google Lens",
+    "Gemini",
+    "Scratch"
+  ],
+  "how": [
+    "Open Google Lens and take a clear photo of one textbook page.",
+    "Tap Text, select all, and copy it.",
+    "Paste it into Gemini and ask for a simple Telugu explanation, paragraph by paragraph.",
+    "Open Scratch, add the Text to Speech extension, and set the language to Telugu if available (or English).",
+    "Paste each short paragraph into a 'speak' block and add a 'Next' button.",
+    "Let my friend listen and ask questions. Check the facts with our science teacher."
+  ],
+  "prompt": "I am a Class 8 student. Here is a page from my science textbook: [paste text]. Explain it in very simple Telugu and English, in short sentences, so my friend who cannot read small letters can understand it by listening."
+}

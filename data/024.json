@@ -1,0 +1,91 @@
+{
+  "id": 24,
+  "emoji": "🌊",
+  "title": "Muddy Flood Water Safety Warning",
+  "title_te": "వరద బురద నీటి జాగ్రత్త హెచ్చరిక",
+  "problem": "During monsoon floods, tap water turns brownish, but people still drink it directly without boiling, causing bad stomach infections.",
+  "idea": "A water checker. The camera looks at a glass of water and, if it looks muddy, the screen shows how to make it safe. Here you can tap the water the camera 'sees'.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: What water is in the glass?",
+      "intro": "In my real project, Teachable Machine learns photos of clear and muddy water. Here, tap a glass. Remember: clear water can also have germs, so boil it during floods.",
+      "question": "The camera sees this glass of water:",
+      "options": [
+        {
+          "icon": "🟤",
+          "label": "Brown muddy water",
+          "result": "DON'T DRINK! Let the mud settle, filter through a clean cloth, then boil it.",
+          "te": "తాగవద్దు! బురద అడుగుకి చేరనివ్వండి, గుడ్డతో వడకట్టి, మరిగించండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🟢",
+          "label": "Greenish smelly water",
+          "result": "DON'T DRINK! Get water from a safe source like a tanker or covered tank.",
+          "te": "తాగవద్దు! ట్యాంకర్ లేదా మూత ఉన్న ట్యాంక్ నీళ్ళు వాడండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "💧",
+          "label": "Clear water from the tap",
+          "result": "Looks clear, but during floods germs can hide. Boil it before drinking.",
+          "te": "నీళ్ళు తేటగా ఉన్నా, వరదల సమయంలో మరిగించి తాగండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "♨️",
+          "label": "Boiled and cooled water, covered",
+          "result": "Safe to drink. Keep it covered and use a clean ladle.",
+          "te": "తాగడానికి సురక్షితం. మూత పెట్టి, శుభ్రమైన గరిటెతో తీయండి.",
+          "level": "good"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "♨️ Making Flood Water Safe",
+      "items": [
+        {
+          "title": "Settle",
+          "text": "Let the water stand in a pot so the mud sinks to the bottom.",
+          "te": "బురద అడుగుకి చేరేదాకా నీళ్ళు కదపకుండా ఉంచండి."
+        },
+        {
+          "title": "Filter",
+          "text": "Pour the top water through a clean cotton cloth folded 4 times.",
+          "te": "పైన నీళ్ళను నాలుగు మడతల శుభ్రమైన గుడ్డతో వడకట్టండి."
+        },
+        {
+          "title": "Boil",
+          "text": "Boil until big bubbles come, and keep boiling for at least 1 minute.",
+          "te": "పెద్ద బుడగలు వచ్చాక కనీసం ఒక నిమిషం మరిగించండి."
+        },
+        {
+          "title": "Cover",
+          "text": "Cool it in a clean, covered pot. Don't dip hands or glasses in.",
+          "te": "శుభ్రమైన మూత ఉన్న కుండలో చల్లార్చండి."
+        },
+        {
+          "title": "Watch for sickness",
+          "text": "Loose motions or vomiting? Give ORS and go to the PHC.",
+          "te": "విరేచనాలు, వాంతులు అయితే ఓఆర్ఎస్ ఇచ్చి పీహెచ్‌సీకి వెళ్ళండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Teachable Machine",
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Fill clear glasses with clean water, and some with water mixed with a little soil (only for photos, not drinking).",
+    "Open Teachable Machine and make 2 classes: Clear and Muddy. Take about 50 photos each.",
+    "Train the model, then Export it.",
+    "In Scratch, load the model. If 'Muddy' is seen, show the boiling steps on the screen.",
+    "Ask Gemini to write the steps in simple Telugu.",
+    "Show it to families during the rainy season. Remind them that clear water should also be boiled in floods."
+  ],
+  "prompt": "I am a Class 8 student. Give 5 simple steps in English and Telugu to make muddy flood water safer to drink at home (settle, filter with cloth, boil, store covered), and the signs of stomach infection when we should go to the PHC."
+}

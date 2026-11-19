@@ -1,0 +1,102 @@
+{
+  "id": 40,
+  "emoji": "🪣",
+  "title": "Jeevamrutha Organic Fertilizer Calculator",
+  "title_te": "జీవామృతం సేంద్రీయ ఎరువు లెక్కింపు",
+  "problem": "Abba wants to make natural cow dung fertilizer, but he forgets the exact amount of jaggery and besan flour needed for 1 acre of land.",
+  "idea": "A calculator where the farmer types land size in acres and gets the amount of each ingredient for Jeevamrutha, using the common recipe for one acre.",
+  "widgets": [
+    {
+      "type": "calculator",
+      "heading": "🧮 Try it: Ingredients for my land",
+      "intro": "Common recipe for 1 acre: 200 L water, 10 kg fresh cow dung, 5–10 L cow urine, 1–2 kg jaggery, 1–2 kg besan (pulse flour) and a handful of soil from the field bund. Change the acres below.",
+      "inputs": [
+        {
+          "id": "acres",
+          "label": "Land size (acres)",
+          "value": 2
+        }
+      ],
+      "formula": "if (acres <= 0) return null; return {water: acres * 200, dung: acres * 10, urine: acres * 5, urine2: acres * 10, jag: acres * 1, jag2: acres * 2, besan: acres * 1, besan2: acres * 2, soil: acres, level: 'good'};",
+      "result": "💧 Water: {water} litres\n🐄 Fresh cow dung: {dung} kg\n🫗 Cow urine: {urine} to {urine2} litres\n🍯 Jaggery: {jag} to {jag2} kg\n🫘 Besan flour: {besan} to {besan2} kg\n🤎 Field bund soil: {soil} handful(s)"
+    },
+    {
+      "type": "steps",
+      "heading": "🪣 How to Mix Jeevamrutha",
+      "items": [
+        {
+          "title": "Take a drum",
+          "text": "Use a plastic or cement drum kept in the shade.",
+          "te": "నీడలో ప్లాస్టిక్ లేదా సిమెంట్ డ్రమ్ తీసుకోండి."
+        },
+        {
+          "title": "Add everything",
+          "text": "Put water, dung, urine, jaggery, besan and soil in the drum.",
+          "te": "నీళ్ళు, పేడ, మూత్రం, బెల్లం, శనగపిండి, మట్టి డ్రమ్‌లో వేయండి."
+        },
+        {
+          "title": "Stir well",
+          "text": "Stir clockwise with a stick for a few minutes, twice a day.",
+          "te": "రోజుకు రెండుసార్లు కర్రతో బాగా కలపండి."
+        },
+        {
+          "title": "Cover and wait",
+          "text": "Cover with a jute bag and keep it for 2 to 7 days.",
+          "te": "గోనె సంచి కప్పి 2 నుండి 7 రోజులు ఉంచండి."
+        },
+        {
+          "title": "Use it",
+          "text": "Give it with irrigation water or spray after filtering. Use within about a week.",
+          "te": "నీటితో కలిపి పొలానికి ఇవ్వండి. వారంలోపు వాడండి."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "How much water for 1 acre of Jeevamrutha?",
+          "options": [
+            "20 litres",
+            "200 litres",
+            "2000 litres"
+          ],
+          "answer": 1,
+          "why": "The common recipe uses about 200 litres of water per acre."
+        },
+        {
+          "q": "Why do we add jaggery?",
+          "options": [
+            "To feed good microbes",
+            "To make it sweet for cows"
+          ],
+          "answer": 0,
+          "why": "Jaggery is food for the good microbes that grow in the mix."
+        },
+        {
+          "q": "Where should the drum be kept?",
+          "options": [
+            "In the shade",
+            "In hot sun"
+          ],
+          "answer": 0,
+          "why": "Shade keeps the good microbes alive."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Scratch",
+    "Gemini"
+  ],
+  "how": [
+    "Ask Gemini or the Agriculture Officer for the standard Jeevamrutha recipe for 1 acre.",
+    "Open Scratch and make a variable 'acres'.",
+    "Use an 'ask' block: 'How many acres?' and save the answer.",
+    "Make the sprite say: water = acres × 200, dung = acres × 10, jaggery = acres × 1 to 2, and so on.",
+    "Add a cow sprite and Telugu text with help from Gemini.",
+    "Test with 1, 2 and 5 acres and check the answers with Abba."
+  ],
+  "prompt": "I am a Class 8 student. Give me the common Jeevamrutha organic fertilizer recipe for 1 acre (water, cow dung, cow urine, jaggery, pulse flour, soil) in a simple table, with mixing steps in English and Telugu. Then show the amounts for 2 acres and 5 acres."
+}

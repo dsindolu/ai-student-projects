@@ -1,0 +1,95 @@
+{
+  "id": 101,
+  "emoji": "🔋",
+  "title": "Electronic Waste Danger Warning Guide",
+  "title_te": "ఎలక్ట్రానిక్ వ్యర్థాల ప్రమాద హెచ్చరిక గైడ్",
+  "problem": "Small children play with old swollen phone batteries and broken wires found in open trash piles, risking chemical burns and injuries.",
+  "idea": "A warning guide with posters and a 'what should I do?' helper, so children and families know how to handle e-waste safely.",
+  "widgets": [
+    {
+      "type": "picker",
+      "heading": "🎯 Try it: I found this in the trash. What do I do?",
+      "intro": "Tap what you found to see the safe thing to do.",
+      "question": "I found:",
+      "options": [
+        {
+          "icon": "🔋",
+          "label": "Swollen phone battery",
+          "result": "Do NOT touch, press or poke it. It can catch fire. Tell an adult to put it in a tin box away from heat.",
+          "te": "తాకవద్దు, నొక్కవద్దు! మంటలు రావచ్చు. పెద్దవాళ్ళకు చెప్పండి.",
+          "level": "bad"
+        },
+        {
+          "icon": "🔌",
+          "label": "Broken wires",
+          "result": "Don't play with them or burn them. Give them to the scrap collector for e-waste.",
+          "te": "వాటితో ఆడవద్దు, కాల్చవద్దు. ఈ-వేస్ట్ సేకరించే వారికి ఇవ్వండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "📱",
+          "label": "Old mobile phone",
+          "result": "Keep it in a box. Give it to an authorised e-waste collector or a mobile shop take-back.",
+          "te": "డబ్బాలో ఉంచి, అధికారిక ఈ-వేస్ట్ సేకరణకు ఇవ్వండి.",
+          "level": "warn"
+        },
+        {
+          "icon": "💡",
+          "label": "Broken tube light",
+          "result": "Careful! Broken glass and mercury. Don't touch with bare hands. Ask an adult to wrap it and give it away safely.",
+          "te": "జాగ్రత్త! గాజు, పాదరసం ఉంటాయి. చేతులతో తాకవద్దు.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "🪧 E-Waste Safety Posters",
+      "items": [
+        {
+          "icon": "🔥",
+          "title": "Never burn",
+          "text": "Burning wires and circuit boards makes toxic smoke.",
+          "te": "వైర్లు, సర్క్యూట్ బోర్డులు కాల్చవద్దు – విషపు పొగ."
+        },
+        {
+          "icon": "🧒",
+          "title": "Not a toy",
+          "text": "Batteries and wires are not toys. Keep them away from small children.",
+          "te": "బ్యాటరీలు బొమ్మలు కాదు. చిన్న పిల్లలకు దూరంగా ఉంచండి."
+        },
+        {
+          "icon": "📦",
+          "title": "Collect in a box",
+          "text": "Keep old phones, chargers and batteries in one closed box at home.",
+          "te": "పాత ఫోన్లు, ఛార్జర్లు ఒక డబ్బాలో ఉంచండి."
+        },
+        {
+          "icon": "♻️",
+          "title": "Give to authorised collectors",
+          "text": "Hand e-waste to authorised collectors or shop take-back schemes.",
+          "te": "అధికారిక ఈ-వేస్ట్ సేకరణదారులకు ఇవ్వండి."
+        },
+        {
+          "icon": "🧼",
+          "title": "Wash hands",
+          "text": "If you touched e-waste, wash hands with soap.",
+          "te": "తాకితే సబ్బుతో చేతులు కడగండి."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini to list the hidden dangers of e-waste in simple words.",
+    "Check the list with your science teacher.",
+    "Open Canva and pick a poster template with big pictures.",
+    "Make 5 posters: Never burn, Not a toy, Collect in a box, Give to collectors, Wash hands.",
+    "Add Telugu lines so younger children and parents can read them.",
+    "Put the posters on the school noticeboard and near the village trash point."
+  ],
+  "prompt": "I am a Class 8 student. List 5 hidden dangers of e-waste like swollen batteries and broken wires, in very simple English and Telugu, and tell what children should do instead (don't burn, give to authorised collectors)."
+}

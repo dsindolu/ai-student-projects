@@ -1,0 +1,135 @@
+{
+  "id": 59,
+  "emoji": "🔗",
+  "title": "Checking Bank Account Aadhaar Linking Steps",
+  "title_te": "బ్యాంక్ ఖాతా ఆధార్ లింకింగ్ దశల తనిఖీ",
+  "problem": "Neighbours miss out on government scheme money because their bank accounts are not mapped properly to their Aadhaar numbers.",
+  "idea": "A step-by-step guide and checklist so families can check if their bank account is linked (seeded) with Aadhaar for government benefits, and fix it at the bank.",
+  "widgets": [
+    {
+      "type": "steps",
+      "heading": "🪜 How to Check and Link",
+      "items": [
+        {
+          "title": "Check status",
+          "text": "On myaadhaar.uidai.gov.in, log in with the Aadhaar mobile OTP and open 'Bank Seeding Status'.",
+          "te": "myaadhaar.uidai.gov.in లో ఆధార్ మొబైల్ ఓటీపీతో లాగిన్ అయి 'బ్యాంక్ సీడింగ్ స్టేటస్' చూడండి."
+        },
+        {
+          "title": "Go to your bank",
+          "text": "Visit your home branch with Aadhaar card and passbook.",
+          "te": "ఆధార్ కార్డ్, పాస్‌బుక్‌తో మీ బ్యాంకుకు వెళ్ళండి."
+        },
+        {
+          "title": "Fill the form",
+          "text": "Ask for the Aadhaar seeding / DBT consent form. Sign it.",
+          "te": "ఆధార్ సీడింగ్ / డీబీటీ సమ్మతి ఫారం అడిగి సంతకం చేయండి."
+        },
+        {
+          "title": "Get acknowledgement",
+          "text": "Take a receipt. Linking may take a few days.",
+          "te": "రసీదు తీసుకోండి. లింక్ అవ్వడానికి కొన్ని రోజులు పట్టవచ్చు."
+        },
+        {
+          "title": "Check again",
+          "text": "After a week, check the status again or ask the bank.",
+          "te": "వారం తర్వాత మళ్ళీ స్టేటస్ చూడండి."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "heading": "✅ Try it: Are we ready for scheme money?",
+      "intro": "Tick what is true for your family member.",
+      "items": [
+        {
+          "text": "Mobile number is linked to Aadhaar",
+          "te": "ఆధార్‌కు మొబైల్ నంబర్ లింక్ అయింది"
+        },
+        {
+          "text": "Name is the same in Aadhaar and bank account",
+          "te": "ఆధార్, బ్యాంక్ ఖాతాలో పేరు ఒకేలా ఉంది"
+        },
+        {
+          "text": "Bank account is active (used in the last year)",
+          "te": "బ్యాంక్ ఖాతా యాక్టివ్‌గా ఉంది"
+        },
+        {
+          "text": "KYC is updated at the bank",
+          "te": "బ్యాంకులో కేవైసీ అప్‌డేట్ అయింది"
+        },
+        {
+          "text": "Bank Seeding Status shows 'Active'",
+          "te": "బ్యాంక్ సీడింగ్ స్టేటస్ 'యాక్టివ్'"
+        },
+        {
+          "text": "The right account is chosen for DBT (if you have many)",
+          "te": "డీబీటీ కోసం సరైన ఖాతా ఎంచుకున్నాం"
+        }
+      ],
+      "bands": [
+        {
+          "min": 1.0,
+          "text": "All set! Scheme money can reach the account.",
+          "level": "good"
+        },
+        {
+          "min": 0.5,
+          "text": "A few things to fix. Visit the bank this week.",
+          "level": "warn"
+        },
+        {
+          "min": 0,
+          "text": "Money may not reach you. Visit the bank with Aadhaar and passbook.",
+          "level": "bad"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "heading": "🧠 Quick Quiz",
+      "questions": [
+        {
+          "q": "Is there a fee to link Aadhaar with your bank account at the branch?",
+          "options": [
+            "Banks do it free",
+            "Pay an agent ₹500"
+          ],
+          "answer": 0,
+          "why": "Aadhaar seeding at your bank is free. Don't pay agents."
+        },
+        {
+          "q": "A caller says 'Share OTP to link Aadhaar to bank'. You…",
+          "options": [
+            "Share it",
+            "Refuse and go to the bank"
+          ],
+          "answer": 1,
+          "why": "Never share OTP on the phone. It's a scam."
+        },
+        {
+          "q": "Your name spelling is different in Aadhaar and bank. What can happen?",
+          "options": [
+            "Linking may fail",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "Names should match. Correct it first."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "Gemini",
+    "Canva"
+  ],
+  "how": [
+    "Ask Gemini to outline the steps to check and link Aadhaar with a bank account for DBT.",
+    "Check the steps on the official UIDAI website with a parent.",
+    "Ask the bank staff which form they use for Aadhaar seeding.",
+    "Translate the steps into simple Telugu with Gemini.",
+    "Design a big poster in Canva with 5 numbered steps and icons.",
+    "Put the poster at the village centre and help neighbours check their status."
+  ],
+  "prompt": "I am a Class 8 student. Explain in simple English and Telugu how a village family can check if their bank account is linked (seeded) with Aadhaar for government DBT money, and how to link it at the bank. Give 5 steps, the papers needed, and a warning never to share OTP with callers."
+}
